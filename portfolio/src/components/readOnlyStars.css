@@ -1,0 +1,49 @@
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0.3rem;
+    --stroke: #666;
+    --fill: #ffc73a;
+  }
+  
+  
+  .stars label {
+    cursor: default;
+  }
+  
+  .stars svg {
+    width: 2rem;
+    height: 2rem;
+    overflow: visible;
+
+    fill: transparent;
+    stroke: var(--stroke);
+    stroke-linejoin: bevel;
+    stroke-dasharray: 12;
+    animation: idle 4s linear infinite;
+    transition: stroke 0.2s, fill 0.5s;
+  }
+  
+  @keyframes idle {
+    from {
+      stroke-dashoffset: 24;
+    }
+  }
+  
+  .stars label:hover svg {
+    stroke: var(--fill);
+  }
+  
+  .stars label svg {
+    transition: 0s;
+    animation: idle 4s linear infinite;
+    fill: var(--fill);
+    stroke: var(--fill);
+    stroke-opacity: 0;
+    stroke-dasharray: 0;
+    stroke-linejoin: miter;
+    stroke-width: 8px;
+  }
+  
+  
+  
