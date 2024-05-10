@@ -1,5 +1,5 @@
 import React from "react";
-
+import './Navbar.css';
 
 function Navbar({clickHandler, darkmode}) {
     console.log(darkmode)

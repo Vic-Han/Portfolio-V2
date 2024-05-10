@@ -1,18 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import DarkThemeSwitch from '../components/DarkThemeSwitch';
 import AnimationToggle from '../components/AnimationToggle';
-import CoolButton from '../components/CoolButton';
 
 import ReadOnlyStars from '../components/ReadOnlyStars';
 import { useContext } from 'react';
-import {SettingsContext} from '../context/SettingsContext';
+import {GlobalContext} from '../context/GlobalContext';
 
-function Settings({close, setSlideTransition, setCircleTransition}) {
-    const settingsStates = useContext(SettingsContext);
-    const {darkMode, setDarkMode, animation, setAnimation} = settingsStates;
+function Settings({close}) {
+    const settingsStates = useContext(GlobalContext);
+    const {darkMode, setDarkMode, animation, setAnimation, toggleSlideTransition, toggleCircleTransition} = settingsStates;
     const [boxAnimationStates, setBoxAnimationStates] = useState(['', '', '']);
 
-    
     const changeBoxAnimationStates = (index, value) => {
         setBoxAnimationStates(prevState => {
             const newAnimationStates = [...prevState];
@@ -24,7 +22,29 @@ function Settings({close, setSlideTransition, setCircleTransition}) {
         const newAnimationStates = boxAnimationStates.map(() => 'hidden');
         setBoxAnimationStates(newAnimationStates);
     }
-    const animateContentBoxes = () => {
+    const animateContentBoxesLow = () => {
+        for (let i = 0; i <3; i++) {
+            setTimeout(() => {
+                changeBoxAnimationStates(i, 'fade-in'); // Adjust animation class if needed
+                setTimeout(() => {
+                    changeBoxAnimationStates(i, '');
+                }, 1200); // Adjust animation duration if needed
+            }, i * 200); // Stagger animations by 200ms
+        }
+    };
+
+    const animateContentBoxesNormal = () => {
+        for (let i = 0; i <3; i++) {
+            setTimeout(() => {
+                changeBoxAnimationStates(i, 'scale-in'); 
+                setTimeout(() => {
+                    changeBoxAnimationStates(i, ''); 
+                }, 52000); 
+            }, i * 250); 
+        }
+    };
+
+    const animateContentBoxesExtreme = () => {
         
         for (let i = 0; i <3; i++) {
           setTimeout(() => {
@@ -37,43 +57,58 @@ function Settings({close, setSlideTransition, setCircleTransition}) {
     };
     const changeDarkMode = (value) => { 
         if(animation === 'Extreme'){
-            setSlideTransition(true);
-
+            toggleSlideTransition()
             setTimeout(() => {
-                setDarkMode(value);
-                hideContentBoxes();
+                setDarkMode(value)
+                hideContentBoxes()
             },500);
             setTimeout(() => {
-                setSlideTransition(false);
-                animateContentBoxes();
+                animateContentBoxesExtreme()
             }, 1000);
             
         }
         else if(animation === 'Normal'){
-            setCircleTransition(true);
+            toggleCircleTransition()            
             setTimeout(() => {
-                setCircleTransition(false);
-            }, 2000);
-            setTimeout(() => {
-                setDarkMode(value);
-            }, 850);
+                setDarkMode(value)
+            }, 650);
         }
         else{
-            setDarkMode(value);
+            setDarkMode(value)
         }
     }
     useEffect(() => {
-
+        hideContentBoxes()
+        if(animation === 'Low'){
+            animateContentBoxesLow();
+        }
+        else if(animation === 'Normal'){
+            animateContentBoxesNormal()
+        }
+        else if(animation === 'Extreme'){
+            animateContentBoxesExtreme()
+        }
     },[])
     
 
     return(
         <div className={`${darkMode ? 'bg-dark' : 'bg-light'} p-10 box-border w-screen h-screen fixed top-0 left-0 z-30`}>
-            <div className={`relative -translate-x-1/2 left-1/2 ${darkMode ? 'card-dark' : 'card-light'} w-2/3 rounded-xl m-10 p-6 ${boxAnimationStates[0]}` }>
-                <div className={`${darkMode ? 'text-blue-200' : 'text-white'} text-3xl`}>Dark Theme?</div>
-                <DarkThemeSwitch value={darkMode} change={changeDarkMode}/>
+            <div className='flex flex-row relative left-1/2 -translate-x-1/2 w-2/3 my-10'>
+                <div className='w-1/2'> 
+                <div className={`relative left-1/2 -translate-x-1/2 w-2/3 ${darkMode ? 'card-dark' : 'card-light'} rounded-xl p-6 ${boxAnimationStates[0]}` }>
+                    <div className={`text-3xl`}>Dark Theme?</div>
+                    <DarkThemeSwitch value={darkMode} change={changeDarkMode}/>
+                </div> 
+                </div>
+                <div className='w-1/2'>
+                <div className={`relative left-1/2 -translate-x-1/2 w-2/3 ${darkMode ? 'card-dark' : 'card-light'} rounded-xl p-6 text-center ${boxAnimationStates[2]}`}>
+                    <button onClick={close} className={`${darkMode ? 'btn-primary-dark' : 'btn-primary-light'}`}> Close </button>
+                </div>
+                </div>
+                
+                
             </div>
-            <div className={`relative -translate-x-1/2 left-1/2 ${darkMode ? 'card-dark' : 'card-light'} text-white rounded-xl m-10 p-6 w-2/3 text-center ${boxAnimationStates[1]}`}>
+            <div className={`relative -translate-x-1/2 left-1/2 ${darkMode ? 'card-dark' : 'card-light'} rounded-xl my-10 p-6 w-2/3 text-center ${boxAnimationStates[1]}`}>
                 <div className='text-3xl mb-10'>Animation Level:</div>
                 <div> {animation}</div>
                 <div className={`relative -translate-x-1/2 left-1/2 w-fit p-5 ${darkMode ? 'bg-white' : 'bg-gray-50'}`}> <AnimationToggle value={animation} change={setAnimation}/> </div>
@@ -94,13 +129,10 @@ function Settings({close, setSlideTransition, setCircleTransition}) {
                 <div> I'm a boomer </div>
                 
             </div>
-            <div className={`relative -translate-x-1/2 left-1/2  ${darkMode ? 'card-dark' : 'card-light'} rounded-xl m-10 p-6 w-2/3 text-center ${boxAnimationStates[2]}`}>
-                <CoolButton darkMode={darkMode} click={close}/>
-            </div>
+            
 
         </div>
     )
 }
 
 export default Settings;
-

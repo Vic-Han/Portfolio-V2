@@ -1,0 +1,8 @@
+.bg-light {
+    background: linear-gradient(130deg, #f2f2f2 0%, #c9c9c9 50%, #f2f2f2 100%);
+    min-height: 100vh;
+}
+.bg-dark {
+    background: linear-gradient(135deg, #141414 0%, #252525 50%, #141414 100%);
+    min-height: 100vh;
+}

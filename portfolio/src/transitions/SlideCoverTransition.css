@@ -1,0 +1,26 @@
+
+@keyframes slide-in-out-vertical {
+    0% {
+      transform: translateY(-100%);
+    }
+    49% {
+      transform: translateY(0);
+    }
+    51%{
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }
+  
+.animate-slide-in-out-vertical {
+    animation: slide-in-out-vertical 1.0s ease-in-out;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vw;
+    z-index: 100;
+}

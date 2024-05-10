@@ -1,8 +1,8 @@
 import React from "react";
 import { useContext } from "react";
-import { SettingsContext } from "../context/SettingsContext";
+import { GlobalContext } from "../context/GlobalContext";
 function Resume() {
-    const settingsStates = useContext(SettingsContext);
+    const settingsStates = useContext(GlobalContext);
     const { darkMode, animation } = settingsStates;
     
         return (

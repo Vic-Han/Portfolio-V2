@@ -1,0 +1,41 @@
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+}
+  
+.navbar.dark {
+    background: linear-gradient(135deg, #f2f2f2 0%, #c9c9c9 50%, #f2f2f2 100%);
+}
+  
+.navbar.light {
+    background: linear-gradient(145deg, #141414 0%, #252525 50%, #141414 100%);
+}
+  
+.navbar-btn{
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.navbar-btn.light {
+    background: rgba(255, 255, 255, 0);
+    color: #fff;
+    transition: background 0.3s ease;
+}
+  
+.navbar-btn.light:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+  
+.navbar-btn.dark{
+    background: rgba(0, 0, 0, 0);
+    color: #000;
+    transition: background 0.3s ease;
+}
+  
+.navbar-btn.dark:hover {
+    background: rgba(0, 0, 0, 0.2);
+}

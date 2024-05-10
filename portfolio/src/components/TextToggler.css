@@ -1,0 +1,103 @@
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-150%);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutLeft {
+    0%{
+        transform: translateX(-50%);
+        opacity: 1;
+    
+    }
+    100%{
+        transform: translateX(-150%);
+        opacity: 0.5;
+    }
+    
+}
+@keyframes slideOutRight {
+    0%{
+        transform: translateX(-50%);
+        opacity: 1;
+    
+    }
+    100%{
+        transform: translateX(100%);
+        opacity: 0.5;
+    }
+}
+
+.slideInLeft{
+    animation: slideInLeft 0.5s ease-in-out;
+}
+.slideInRight{
+    animation: slideInRight 0.5s ease-in-out;
+}
+.slideOutLeft{
+    animation: slideOutLeft 0.5s ease-in-out;
+}
+.slideOutRight{
+    animation: slideOutRight 0.5s ease-in-out;
+}
+
+.text-toggler .slide-normal {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%);
+    /* Animation for normal speed */
+    animation: slide-normal 0.8s ease-in-out forwards;
+  }
+  
+  .text-toggler .slide-normal::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    /* Animation for normal speed (reversed) */
+    animation: slide-normal-reverse 0.8s ease-in-out forwards;
+  }
+  
+  /* Keyframes for the animation */
+  @keyframes slide-normal {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  @keyframes slide-normal-reverse {
+    0% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  .something{
+    
+        font-size: 30px;
+        background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0.5), rgba(0,0,0,0));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+  }

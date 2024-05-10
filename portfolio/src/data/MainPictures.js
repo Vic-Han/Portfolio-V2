@@ -3,9 +3,10 @@ import Personal2 from '../assets/personal2.jpg'
 import Personal3 from '../assets/personal1.jpg'
 
 
-const picturePaths = [
+const mainPictures = [
     Personal1,
     Personal2,
+    Personal3
 ]
 
-export default picturePaths 
+export default mainPictures 

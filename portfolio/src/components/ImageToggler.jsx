@@ -1,12 +1,12 @@
 import React,{useState, useEffect} from "react";
-import picturePaths from "../data/Pictures";
-
+import mainPictures from "../data/MainPictures";
+import './ImageToggler.css';
 function ImageToggler({animation}){
 
-    const length = picturePaths.length;
+    const length = mainPictures.length;
 
     const [index, setIndex] = useState(0);
-    console.log(picturePaths[index])
+    console.log(mainPictures[index])
     const [imageState, setImageState] = useState('');
     const basicTransition = () => { 
         setImageState('slide-out-img');
@@ -35,12 +35,12 @@ function ImageToggler({animation}){
     }
     useEffect(() => {
         setInterval(() => {
-          //transition()
+          transition()
         }, 8000);
       },[])
     return (
-        <div className="py-5 overflow-hidden w-full">
-            <img className={`base-img ${imageState}`} src = {picturePaths[index]} alt = "PersonalPhoto"/>
+        <div className="py-5 overflow-x-hidden w-full pr-3 pl-1">
+            <img className={`base-img ${imageState}`} src = {mainPictures[index]} alt = "PersonalPhoto"/>
         </div>
     )
 }

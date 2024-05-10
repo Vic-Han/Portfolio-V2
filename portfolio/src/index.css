@@ -2,11 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('animations/settings.css');
-@import url('animations/checkboxInput.css');
-@import url('animations/imagetoggler.css');
 
-@import url('backgrounds/gradient.css');
+@import url('styles/buttons.css');
+@import url('styles/backgrounds.css');
+@import url('styles/cards.css');
+@import url('styles/animations.css');
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

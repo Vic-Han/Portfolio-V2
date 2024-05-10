@@ -2,8 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import Cookies from 'js-cookie';
 
 import Portfolio from './Portfolio';
-import { SettingsProvider } from './context/SettingsContext';
-
+import { GlobalProvider } from './context/GlobalContext'
 function App() {
   useEffect(() => { 
     const darkTheme = Cookies.get('darkMode');
@@ -18,9 +17,9 @@ function App() {
   
   return (
     <div className='w-screen h-screen overflow-x-hidden'>
-    <SettingsProvider>
+    <GlobalProvider>
       <Portfolio/>
-    </SettingsProvider>
+    </GlobalProvider>
     </div>  
   );
 }
