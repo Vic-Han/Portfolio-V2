@@ -5,56 +5,20 @@ import AnimationToggle from '../components/AnimationToggle';
 import ReadOnlyStars from '../components/ReadOnlyStars';
 import { useContext } from 'react';
 import {GlobalContext} from '../context/GlobalContext';
-
+import { animateContentBoxes } from '../transitions/AnimationHelper';
 function Settings({close}) {
     const settingsStates = useContext(GlobalContext);
     const {darkMode, setDarkMode, animation, setAnimation, toggleSlideTransition, toggleCircleTransition} = settingsStates;
     const [boxAnimationStates, setBoxAnimationStates] = useState(['', '', '']);
 
-    const changeBoxAnimationStates = (index, value) => {
-        setBoxAnimationStates(prevState => {
-            const newAnimationStates = [...prevState];
-            newAnimationStates[index] = value;
-            return newAnimationStates;
-        });
-    }
     const hideContentBoxes = () => {    
         const newAnimationStates = boxAnimationStates.map(() => 'hidden');
         setBoxAnimationStates(newAnimationStates);
     }
-    const animateContentBoxesLow = () => {
-        for (let i = 0; i <3; i++) {
-            setTimeout(() => {
-                changeBoxAnimationStates(i, 'fade-in'); // Adjust animation class if needed
-                setTimeout(() => {
-                    changeBoxAnimationStates(i, '');
-                }, 1200); // Adjust animation duration if needed
-            }, i * 200); // Stagger animations by 200ms
-        }
-    };
 
-    const animateContentBoxesNormal = () => {
-        for (let i = 0; i <3; i++) {
-            setTimeout(() => {
-                changeBoxAnimationStates(i, 'scale-in'); 
-                setTimeout(() => {
-                    changeBoxAnimationStates(i, ''); 
-                }, 52000); 
-            }, i * 250); 
-        }
-    };
-
-    const animateContentBoxesExtreme = () => {
-        
-        for (let i = 0; i <3; i++) {
-          setTimeout(() => {
-            changeBoxAnimationStates(i, 'slam');
-            setTimeout(() => {
-              changeBoxAnimationStates(i, '');
-            }, 200);
-          }, i * 300); // Stagger animations by 200ms
-        }
-    };
+    const animateContentBoxesLow = animateContentBoxes('fade-in', 200);
+    const animateContentBoxesNormal = animateContentBoxes('scale-in', 250);
+    const animateContentBoxesExtreme = animateContentBoxes('slam', 300);
     const changeDarkMode = (value) => { 
         if(animation === 'Extreme'){
             toggleSlideTransition()
@@ -78,17 +42,15 @@ function Settings({close}) {
         }
     }
     useEffect(() => {
-        hideContentBoxes()
-        if(animation === 'Low'){
-            animateContentBoxesLow();
+        hideContentBoxes();
+        if (animation === 'Low') {
+          animateContentBoxesLow(boxAnimationStates, setBoxAnimationStates);
+        } else if (animation === 'Normal') {
+          animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates);
+        } else if (animation === 'Extreme') {
+          animateContentBoxesExtreme(boxAnimationStates, setBoxAnimationStates);
         }
-        else if(animation === 'Normal'){
-            animateContentBoxesNormal()
-        }
-        else if(animation === 'Extreme'){
-            animateContentBoxesExtreme()
-        }
-    },[])
+      }, []);
     
 
     return(

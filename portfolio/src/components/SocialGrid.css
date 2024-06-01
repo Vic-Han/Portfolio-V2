@@ -1,8 +1,10 @@
+
+
 .social-container{
     background: linear-gradient(140deg , #f2f2f2 0%, #e9e9e9 50%, #f2f2f2 100%);
     transition: all 0.7s ease;
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1/2;
     border-radius: 7%;
     position: relative;
     left: 50%;
@@ -10,50 +12,83 @@
     overflow-x: hidden;
 }
 
-.social-container:hover{
-    background-color: linear-gradient(140deg , #ffffff 0%, #f2f2f2 50%, #ffffff 100%); 
+.social-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.5s ease;
 }
+
+.social-container:hover .social-text{
+    top: 10%;
+}
+
 
 .social-box{
     position:absolute;
     left:0;
-    top:100%;
-    transform: translateY(-100%);
-    aspect-ratio: 1/1;
-    border-top-right-radius: 50%;
+    bottom:0;
+    width: 100%;
+    height: 0;
+    transition: all 0.9s ease;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    overflow: hidden; /* add this */
+}
+
+.social-box span{
+    opacity: 0; /* add this */
+    transition: opacity 0.3s ease; /* add this */
+}
+
+.social-container:hover .social-box span{
+    opacity: 1; /* add this */
+}
+
+
+.social-box i{
+    margin-right: 10px;
 }
 
 .linkedin-box{
-    background: linear-gradient(175deg, #374967 0%, #5670c0 50%, #374967 100%);
-    width: 0%;
-    opacity: 0.0;
+    background: #0077B5;
     z-index: 10;
-    transition: all 0.9s ease;
-}
-.git-box{
-    background: linear-gradient(145deg, #222d45 0%, #334085 50%, #222d45 100%);
-    width: 0%;
-    opacity: 0.0;
-    z-index: 11;
-    transition: all 1.0s ease;
-}
-.insta-box{
-    background: linear-gradient(125deg, #13182a 0%, #263970 50%, #13182a 100%);
-    width: 0px;
-    opacity: 0.0;
-    z-index: 12;
-    transition: all 1.1s ease;
+    transition-delay: 0s;
 }
 
+.git-box{
+    background: #6CC644;
+    z-index: 11;
+    transition-delay: 0.2s;
+}
+
+.insta-box{
+    background: #E1306C;
+    z-index: 12;
+    transition-delay: 0.4s;
+}
+.social-container:not(:hover) .linkedin-box{
+    transition-delay: 0.4s;
+}
+
+.social-container:not(:hover) .git-box{
+    transition-delay: 0.2s; 
+}
+
+.social-container:not(:hover) .insta-box{
+    transition-delay: 0s; 
+}
 .social-container:hover .linkedin-box{
-    width: 80%;
-    opacity: 0.9;
+    height: 75%;
 }
+
 .social-container:hover .git-box{
-    width: 60%;
-    opacity: 0.7;
+    height: 50%;
 }
+
 .social-container:hover .insta-box{
-    width: 40%;
-    opacity: 0.5;
+    height: 25%;
 }

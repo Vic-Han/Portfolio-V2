@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useContext } from 'react';
-import './style.css';
 
 import Settings from './views/Settings';  
 import Mainpage from './views/Mainpage';
@@ -12,14 +11,20 @@ import FadeCircleTransition from './transitions/FadeCircleTransition';
 import SlideCoverTransition from './transitions/SlideCoverTransition';
 import { GlobalContext } from './context/GlobalContext';
 
+
+// Portfolio component
+// This component handles the main logic for the portfolio, including switching between screens and playing transitions.
 function Portfolio() {
   
+  // Initialize state and context
   const GlobalStates = useContext(GlobalContext);
   const { darkMode, animation, circleTransition, slideTransition, toggleCircleTransition,  toggleSlideTransition} = GlobalStates;
   const [screen, setScreen] = useState(null);
-
-
   const [settings, setSettings] = useState(false);
+
+  // Function to toggle between screens with transitions
+  // This function handles the logic for switching between different screens in the portfolio,
+  // including playing transitions based on the current animation level.
   const toggleScreen = (page) => {    
     if (page === 'settings') {      
       toggleSettings();      
@@ -47,9 +52,13 @@ function Portfolio() {
       }, 1000);    
     }  
   };
+
+  // This function simply toggles the settings state on and off.
   function toggleSettings(){
     setSettings(!settings);
   }
+
+  // Initialize screen to main page on mount
   useEffect(() => { 
     toggleScreen('mainpage');    
   }, []); 
@@ -64,9 +73,9 @@ function Portfolio() {
       {screen === 'mainpage' && <Mainpage/>}
       {screen === 'projects' && <Projects />}
       {screen === 'resume' && <Resume />}
-      {screen === 'contact' && <About/>}
+      {screen === 'about' && <About/>}
     </div>  
   );
 }
-  
-export default Portfolio; 
+
+export default Portfolio;

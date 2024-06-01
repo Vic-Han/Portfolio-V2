@@ -1,10 +1,13 @@
-// BasicTransition.js
 import React from 'react';
 import './SlideCoverTransition.css';
-function SlideCoverTransition() {
+
+// Fade circle transition component
+// This component plays a fade circle animation when rendered.
+// It's used to create a smooth transition between screens.
+function FadeCircleTransition() {
   return (
-    <div className= 'animate-slide-in-out-vertical'></div>
+    <div className='animate-close' ></div>
   );
 }
 
-export default SlideCoverTransition;
+export default FadeCircleTransition;

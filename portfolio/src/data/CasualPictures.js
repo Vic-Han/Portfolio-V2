@@ -3,10 +3,13 @@ import Personal2 from '../assets/personal2.jpg'
 import Personal3 from '../assets/personal3.jpg'
 
 
-const mainPictures = [
+const casualPictures = [
     Personal1,
     Personal2,
-    Personal3
+    Personal3,
+    Personal1,
+    Personal2,
+    Personal3,
 ]
 
-export default mainPictures 
+export default casualPictures 
