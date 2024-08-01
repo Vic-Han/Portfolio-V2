@@ -14,7 +14,7 @@ function Mainpage() {
   // Content box animation
   // These functions animate the content boxes with different effects based on the animation prop.
   const hideContentBoxes = () => {    
-    const newAnimationStates = boxAnimationStates.map(() => 'hidden');
+    const newAnimationStates = boxAnimationStates.map(() => 'opacity-0');
     setBoxAnimationStates(newAnimationStates);
   }
 
@@ -60,23 +60,25 @@ function Mainpage() {
         </div>
 
         {/* Second content box */}
-        <div className={`w-11/12 relative left-1/2 -translate-x-1/2 m-10 flex flex-col overflow-auto ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[1]}`}>
+        <div className={`w-11/12 relative left-1/2 -translate-x-1/2 m-10 flex flex-col overflow-auto p-5 ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[1]}`}>
           {/* Text content */}
-          <div className={`flex flex-col items-center m-5 `}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-            In sodales elit vel risus aliquet, quis commodo ipsum pulvinar. 
-            Nulla et augue sit amet est efficitur scelerisque. 
-            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. 
+          <div className={`flex flex-col items-center m-5 text-3xl leading-loose`}>
+            I'm a web developer currently training AI to write code at DataAnnotation. 
+            I recently graduated from the University of Calgary with a degree in Computer Science.
+
+            I'm driven by my curiosity and love for taking on difficult challenges.
           </div>
         </div>
       </div>
 
       {/* Third content box */}
-      <div className={`md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 flex flex-col m-10 ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[2]}`}>
-        {/* Social grid */}
-        <div className={`w-11/12 relative left-1/2 -translate-x-1/2 h-full grid items-center m-5 p-6`}>
-          Connect with me!
-          <SocialGrid />
+      <div className={`md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 flex justify-center m-10`}>
+        <div className={`w-full relative left-1/2 -translate-x-1/2 flex flex-col ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[2]}`}>
+          {/* Social grid */}
+          <div className={`w-5/6 relative left-1/2 -translate-x-1/2 h-full grid items-center`}>
+            Connect with me!
+            <SocialGrid />
+          </div>
         </div>
       </div>
     </div>

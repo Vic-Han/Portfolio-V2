@@ -123,3 +123,35 @@
                 0 0 30px rgba(0, 150, 150, 0.5);
   }
 }
+
+@keyframes animate-footer {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-footer {
+  animation: animate-footer 2s forwards;
+}
+
+.flip {
+  animation: flip 1s;
+  animation-fill-mode: forwards;
+  transform-style: preserve-3d;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0);
+  }
+}
+.before-flip{
+
+  transform: rotateY(90deg);
+}

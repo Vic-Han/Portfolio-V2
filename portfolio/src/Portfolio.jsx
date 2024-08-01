@@ -6,6 +6,7 @@ import Projects from './views/Projects';
 import Resume from './views/Resume';
 import About from './views/About';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 import FadeCircleTransition from './transitions/FadeCircleTransition';
 import SlideCoverTransition from './transitions/SlideCoverTransition';
@@ -74,6 +75,7 @@ function Portfolio() {
       {screen === 'projects' && <Projects />}
       {screen === 'resume' && <Resume />}
       {screen === 'about' && <About/>}
+      <Footer/>
     </div>  
   );
 }

@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 import projects from "../data/Projects";
 import ProjectCard from "../components/ProjectCard";
@@ -10,40 +9,44 @@ function Projects() {
     const { darkMode, animation } = settingsStates;
     const [boxAnimationStates, setBoxAnimationStates] = useState(new Array(projects.length).fill(''));
 
-    useEffect(() => {
-        let animationClass = '';
-        let stagger = 0;
 
+    const hideContentBoxes = () => {
+        const newAnimationStates = boxAnimationStates.map(() => 'opacity-0');
+        setBoxAnimationStates(newAnimationStates);
+    }
+
+
+    const animateContentBoxesLow = animateContentBoxes('fade-in-top', 200);
+    const animateContentBoxesNormal = animateContentBoxes('scale-in', 150);
+    const animateContentBoxesExtreme = animateContentBoxes('slam', 150);
+    useEffect(() => {
+        hideContentBoxes();
         switch (animation) {
             case 'Low':
-                animationClass = 'fade-in';
-                stagger = 200;
-                break;
+                animateContentBoxesLow(boxAnimationStates, setBoxAnimationStates);
+                break
             case 'Normal':
-                animationClass = 'scale-in';
-                stagger = 150;
-                break;
+                animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates);
+                break
             case 'Extreme':
-                animationClass = 'slam';
-                stagger = 100;
-                break;
-            default:
-                animationClass = 'fade-in';
-                stagger = 200;
+                animateContentBoxesExtreme(boxAnimationStates, setBoxAnimationStates);
+                break
+            
         }
 
-        animateContentBoxes(animationClass, stagger)(boxAnimationStates, setBoxAnimationStates);
     }, [animation]);
 
     return (
         <div>
-            <h1 className={`${darkMode ? 'text-white' : 'text-black'} text-4xl font-bold mb-10`}>Check out my Projects</h1>
-            <div className="flex flex-row flex-wrap-reverse"> 
+            <h1 className={`${darkMode ? 'text-white' : 'text-black'} text-4xl font-bold mb-10 text-center relative -translate-x-1/2 left-1/2`}>Check out my Projects</h1>
+            <div className="flex flex-row flex-wrap w-4/5 relative -translate-x-1/2 left-1/2"> 
                 {projects.map((project, index) => (
-                    <div key={index} className={boxAnimationStates[index]}>
-                        <ProjectCard
-                            project={project}
-                        />
+                    <div key={index} className="p-2 m-4">
+                        <div className={`${boxAnimationStates[index]} relative left-1/2 -translate-x-1/2`}>
+                            <ProjectCard
+                                project={project}
+                            />
+                        </div>
                     </div>
                 ))}
             </div>

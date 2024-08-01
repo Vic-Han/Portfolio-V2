@@ -28,6 +28,3 @@ const DarkThemeSwitch = ({ value, change }) => {
 };
 
 export default DarkThemeSwitch;
- // <div className="w-32 h-10 rounded-xl border border-b" onClick={handleClick}>
-        //     <div className={`rounded-xl relative h-full text-center text-lg leading-relaxed ${styles}`}>{buttonText}</div>
-        // </div>

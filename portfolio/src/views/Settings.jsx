@@ -27,7 +27,7 @@ function Settings({close}) {
                 hideContentBoxes()
             },500);
             setTimeout(() => {
-                animateContentBoxesExtreme()
+                animateContentBoxesExtreme(boxAnimationStates, setBoxAnimationStates);
             }, 1000);
             
         }
@@ -78,17 +78,17 @@ function Settings({close}) {
                     <div> Extreme: </div> 
                     <ReadOnlyStars value={3}/>
                 </div>
-                <div> Unecessary, I know </div>
+                <div> Completely unecessary </div>
                 <div className='flex flex-row'>
                     <div> Normal: </div> 
                     <ReadOnlyStars value={2}/>
                 </div>
-                <div> Just right </div>
+                <div> Flashy </div>
                 <div className='flex flex-row'>
                     <div> Low: </div> 
                     <ReadOnlyStars value={1}/>
                 </div>
-                <div> I'm a boomer </div>
+                <div> Recommended </div>
                 
             </div>
             

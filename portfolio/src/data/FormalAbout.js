@@ -15,9 +15,9 @@ const formalAbout = [
     `
        Right now I mostly do web stuff outside my job. 
        I have a lot of experience with the full stack, including React, Vue, Express, Django, SQL, and a lot more.
-       I am also dabbling in some Swift and ios development. 
-       Soon I will use my expertise to make the next billion dollar app ...maybe.
+       I am trying to get into data engineering and machine learning too, as I find the architectural challenges fascinating.
     `    
 ]
+
 
 export default formalAbout

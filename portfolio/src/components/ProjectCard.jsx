@@ -3,9 +3,7 @@ import React from 'react';
 
 const ProjectCard = ({ project }) => {
   return (
-    <div
-      className="relative overflow-hidden transition duration-500 ease-in-out transform hover:scale-105 w-64 h-80 group rounded-lg"
-    >
+    <div className="relative overflow-hidden transition duration-500 ease-in-out transform hover:scale-105 md:w-64 md:h-80 group rounded-lg">
       <img
         src={project.image}
         alt={project.name}
