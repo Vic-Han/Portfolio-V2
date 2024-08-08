@@ -61,7 +61,7 @@ function Portfolio() {
 
   // Initialize screen to main page on mount
   useEffect(() => { 
-    toggleScreen('mainpage');    
+    setScreen('mainpage');    
   }, []); 
   
   return (
