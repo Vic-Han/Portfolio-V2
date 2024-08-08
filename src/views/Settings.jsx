@@ -9,7 +9,7 @@ import { animateContentBoxes } from '../transitions/AnimationHelper';
 function Settings({close}) {
     const settingsStates = useContext(GlobalContext);
     const {darkMode, setDarkMode, animation, setAnimation, toggleSlideTransition, toggleCircleTransition} = settingsStates;
-    const [boxAnimationStates, setBoxAnimationStates] = useState(['', '', '']);
+    const [boxAnimationStates, setBoxAnimationStates] = useState(['']);
 
     const hideContentBoxes = () => {    
         const newAnimationStates = boxAnimationStates.map(() => 'hidden');
@@ -55,22 +55,23 @@ function Settings({close}) {
 
     return(
         <div className={`${darkMode ? 'bg-dark' : 'bg-light'} p-10 box-border w-screen h-screen fixed top-0 left-0 z-30`}>
+          
+            <div className={`relative -translate-x-1/2 left-1/2 ${darkMode ? 'card-dark' : 'card-light'} rounded-xl my-10 p-6 w-2/3 text-center ${boxAnimationStates[0]}`}>
             <div className='flex flex-row relative left-1/2 -translate-x-1/2 w-2/3 my-10'>
                 <div className='w-1/2'> 
-                <div className={`relative left-1/2 -translate-x-1/2 w-2/3 ${darkMode ? 'card-dark' : 'card-light'} rounded-xl p-6 ${boxAnimationStates[0]}` }>
+                <div className={`relative left-1/2 -translate-x-1/2 w-2/3  rounded-xl p-6` }>
                     <div className={`text-3xl`}>Dark Theme?</div>
                     <DarkThemeSwitch value={darkMode} change={changeDarkMode}/>
                 </div> 
                 </div>
                 <div className='w-1/2'>
-                <div className={`relative left-1/2 -translate-x-1/2 w-2/3 ${darkMode ? 'card-dark' : 'card-light'} rounded-xl p-6 text-center ${boxAnimationStates[2]}`}>
+                <div className={`relative left-1/2 -translate-x-1/2 w-2/3 rounded-xl p-6 text-center`}>
                     <button onClick={close} className={`${darkMode ? 'btn-primary-dark' : 'btn-primary-light'}`}> Close </button>
                 </div>
                 </div>
                 
                 
             </div>
-            <div className={`relative -translate-x-1/2 left-1/2 ${darkMode ? 'card-dark' : 'card-light'} rounded-xl my-10 p-6 w-2/3 text-center ${boxAnimationStates[1]}`}>
                 <div className='text-3xl mb-10'>Animation Level:</div>
                 <div> {animation}</div>
                 <div className={`relative -translate-x-1/2 left-1/2 w-fit p-5 ${darkMode ? 'bg-white' : 'bg-gray-50'}`}> <AnimationToggle value={animation} change={setAnimation}/> </div>

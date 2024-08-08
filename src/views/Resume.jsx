@@ -584,419 +584,8 @@
 
 // export default Resume;
 
-// import React, { useState, useEffect, useContext } from "react";
-// import { GlobalContext } from "../context/GlobalContext";
-// import { animateContentBoxes } from '../transitions/AnimationHelper';
 
-// function Resume() {
-//   // Get the global context states
-//   const settingsStates = useContext(GlobalContext);
-//   const { darkMode, animation } = settingsStates;
 
-//   // Define the categories and items to be displayed
-//   const sections = {
-//     "Resume": ["Download my resume"],
-//     "Experience & Education": ["Work Experience", "Education"],
-//   };
-
-//   const skills = {
-//     "Front end": ["React", "Vue", "Angular"],
-//     "Back end": ["Node", "Express", "Django"],
-//     "Database": ["MongoDB", "PostgreSQL", "MySQL"],
-//     "Languages": ["JavaScript", "Python", "Java"],
-//     "Tools": ["Git", "Docker", "Jenkins"],
-//     "Cloud": ["AWS", "Azure", "Google Cloud"],
-//   };
-
-//   // Define work experience and education
-//   const workExperience = [
-//     {
-//       title: "Software Engineer",
-//       company: "ABC Corporation",
-//       timeline: "2020-2022",
-//       accomplishments: [
-//         "Developed and maintained multiple web applications",
-//         "Collaborated with cross-functional teams to deliver projects",
-//         "Improved code quality and reduced bugs by 30%",
-//       ],
-//     },
-//     {
-//       title: "Junior Developer",
-//       company: "DEF Startups",
-//       timeline: "2018-2020",
-//       accomplishments: [
-//         "Contributed to the development of a mobile app",
-//         "Participated in code reviews and ensured best practices",
-//         "Worked with the QA team to identify and fix issues",
-//       ],
-//     },
-//   ];
-
-//   const education = [
-//     {
-//       qualification: "Bachelor of Science in Computer Science",
-//       date: "2015-2019",
-//     },
-//     {
-//       qualification: "Certified Scrum Master",
-//       date: "2020",
-//     },
-//   ];
-
-//   // Initialize state variables for category list, item list, box animation states, and item animation states
-//   const categories = Object.keys(skills);
-//   const sectionList = Object.keys(sections);
-//   const [categoryList, setCategoryList] = useState(categories);
-//   const [itemList, setItemList] = useState(
-//     categories.map(category => skills[category])
-//   );
-//   const [boxAnimationStates, setBoxAnimationStates] = useState(
-//     categories.map(() => "")
-//   );
-//   const [itemAnimationStates, setItemAnimationStates] = useState(
-//     categories.map(category => skills[category].map(() => ""))
-//   );
-//   const [sectionAnimationStates, setSectionAnimationStates] = useState(
-//     sectionList.map(() => "")
-//   );
-
-//   // Hide all content boxes
-//   const hideContentBoxes = () => {    
-//     const newAnimationStates = boxAnimationStates.map(() => 'hidden');
-//     setBoxAnimationStates(newAnimationStates);
-//     const newItemAnimationStates = itemAnimationStates.map(category => category.map(() => 'hidden'));
-//     setItemAnimationStates(newItemAnimationStates);
-//     const newSectionAnimationStates = sectionAnimationStates.map(() => 'hidden');
-//     setSectionAnimationStates(newSectionAnimationStates);
-//   }
-
-//   // Define animation functions with different animation classes and durations
-//   const animateContentBoxesLow = animateContentBoxes('fade-in', 200);
-//   const animateContentBoxesNormal = animateContentBoxes('slide-in', 250);
-//   const animateContentBoxesExtreme = animateContentBoxes('bounce-in', 300);
-
-//   useEffect(() => {
-//     hideContentBoxes();
-//     setTimeout(() => {
-//       if (animation === 'Low') {
-//         animateContentBoxesLow(sectionAnimationStates, setSectionAnimationStates);
-//         animateContentBoxesLow(boxAnimationStates, setBoxAnimationStates);
-//       } else if (animation === 'Normal') {
-//         animateContentBoxesNormal(sectionAnimationStates, setSectionAnimationStates);
-//         animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates);
-//       } else if (animation === 'Extreme') {
-//         animateContentBoxesExtreme(sectionAnimationStates, setSectionAnimationStates);
-//         animateContentBoxesExtreme(boxAnimationStates, setBoxAnimationStates);
-//       }
-//     }, 200);
-//   }, []);
-
-//   return (
-//     <div className="flex flex-wrap justify-center w-full">
-//       {sectionList.map((section, index) => (
-//         <div key={index} className="w-full md:w-3/4 lg:w-2/3 px-4 mb-8">
-//           <div
-//             className={`
-//               relative left-1/2 -translate-x-1/2 p-4 
-//               ${darkMode ? 'card-dark' : 'card-light'} 
-//               ${sectionAnimationStates[index]}
-//             `}
-//           >
-//             <h2 className="text-xl font-bold mb-2">{section}</h2>
-//             {section === "Resume" && (
-//               <div className="flex flex-wrap justify-center mb-4">
-//                 <p className="text-lg">Download my resume:</p>
-//                 <a
-//                   href="resume.pdf"
-//                   download
-//                   className="ml-2 md:ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-//                 >
-//                   Download
-//                 </a>
-//               </div>
-//             )}
-//             {section === "Experience & Education" && (
-//               <div>
-//                 <h2 className="text-xl font-bold mb-2">Work Experience:</h2>
-//                 {workExperience.map((experience, experienceIndex) => (
-//                   <div key={experienceIndex} className="mb-4">
-//                     <h3 className="text-lg font-bold">{experience.title}</h3>
-//                     <p className="text-lg">{experience.company}</p>
-//                     <p className="text-lg">{experience.timeline}</p>
-//                     <ul>
-//                       {experience.accomplishments.map((accomplishment, accomplishmentIndex) => (
-//                         <li key={accomplishmentIndex}>{accomplishment}</li>
-//                       ))}
-//                     </ul>
-//                   </div>
-//                 ))}
-//                 <h2 className="text-xl font-bold mb-2">Education:</h2>
-//                 {education.map((qualification, qualificationIndex) => (
-//                   <div key={qualificationIndex} className="mb-4">
-//                     <h3 className="text-lg font-bold">{qualification.qualification}</h3>
-//                     <p className="text-lg">{qualification.date}</p>
-//                   </div>
-//                 ))}
-//               </div>
-//             )}
-//           </div>
-//         </div>
-//       ))}
-//       <div className="w-full flex flex-wrap justify-center">
-//         {categoryList.map((category, index) => (
-//           <div key={index} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-//             <div
-//               className={`
-//                 relative left-1/2 -translate-x-1/2 p-4 
-//                 ${darkMode ? 'card-dark' : 'card-light'} 
-//                 ${boxAnimationStates[index]}
-//               `}
-//             >
-//               <h2 className="text-xl font-bold mb-2">{category}</h2>
-//               <div className="flex flex-wrap justify-center"> 
-//                 {itemList[index].map((item, itemIndex) => (
-//                   <div key={itemIndex} className="w-fit mx-1">
-//                     <div
-//                       className={`
-//                         relative left-1/2 -translate-x-1/2 
-//                         inline-block 
-//                         px-2 py-1 mb-2 mx-1
-//                         ${itemAnimationStates[index][itemIndex]} 
-//                         bg-slate-500 
-//                         text-white 
-//                       `}
-//                     >
-//                       <p>{item}</p>
-//                     </div>
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Resume;
-// import React, { useState, useEffect, useContext } from "react";
-// import { GlobalContext } from "../context/GlobalContext";
-// import { animateContentBoxes } from '../transitions/AnimationHelper';
-
-// function Resume() {
-//   // Get the global context states
-//   const settingsStates = useContext(GlobalContext);
-//   const { darkMode, animation } = settingsStates;
-
-//   // Define the categories and items to be displayed
-//   const sections = {
-//     "Resume": ["Download my resume"],
-//     "Experience & Education": ["Work Experience", "Education"],
-//   };
-
-//   const skills = {
-//     "Front end": ["React", "Vue", "Angular"],
-//     "Back end": ["Node", "Express", "Django"],
-//     "Database": ["MongoDB", "PostgreSQL", "MySQL"],
-//     "Languages": ["JavaScript", "Python", "Java"],
-//     "Tools": ["Git", "Docker", "Jenkins"],
-//     "Cloud": ["AWS", "Azure", "Google Cloud"],
-//   };
-
-//   // Define work experience and education
-//   const workExperience = [
-//     {
-//       title: "Software Engineer",
-//       company: "ABC Corporation",
-//       timeline: "2020-2022",
-//       accomplishments: [
-//         "Developed and maintained multiple web applications",
-//         "Collaborated with cross-functional teams to deliver projects",
-//         "Improved code quality and reduced bugs by 30%",
-//       ],
-//     },
-//     {
-//       title: "Junior Developer",
-//       company: "DEF Startups",
-//       timeline: "2018-2020",
-//       accomplishments: [
-//         "Contributed to the development of a mobile app",
-//         "Participated in code reviews and ensured best practices",
-//         "Worked with the QA team to identify and fix issues",
-//       ],
-//     },
-//   ];
-
-//   const education = [
-//     {
-//       qualification: "Bachelor of Science in Computer Science",
-//       date: "2015-2019",
-//     },
-//     {
-//       qualification: "Certified Scrum Master",
-//       date: "2020",
-//     },
-//   ];
-
-//   // Initialize state variables for category list, item list, box animation states, and item animation states
-//   const categories = Object.keys(skills);
-//   const sectionList = Object.keys(sections);
-//   const [categoryList, setCategoryList] = useState(categories);
-//   const [itemList, setItemList] = useState(
-//     categories.map(category => skills[category])
-//   );
-//   const [boxAnimationStates, setBoxAnimationStates] = useState(
-//     categories.map(() => "")
-//   );
-//   const [itemAnimationStates, setItemAnimationStates] = useState(
-//     categories.map(category => skills[category].map(() => ""))
-//   );
-//   const [sectionAnimationStates, setSectionAnimationStates] = useState(
-//     sectionList.map(() => "")
-//   );
-
-//   // Hide all content boxes
-//   const hideContentBoxes = () => {    
-//     const newAnimationStates = boxAnimationStates.map(() => 'hidden');
-//     setBoxAnimationStates(newAnimationStates);
-//     const newItemAnimationStates = itemAnimationStates.map(category => category.map(() => 'hidden'));
-//     setItemAnimationStates(newItemAnimationStates);
-//     const newSectionAnimationStates = sectionAnimationStates.map(() => 'hidden');
-//     setSectionAnimationStates(newSectionAnimationStates);
-//   }
-
-//   // Define animation functions with different animation classes and durations
-//   const animateContentBoxesLow = animateContentBoxes('fade-in', 200);
-//   const animateContentBoxesNormal = animateContentBoxes('slide-in', 250);
-//   const animateContentBoxesExtreme = animateContentBoxes('bounce-in', 300);
-
-//   // Animate items in a category
-//   const animateItems = (index) => {
-//     const itemLength = itemAnimationStates[index].length;
-//     for (let i = 0; i < itemLength; i++) {
-//       setTimeout(() => {
-//         setItemAnimationStates((prevItemAnimationStates) => {
-//           const newItemAnimationStates = [...prevItemAnimationStates];
-//           newItemAnimationStates[index][i] = 'fade-in-top';
-//           return newItemAnimationStates;
-//         });
-//         setTimeout(() => {
-//           setItemAnimationStates((prevItemAnimationStates) => {
-//             const newItemAnimationStates = [...prevItemAnimationStates];
-//             newItemAnimationStates[index][i] = 'animate-glow';
-//             return newItemAnimationStates;
-//           });
-//         }, 800); 
-//       }, i * 100); 
-//     }
-//   }
-
-//   useEffect(() => {
-//     hideContentBoxes();
-//     setTimeout(() => {
-//       if (animation === 'Low') {
-//         animateContentBoxesLow(sectionAnimationStates, setSectionAnimationStates, animateItems);
-//         animateContentBoxesLow(boxAnimationStates, setBoxAnimationStates, animateItems);
-//       } else if (animation === 'Normal') {
-//         animateContentBoxesNormal(sectionAnimationStates, setSectionAnimationStates, animateItems);
-//         animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates, animateItems);
-//       } else if (animation === 'Extreme') {
-//         animateContentBoxesExtreme(sectionAnimationStates, setSectionAnimationStates, animateItems);
-//         animateContentBoxesExtreme(boxAnimationStates, setBoxAnimationStates, animateItems);
-//       }
-//     }, 200);
-//   }, []);
-
-//   return (
-//     <div className="flex flex-wrap justify-center w-full">
-//       {sectionList.map((section, index) => (
-//         <div key={index} className="w-full md:w-3/4 lg:w-2/3 px-4 mb-8">
-//           <div
-//             className={`
-//               relative left-1/2 -translate-x-1/2 p-4 
-//               ${darkMode ? 'card-dark' : 'card-light'} 
-//               ${sectionAnimationStates[index]}
-//             `}
-//           >
-//             <h2 className="text-xl font-bold mb-2">{section}</h2>
-//             {section === "Resume" && (
-//               <div className="flex flex-wrap justify-center mb-4">
-//                 <p className="text-lg">Download my resume:</p>
-//                 <a
-//                   href="resume.pdf"
-//                   download
-//                   className="ml-2 md:ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-//                 >
-//                   Download
-//                 </a>
-//               </div>
-//             )}
-//             {section === "Experience & Education" && (
-//               <div>
-//                 <h2 className="text-xl font-bold mb-2">Work Experience:</h2>
-//                 {workExperience.map((experience, experienceIndex) => (
-//                   <div key={experienceIndex} className="mb-4">
-//                     <h3 className="text-lg font-bold">{experience.title}</h3>
-//                     <p className="text-lg">{experience.company}</p>
-//                     <p className="text-lg">{experience.timeline}</p>
-//                     <ul>
-//                       {experience.accomplishments.map((accomplishment, accomplishmentIndex) => (
-//                         <li key={accomplishmentIndex}>{accomplishment}</li>
-//                       ))}
-//                     </ul>
-//                   </div>
-//                 ))}
-//                 <h2 className="text-xl font-bold mb-2">Education:</h2>
-//                 {education.map((qualification, qualificationIndex) => (
-//                   <div key={qualificationIndex} className="mb-4">
-//                     <h3 className="text-lg font-bold">{qualification.qualification}</h3>
-//                     <p className="text-lg">{qualification.date}</p>
-//                   </div>
-//                 ))}
-//               </div>
-//             )}
-//           </div>
-//         </div>
-//       ))}
-//       <div className="w-full flex flex-wrap justify-center">
-//         {categoryList.map((category, index) => (
-//           <div key={index} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-//             <div
-//               className={`
-//                 relative left-1/2 -translate-x-1/2 p-4 
-//                 ${darkMode ? 'card-dark' : 'card-light'} 
-//                 ${boxAnimationStates[index]}
-//               `}
-//             >
-//               <h2 className="text-xl font-bold mb-2">{category}</h2>
-//               <div className="flex flex-wrap justify-center"> 
-//                 {itemList[index].map((item, itemIndex) => (
-//                   <div key={itemIndex} className="w-fit mx-1">
-//                     <div
-//                       className={`
-//                         relative left-1/2 -translate-x-1/2 
-//                         inline-block 
-//                         px-2 py-1 mb-2 mx-1
-//                         ${itemAnimationStates[index][itemIndex]} 
-//                         bg-slate-500 
-//                         text-white 
-//                       `}
-//                     >
-//                       <p>{item}</p>
-//                     </div>
-//                   </div>
-//                 ))}
-//               </div>
-//             </div>
-//           </div>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Resume;
 import React, { useState, useEffect, useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 import { animateContentBoxes } from '../transitions/AnimationHelper';
@@ -1005,12 +594,6 @@ function Resume() {
   // Get the global context states
   const settingsStates = useContext(GlobalContext);
   const { darkMode, animation } = settingsStates;
-
-  // Define the categories and items to be displayed
-  const sections = {
-    "Resume": ["Download my resume"],
-    "Experience & Education": ["Work Experience", "Education"],
-  };
 
   const skills = {
     "Front end": ["React", "Vue", "Angular"],
@@ -1024,41 +607,32 @@ function Resume() {
   // Define work experience and education
   const workExperience = [
     {
-      title: "Software Engineer",
-      company: "ABC Corporation",
-      timeline: "2020-2022",
+      title: "Prompt Engineer",
+      company: "DataAnnotation",
+      timeline: "March 2024 - Present",
       accomplishments: [
         "Developed and maintained multiple web applications",
         "Collaborated with cross-functional teams to deliver projects",
         "Improved code quality and reduced bugs by 30%",
       ],
-    },
-    {
-      title: "Junior Developer",
-      company: "DEF Startups",
-      timeline: "2018-2020",
-      accomplishments: [
-        "Contributed to the development of a mobile app",
-        "Participated in code reviews and ensured best practices",
-        "Worked with the QA team to identify and fix issues",
-      ],
-    },
+    }
   ];
 
   const education = [
     {
       qualification: "Bachelor of Science in Computer Science",
-      date: "2015-2019",
+      provider: "Univesity of Calgary",
+      date: "May 2024",
     },
     {
-      qualification: "Certified Scrum Master",
-      date: "2020",
+      qualification: "IBM Full Stack Developer Certificate",
+      provider: "IBM & Coursera",
+      date: "Feburary 2024",
     },
   ];
 
   // Initialize state variables for category list, item list, box animation states, and item animation states
   const categories = Object.keys(skills);
-  const sectionList = Object.keys(sections);
   const [categoryList, setCategoryList] = useState(categories);
   const [itemList, setItemList] = useState(
     categories.map(category => skills[category])
@@ -1170,7 +744,7 @@ function Resume() {
             ))}
           </div>
           <div className={mainCardAnimationStates[2]}>
-            <h2 className="text-xl font-bold mb-2">Education:</h2>
+            <h2 className="text-xl font-bold mb-2">Education and Certificates:</h2>
             {education.map((qualification, qualificationIndex) => (
               <div key={qualificationIndex} className="mb-4">
                 <h3 className="text-lg font-bold">{qualification.qualification}</h3>

@@ -1,11 +1,18 @@
 import image1 from '../assets/personal1.jpg'
 import image2 from '../assets/personal2.jpg'
 
+// import MyUC2 from '../assets/MyUC2.png'
+// import SpaceBook from '../assets/SpaceBook.png'
+// import TwitterBot from '../assets/TwitterBot.png'
+// import EsportsZone from '../assets/EsportsZone.png'
+import PassnPlay from '../assets/PassnPlay.png'
+// import UltimateTicTacToe from '../assets/UltimateTicTacToe.png'
+
 const projects = [
     
     {
         name: 'My Ucalgary 2.0',
-        description: 'A redo of the UofC student portal',
+        description: 'A redo of the UofC student portal. Emphasizes a more user friendly experience.',
         image : image2,
         github: 'https://github.com/Vic-Han/MyUcalgary2.0',
         link: null,
@@ -13,7 +20,7 @@ const projects = [
     },
     {
         name: 'SpaceBook',
-        description: 'A space themed social media platform',
+        description: 'A space themed social media platform. Includes key features with a space twist.',
         image : image1,
         github: 'https://github.com/EugeneL11/SpaceBook',
         link: null,
@@ -21,7 +28,7 @@ const projects = [
     },
     {
         name: 'Twitter Bot Detection',
-        description: 'This is a project',
+        description: 'Detection of Twitter bots using machine learning. Uses a variety of features to cluster bots.',
         image : image2,
         github: 'https://github.com/Logan-PD/SENG-550-Project',
         link: "https://vic-han.github.io/pdf/SENG_550_Final_Project_Group_1.pdf",
@@ -29,16 +36,8 @@ const projects = [
     },
   
     {
-        name: 'Connect 4 Solver',
-        description: 'Coming Soon',
-        image : image2,
-        github: 'https://github.com',
-        link: null,
-        video : 'https://www.youtube.com',
-    },
-    {
         name: 'Esports Zone',
-        description: 'This is a project',
+        description: 'Exlcusive gaming media platform. Many features included and designed for gamers.',
         image : image1,
         github: 'https://github.com/Vic-Han/Esports-Zone',
         link: null,
@@ -46,8 +45,8 @@ const projects = [
     },
     {
         name: 'Pass n Play Texas Holdem',
-        description: 'This is a project',
-        image : image2,
+        description: 'Pass and play implemenation of Texas Holdem. Play with friends on the same device.',
+        image : PassnPlay,
         github: 'https://github.com/Vic-Han/PassnPlayPoker',
         link: 'https://vic-han.github.io/PassnPlayPoker/',
         video : null,
