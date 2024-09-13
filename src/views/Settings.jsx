@@ -42,13 +42,15 @@ function Settings({close}) {
         }
     }
     useEffect(() => {
-        hideContentBoxes();
-        if (animation === 'Low') {
-          animateContentBoxesLow(boxAnimationStates, setBoxAnimationStates);
-        } else if (animation === 'Normal') {
-          animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates);
-        } else if (animation === 'Extreme') {
-          animateContentBoxesExtreme(boxAnimationStates, setBoxAnimationStates);
+        if(animation !== 'None'){
+            hideContentBoxes();
+            if (animation === 'Low') {
+            animateContentBoxesLow(boxAnimationStates, setBoxAnimationStates);
+            } else if (animation === 'Normal') {
+            animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates);
+            } else if (animation === 'Extreme') {
+            animateContentBoxesExtreme(boxAnimationStates, setBoxAnimationStates);
+            }
         }
       }, []);
     

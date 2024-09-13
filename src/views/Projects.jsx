@@ -20,6 +20,7 @@ function Projects() {
     const animateContentBoxesNormal = animateContentBoxes('scale-in', 150);
     const animateContentBoxesExtreme = animateContentBoxes('slam', 150);
     useEffect(() => {
+        if(animation !== 'None'){
         hideContentBoxes();
         switch (animation) {
             case 'Low':
@@ -33,6 +34,7 @@ function Projects() {
                 break
             
         }
+    }
 
     }, [animation]);
 
