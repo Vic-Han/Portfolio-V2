@@ -10,7 +10,7 @@ const ProjectCard = ({ project }) => {
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
       <div className="absolute top-0 left-0 p-4">
-          <h2 className="text-white text-xl">{project.name}</h2>
+          <h2 className={`text-xl ${project.textColor}`}>{project.name}</h2>
         </div>
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 
       group-hover:opacity-50 transition-opacity duration-500 ease-in-out">

@@ -1,0 +1,39 @@
+Figure out AWS =(
+
+Create an accent color
+
+Finish UTTT site
+Add screenshot for UTTT in projects
+Fix project card opacity
+
+Add 'none' to possible animation levels in settings. Reflect update for:
+Mainpage
+About
+Projects
+Resume
+
+Settings page still looks bad
+
+Change Mainpage to use text primary and secondary
+Finalize responsive design for Mainpage
+Center text for socialgrid
+Add normal animation level
+Add extreme animation level
+
+Fix resume top section where inner contents do not animate individually
+Change Mainpage to use text primary and secondary
+Remove resume placeholders
+Fix styling for top box
+Add normal animation level
+Add extreme animation level
+Add inner content animations for both animation levels above
+Choose a good 'glow' color for dark and light theme
+
+Redo some about paragraphs
+Change the typewriter to only medium animation level
+Fix typewriter to keep up with the scroll
+Add a fade in for low animation
+Add a reveal efffect for high animation
+
+Make Navbar look better
+Finish Footer

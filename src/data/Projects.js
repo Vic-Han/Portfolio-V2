@@ -17,6 +17,7 @@ const projects = [
         github: 'https://github.com/Vic-Han/MyUcalgary2.0',
         link: null,
         video : 'https://www.youtube.com/watch?v=DuWW8eVc-Mw',
+        textColor: 'text-white',
     },
     {
         name: 'SpaceBook',
@@ -25,6 +26,7 @@ const projects = [
         github: 'https://github.com/EugeneL11/SpaceBook',
         link: null,
         video : 'https://www.youtube.com/watch?v=JtTn-pMRXLI&t=229s',
+        textColor: 'text-white',
     },
     {
         name: 'Twitter Bot Detection',
@@ -33,6 +35,7 @@ const projects = [
         github: 'https://github.com/Logan-PD/SENG-550-Project',
         link: "https://vic-han.github.io/pdf/SENG_550_Final_Project_Group_1.pdf",
         video : null,
+        textColor: 'text-black',
     },
   
     {

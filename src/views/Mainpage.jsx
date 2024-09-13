@@ -19,8 +19,8 @@ function Mainpage() {
   }
 
   const animateContentBoxesLow = animateContentBoxes('fade-in', 200);
-  const animateContentBoxesNormal = animateContentBoxes('slide-in', 250);
-  const animateContentBoxesExtreme = animateContentBoxes('bounce-in', 300);
+  const animateContentBoxesNormal = animateContentBoxes('scale-in', 250);
+  const animateContentBoxesExtreme = animateContentBoxes('slam', 300);
 
   // Setup and teardown
   // Set up the content box animation based on the animation prop.
@@ -49,7 +49,7 @@ function Mainpage() {
             <ImageToggler animation={animation}/>
           </div>
           {/* Text content */}
-          <div className='text-semibold flex-shrink-0 text-center text-lg p-4 leading-normal w-full
+          <div className='text-semibold text-primary flex-shrink-0 text-center text-lg p-4 leading-normal w-full
             sm:p-8 sm:text-2xl
             md:p-6 md:text-6xl md:leading-relaxed md:w-80 
             lg:text-7xl lg:leading-relaxed lg:w-96
@@ -62,7 +62,7 @@ function Mainpage() {
         {/* Second content box */}
         <div className={`w-11/12 relative left-1/2 -translate-x-1/2 m-10 flex flex-col overflow-auto p-5 ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[1]}`}>
           {/* Text content */}
-          <div className={`flex flex-col items-center m-5 text-3xl leading-loose`}>
+          <div className={`flex flex-col items-center m-5 text-3xl leading-loose text-secondary`}>
             I'm a web developer currently training AI to write code at DataAnnotation. 
             I recently graduated from the University of Calgary with a degree in Computer Science.
 
@@ -75,7 +75,7 @@ function Mainpage() {
       <div className={`md:w-1/3 lg:w-1/4 xl:w-1/5 2xl:w-1/6 flex justify-center m-10`}>
         <div className={`w-full relative left-1/2 -translate-x-1/2 flex flex-col ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[2]}`}>
           {/* Social grid */}
-          <div className={`w-5/6 relative left-1/2 -translate-x-1/2 h-full grid items-center`}>
+          <div className={`w-5/6 relative left-1/2 -translate-x-1/2 h-full grid items-center text-xl text-primary text-center`}>
             Connect with me!
             <SocialGrid />
           </div>

@@ -56,28 +56,28 @@
 }
 
 .linkedin-box{
-    background: linear-gradient(45deg , #406cf2 0%, #375ce4 100%);
+    background: linear-gradient(45deg , #0069ab 0%, #0075b6 100%);
     z-index: 10;
     transition-delay: 0s;
 }
 
 .git-box{
-    background: linear-gradient(45deg , #2844d6 0%, #1830c9 100%);
+    background: linear-gradient(45deg , #151313 0%, #1a1717 100%);
     z-index: 11;
-    transition-delay: 0.2s;
+    transition-delay: 0.08s;
 }
 
 .insta-box{
-    background: linear-gradient(45deg , #0920b5 0%, #0010b0 100%);
+    background: linear-gradient(45deg , #bc3381 0%, #c43787 100%);
     z-index: 12;
-    transition-delay: 0.4s;
+    transition-delay: 0.16s;
 }
 .social-container:not(:hover) .linkedin-box{
-    transition-delay: 0.4s;
+    transition-delay: 0.16s;
 }
 
 .social-container:not(:hover) .git-box{
-    transition-delay: 0.2s; 
+    transition-delay: 0.08s; 
 }
 
 .social-container:not(:hover) .insta-box{

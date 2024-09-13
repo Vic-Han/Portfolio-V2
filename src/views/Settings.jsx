@@ -60,7 +60,7 @@ function Settings({close}) {
             <div className='flex flex-row relative left-1/2 -translate-x-1/2 w-2/3 my-10'>
                 <div className='w-1/2'> 
                 <div className={`relative left-1/2 -translate-x-1/2 w-2/3  rounded-xl p-6` }>
-                    <div className={`text-3xl`}>Dark Theme?</div>
+                    <div className={`text-3xl text-primary`}>Dark Theme?</div>
                     <DarkThemeSwitch value={darkMode} change={changeDarkMode}/>
                 </div> 
                 </div>
@@ -77,19 +77,24 @@ function Settings({close}) {
                 <div className={`relative -translate-x-1/2 left-1/2 w-fit p-5 ${darkMode ? 'bg-white' : 'bg-gray-50'}`}> <AnimationToggle value={animation} change={setAnimation}/> </div>
                 <div className='flex flex-row'>
                     <div> Extreme: </div> 
-                    <ReadOnlyStars value={3}/>
+                    <ReadOnlyStars value={4}/>
                 </div>
                 <div> Completely unecessary </div>
                 <div className='flex flex-row'>
                     <div> Normal: </div> 
-                    <ReadOnlyStars value={2}/>
+                    <ReadOnlyStars value={3}/>
                 </div>
                 <div> Flashy </div>
                 <div className='flex flex-row'>
                     <div> Low: </div> 
-                    <ReadOnlyStars value={1}/>
+                    <ReadOnlyStars value={2}/>
                 </div>
                 <div> Recommended </div>
+                <div className='flex flex-row'>
+                    <div> None: </div> 
+                    <ReadOnlyStars value={1}/>
+                </div>
+                <div> No animations </div>
                 
             </div>
             

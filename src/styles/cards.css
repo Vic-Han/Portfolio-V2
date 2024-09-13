@@ -13,7 +13,7 @@
 /* Styles for .card-dark */
 .card-dark .text-primary {
     color: #f2f2f2; /* Bright white for primary text on dark cards */
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .card-dark .text-secondary {
@@ -31,7 +31,7 @@
 /* Styles for .card-light */
 .card-light .text-primary {
     color: #111111; /* Dark grey for primary text on light cards */
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .card-light .text-secondary {

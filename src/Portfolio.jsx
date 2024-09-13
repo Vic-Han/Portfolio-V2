@@ -31,11 +31,10 @@ function Portfolio() {
       toggleSettings();      
       return;    
     }    
-    if (animation === 'Low'){
+    if (animation === 'Low' || animation === "None"){
       setScreen(page);
-      return;
     }  
-    if (animation === 'Normal') {      
+    else if (animation === 'Normal') {      
       toggleCircleTransition(); 
       setTimeout(() => {
         setScreen('none')
