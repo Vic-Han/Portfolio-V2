@@ -10,7 +10,7 @@ function Navbar({clickHandler, darkmode}) {
         <div className="flex flex-row justify-between py-3 px-10">
             
             <div className={`${styles} ${darkmode ? dark : light} `} onClick={() => clickHandler('settings')}> Settings </div>    
-            <div className={`${styles} ${darkmode ? dark : light} `}  onClick={() => clickHandler('mainpage')}> Mainpage </div>
+            <div className={`${styles} ${darkmode ? dark : light} `}  onClick={() => clickHandler('mainpage')}> Home </div>
             <div className={`${styles} ${darkmode ? dark : light} `}  onClick={() => clickHandler('projects')}> Projects </div>
             <div className={`${styles} ${darkmode ? dark : light} `}  onClick={() => clickHandler('resume')}> Resume </div>
             <div className={`${styles} ${darkmode ? dark : light} `} onClick={() => clickHandler('about')}> About </div>

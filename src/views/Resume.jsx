@@ -12,12 +12,12 @@ function Resume() {
   const { darkMode, animation } = settingsStates;
 
   const skills = {
-    "Front end": ["React", "Vue", "Angular"],
-    "Back end": ["Node", "Express", "Django"],
-    "Database": ["MongoDB", "PostgreSQL", "MySQL"],
-    "Languages": ["JavaScript", "Python", "Java"],
-    "Tools": ["Git", "Docker", "Jenkins"],
-    "Cloud": ["AWS", "Azure", "Google Cloud"],
+    "Languages": ["JavaScript", "Python", "HTML/CSS", "C/C++", "Go", "Java"],
+    "Web/REST API": ["React", "Vue","Express.js", "Flask", "Django", "Gin"],
+    "DBMS": ["MongoDB", "PostgreSQL", "MySQL"],
+    "Data Science": ["Pandas", "Numpy", "Matplotlib", "Tensorflow" ],
+    "Tools": ["Git/Github", "Docker",],
+    "Cloud": ["AWS", "GCP", "Azure"],
   };
 
   // Define work experience and education
@@ -87,7 +87,7 @@ function Resume() {
             newMainCardAnimationStates[i] = `fade-in-top`;
             return newMainCardAnimationStates;
           });
-        }, i * 100);
+        }, i * 300);
       }
     } else {
       const itemLength = itemAnimationStates[index - 1].length;
@@ -134,44 +134,48 @@ function Resume() {
             ${boxAnimationStates[0]}
           `}
         >
-          <div className="mx-4 w-fit">
-          <div className={`relative left-1/2 -translate-x-1/2 ${mainCardAnimationStates[0]}`}>
-            <h2 className="text-xl text-primary mb-2">Resume</h2>
-            <div className="flex flex-wrap justify-center mb-4">
-              <p className="text-lg">Download my resume:</p>
-              <a
-                href="resume.pdf"
-                download
-                className="ml-2 md:ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-              >
-                Download
-              </a>
+          <h2 className="text-xl text-primary mb-2">Resume</h2>
+          <div className = 'w-fit mx-2'>
+            <div className={`relative left-1/2 -translate-x-1/2 ${mainCardAnimationStates[0]}`}>
+              <div className="flex flex-wrap justify-center mb-4">
+                <p className="text-lg">Download my resume:</p>
+                <a
+                  href="resume.pdf"
+                  download
+                  className="ml-2 md:ml-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                >
+                  Download
+                </a>
+              </div>
             </div>
           </div>
+          <h2 className="text-xl font-bold mb-2">Experience:</h2>
+          <div className = 'w-fit mx-2'>
+            <div className={`relative left-1/2 -translate-x-1/2 ${mainCardAnimationStates[1]}`}>
+              {workExperience.map((experience, experienceIndex) => (
+                <div key={experienceIndex} className="mb-4">
+                  <h3 className="text-lg font-bold">{experience.title}</h3>
+                  <p className="text-lg">{experience.company}</p>
+                  <p className="text-lg">{experience.timeline}</p>
+                  <ul>
+                    {experience.accomplishments.map((accomplishment, accomplishmentIndex) => (
+                      <li key={accomplishmentIndex}>{accomplishment}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
-          <div className={mainCardAnimationStates[1]}>
-            <h2 className="text-xl font-bold mb-2">Experience:</h2>
-            {workExperience.map((experience, experienceIndex) => (
-              <div key={experienceIndex} className="mb-4">
-                <h3 className="text-lg font-bold">{experience.title}</h3>
-                <p className="text-lg">{experience.company}</p>
-                <p className="text-lg">{experience.timeline}</p>
-                <ul>
-                  {experience.accomplishments.map((accomplishment, accomplishmentIndex) => (
-                    <li key={accomplishmentIndex}>{accomplishment}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-          <div className={mainCardAnimationStates[2]}>
-            <h2 className="text-xl font-bold mb-2">Education and Certificates:</h2>
-            {education.map((qualification, qualificationIndex) => (
-              <div key={qualificationIndex} className="mb-4">
-                <h3 className="text-lg font-bold">{qualification.qualification}</h3>
-                <p className="text-lg">{qualification.date}</p>
-              </div>
-            ))}
+          <h2 className="text-xl font-bold mb-2"> Education and Certificates: </h2>
+          <div className = 'w-fit mx-2'>
+            <div className={`relative left-1/2 -translate-x-1/2 ${mainCardAnimationStates[2]}`}>
+              {education.map((qualification, qualificationIndex) => (
+                <div key={qualificationIndex} className="mb-4">
+                  <h3 className="text-lg font-bold">{qualification.qualification}</h3>
+                  <p className="text-lg">{qualification.date}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -186,7 +190,7 @@ function Resume() {
               `}
             >
               <h2 className="text-xl font-bold mb-2 text-primary">{category}</h2>
-              <div className="flex flex-wrap justify-center"> 
+              <div className="flex flex-wrap"> 
                 {itemList[index].map((item, itemIndex) => (
                   <div key={itemIndex} className="w-fit mx-1">
                     <div
