@@ -3,13 +3,11 @@ const formalAbout = [
     `
         I'm not driven by money, I'm driven by impact. It's clear to me that too many technologies are designed purely for profit.
         They often neglect real issues, or worse, they fuel problems like addiction. 
-        But this doesn't mean that technology can't make a positive impact, I see many innovations that do so. 
-        I firmly believe in using technology for the greater good. My goal is to die with a positive footprint.
+        My goal is work with like minded individuals to create software that is ethical, sustainable, and beneficial.
     `,
     `
-        What do I enjoy about programming? I'm interested in ...anything challenging really. 
-        It could be trying to implement a scalable solution, optimize a data pipline, or even make some fancy animations for a website. 
-        Just anything that makes your brain twist and use those problem solving skills. 
+        I'm drawn to programming because of the problem solving aspect. 
+        I'm always looking for a tough challenge, it could be optimizing a data pipeline, scaling a service, or creating a fancy animation for a website.
         I take pride in my work and willingness to take on difficult tasks. 
     `,
     `

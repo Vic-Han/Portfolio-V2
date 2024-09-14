@@ -102,27 +102,6 @@
 
 
 
-.animate-glow {
-  animation: glow 2s infinite;
-}
-
-@keyframes glow {
-  0% {
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
-                0 0 20px rgba(0, 200, 200, 0.5),
-                0 0 30px rgba(0, 150, 150, 0.5);
-  }
-  50% {
-    box-shadow: 0 0 20px rgba(0, 255, 255, 1),
-                0 0 40px rgba(0, 200, 200, 1),
-                0 0 60px rgba(0, 150, 150, 1);
-  }
-  100% {
-    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5),
-                0 0 20px rgba(0, 200, 200, 0.5),
-                0 0 30px rgba(0, 150, 150, 0.5);
-  }
-}
 
 @keyframes animate-footer {
   0% {

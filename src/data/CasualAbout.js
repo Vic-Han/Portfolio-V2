@@ -11,17 +11,11 @@ const casualAbout = [
         I struggled a lot with self esteem and trauma when I was younger. 
         It held me back in everything I did. 
     `,
-
     `
         I have a philosophy that the biggest limits are the ones we put on ourselves. 
         It's very obvious to me now that my own self doubt was dragging me down, and I see all the time in others too. 
         I don't believe we gain confidence through self love tactics, 
         we earn confidence by getting out of our comfort zone. 
-    `,
-    `
-        Ultra endurance events are designed to break you down to nothing. 
-        There is a certain type of confidence that can only come from finding more when you thought you had nothing left. 
-        To me, it was never about the numbers or achievement, it's about the growth that comes from it. 
     `,
     `
         I want to tackle races like the Artic Ultra and Badwater in the far(?) future.

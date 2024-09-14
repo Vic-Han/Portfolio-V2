@@ -5,6 +5,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 import { animateContentBoxes } from '../transitions/AnimationHelper';
+import '../styles/resume.css';
 
 function Resume() {
   // Get the global context states
@@ -27,9 +28,9 @@ function Resume() {
       company: "DataAnnotation",
       timeline: "March 2024 - Present",
       accomplishments: [
-        "Developed and maintained multiple web applications",
-        "Collaborated with cross-functional teams to deliver projects",
-        "Improved code quality and reduced bugs by 30%",
+        "Created data science and software engineering prompts to identify and address weak spots in large language models",
+        "Reviewed and ensured the quality of AI generated code",
+        "Ensured clear and comprehensive explanations of technical concepts",
       ],
     }
   ];
@@ -84,7 +85,7 @@ function Resume() {
         setTimeout(() => {
           setMainCardAnimationStates((prevMainCardAnimationStates) => {
             const newMainCardAnimationStates = [...prevMainCardAnimationStates];
-            newMainCardAnimationStates[i] = `fade-in-top`;
+            newMainCardAnimationStates[i] = `fade-in-right`;
             return newMainCardAnimationStates;
           });
         }, i * 300);
@@ -195,12 +196,9 @@ function Resume() {
                   <div key={itemIndex} className="w-fit mx-1">
                     <div
                       className={`
-                        relative left-1/2 -translate-x-1/2 
-                        inline-block 
-                        px-2 py-1 mb-2 mx-1
+                        skill
                         ${itemAnimationStates[index][itemIndex]} 
-                        bg-slate-500 
-                        text-white 
+                      
                       `}
                     >
                       <p>{item}</p>
