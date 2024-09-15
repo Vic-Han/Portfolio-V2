@@ -1,5 +1,6 @@
 .base-img{
     width: 90%;
+    aspect-ratio: 1/1;
     border-radius: 50%;
     position: relative;
     left:50%;
@@ -11,6 +12,10 @@
         transform: translateX(-50%);
         opacity: 1;
     }
+    98% {
+        transform: translateX(-160%);
+        opacity: 0.7;
+    }
     100% {
         transform: translateX(-160%);
         opacity: 0.7;
@@ -18,6 +23,10 @@
 }
 @keyframes slide-in-img {
     0% {
+        transform: translateX(110%);
+        opacity: 0.7;
+    }
+    2% {
         transform: translateX(110%);
         opacity: 0.7;
     }
@@ -39,6 +48,10 @@
       transform: translateX(-50%) rotateY(0deg);
       opacity: 1;
     }
+    98% {
+      transform: translateX(-50%) rotateY(90deg);
+      opacity: 0;
+    }
     100% {
       transform: translateX(-50%) rotateY(90deg);
       opacity: 0;
@@ -47,6 +60,10 @@
   
 @keyframes flip-in-img {
     0% {
+      transform: translateX(-50%) rotateY(90deg);
+      opacity: 0;
+    }
+    2% {
       transform: translateX(-50%) rotateY(90deg) ;
       opacity: 0;
     }

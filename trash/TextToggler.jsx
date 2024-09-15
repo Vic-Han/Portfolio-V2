@@ -12,7 +12,6 @@ function TextToggler({darkMode, animation}) {
     if (!textRef.current) return; // Safety check
 
     const textElement = textRef.current;
-    
     switch (animation) {
         case 'Low':
           handleLowAnimation(textElement, direction); 

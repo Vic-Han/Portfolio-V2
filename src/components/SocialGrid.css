@@ -4,8 +4,8 @@
     background: linear-gradient(140deg , #497cff 0%, #49acff 50%, #497cff 100%);
     transition: all 0.7s ease;
     width: 100%;
-    aspect-ratio: 1/2;
-    border-radius: 7%;
+    aspect-ratio: 2/5;
+    border-radius: 1.5em;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -14,7 +14,7 @@
 
 .social-text{
     position: absolute;
-    font-size: 3em;
+    font-size: 120%;
     color: white;
     top: 50%;
     left: 50%;
@@ -36,11 +36,14 @@
     transition: all 0.9s ease;
     justify-content: center;
     color: white;
-    font-size: 24px;
+    font-size: 100%;
     text-decoration: none;
     overflow: hidden; /* add this */
 }
-
+.social-container:hover .social-box{
+    padding-top: 5%;
+    box-sizing: border-box;
+}
 .social-box span{
     opacity: 0; /* add this */
     transition: opacity 0.3s ease; /* add this */

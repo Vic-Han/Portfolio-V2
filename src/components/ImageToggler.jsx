@@ -17,7 +17,7 @@ function ImageToggler({ animation }) {
       setTimeout(() => {
         setImageState('');
       }, 1000);
-    }, 1000);
+    }, 990);
   }, [index, length]);
 
   // Normal transition effect: flip out and flip in
@@ -29,7 +29,7 @@ function ImageToggler({ animation }) {
       setTimeout(() => {
         setImageState('');
       }, 1000);
-    }, 1000);
+    }, 990);
   }, [index, length]);
 
   // Extreme transition effect: spin out and spin in
@@ -41,12 +41,15 @@ function ImageToggler({ animation }) {
       setTimeout(() => {
         setImageState('');
       }, 600);
-    }, 600);
+    }, 590);
   }, [index, length]);
 
   // Trigger the transition effect based on the animation prop
   const transition = () => {
-    if (animation === 'Low') {
+    if (animation === 'None') {
+      setIndex((prevIndex) => (prevIndex + 1) % length);
+    }
+    else if (animation === 'Low') {
       basicTransition();
     } else if (animation === 'Normal') {
       normalTransition();
@@ -64,7 +67,7 @@ function ImageToggler({ animation }) {
   }, []);
 
   return (
-    <div className="py-5 overflow-hidden w-full pr-3 pl-1">
+    <div className="overflow-hidden w-full pr-3 pl-1">
       <img className={`base-img ${imageState}`} src={mainPictures[index]} alt="PersonalPhoto" />
     </div>
   );
