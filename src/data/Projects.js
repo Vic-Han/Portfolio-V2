@@ -1,19 +1,18 @@
 import image1 from '../assets/personal1.jpg'
-import image2 from '../assets/personal2.jpg'
 
-// import MyUC2 from '../assets/MyUC2.png'
+import MyUC2 from '../assets/MyUC2.png'
 import SpaceBook from '../assets/SpaceBook.png'
 import TwitterBot from '../assets/TwitterBot.png'
 import EsportsZone from '../assets/EsportsZone.png'
 import PassnPlay from '../assets/PassnPlay.png'
-// import UltimateTicTacToe from '../assets/UltimateTicTacToe.png'
+import UltimateTicTacToe from '../assets/UltimateTicTacToe.png'
 
 const projects = [
     
     {
         name: 'My Ucalgary 2.0',
         description: 'A redo of the UofC student portal. Emphasizes a more user friendly experience.',
-        image : image2,
+        image : MyUC2,
         github: 'https://github.com/Vic-Han/MyUcalgary2.0',
         link: null,
         video : 'https://www.youtube.com/watch?v=DuWW8eVc-Mw',
@@ -57,7 +56,7 @@ const projects = [
     {
         name: 'Ultimate Tic Tac Toe',
         description: 'This is a project',
-        image : image1,
+        image : UltimateTicTacToe,
         github: 'https://github.com/Vic-Han/Ultimate-Tic-Tac-Toe-Engine',
         link: 'https://vic-han.github.io/Ultimate-Tic-Tac-Toe-Engine/',
         video : null,
