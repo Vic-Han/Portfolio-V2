@@ -51,11 +51,8 @@ function Mainpage() {
             <ImageToggler animation={animation}/>
           </div>
           {/* Text content */}
-          <div className='text-semibold text-primary flex-shrink-0 p-4 w-full grid place-items-center
-            sm:p-8 md:p-6 md:w-80 
-            lg:text-7xl lg:w-96
-            xl:py-8 xl:px-24 xl:w-128 
-            2xl:py-10 2xl:px-4  2xl:w-144'>
+          <div className='text-semibold text-primary flex-shrink-0 p-4 w-full grid place-items-center md:flex-1
+            sm:p-8 md:p-6 xl:py-8 xl:px-2 2xl:py-10 2xl:px-4'>
               <div className='text-center text-lg sm:text-2xl md:text-3xl xl:text-5xl 2xl:text-7xl'>
                 Hi I'm Victor!
               </div>
@@ -64,9 +61,9 @@ function Mainpage() {
         </div>
 
         {/* Second content box */}
-        <div className={`w-11/12 relative left-1/2 -translate-x-1/2 m-10 flex flex-col overflow-auto p-5 ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[1]}`}>
+        <div className={`w-11/12 relative left-1/2 -translate-x-1/2 m-10 flex flex-col overflow-auto xl:p-4 2xl:p-5 ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[1]}`}>
           {/* Text content */}
-          <div className={`flex flex-col items-center m-5 text-3xl leading-loose text-secondary`}>
+          <div className={`flex flex-col items-center m-5 xl:text-2xl 2xl:text-3xl leading-extra-loose text-secondary`}>
             I'm a web developer currently training AI to write code at DataAnnotation. 
             I recently graduated from the University of Calgary with a degree in Computer Science. 
             I'm driven by my curiosity and love for taking on difficult challenges.

@@ -10,6 +10,12 @@ export default {
         '144' : '36rem',
         '192' : '48rem',
       },
+      lineHeight: {
+        'extra-loose': '4.5',
+      },
+      screens: {
+        '3xl': '1920px',
+      },
     },
   },
   plugins: [],
