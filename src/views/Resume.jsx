@@ -13,12 +13,11 @@ function Resume() {
   const { darkMode, animation } = settingsStates;
 
   const skills = {
-    "Languages": ["JavaScript", "Python", "HTML/CSS", "C/C++", "Go", "Java"],
-    "Web/REST API": ["React", "Vue","Express.js", "Flask", "Django", "Gin"],
+    "Languages": ["JavaScript", "Python", "HTML/CSS", "C/C++", "Go", "Java", "C#"],
+    "Web/REST API": ["React", "Gin", "Vue","Express.js", "Django", "Flask", ],
     "DBMS": ["MongoDB", "PostgreSQL", "MySQL"],
-    "Data Science": ["Pandas", "Numpy", "Matplotlib", "Tensorflow" ],
+    "Data Science": ["Pandas", "Numpy", "Matplotlib", "Tensorflow", "Spark" ],
     "Tools": ["Git/Github", "Docker",],
-    "Cloud": ["AWS", "GCP", "Azure"],
   };
 
   // Define work experience and education
