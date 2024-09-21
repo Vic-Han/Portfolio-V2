@@ -41,17 +41,18 @@ function Projects() {
     return (
         <div>
             <h1 className={`${darkMode ? 'text-white' : 'text-black'} text-4xl font-bold mb-10 text-center relative -translate-x-1/2 left-1/2`}>Check out my Projects</h1>
-            <div className="flex flex-row flex-wrap w-11/12 xl:w-4/5 relative -translate-x-1/2 left-1/2"> 
-                {projects.map((project, index) => (
-                    <div key={index} className="p-1 m-2 xl:p-2 xl:m-4">
-                        <div className={`${boxAnimationStates[index]} relative left-1/2 -translate-x-1/2`}>
-                            <ProjectCard
-                                project={project}
-                            />
+                <div className="flex flex-row flex-wrap w-11/12 xl:w-4/5 relative -translate-x-1/2 left-1/2"> 
+                    {projects.map((project, index) => (
+                        <div key={index} className="p-1 m-2 xl:p-2 xl:m-4">
+                            <div className={`${boxAnimationStates[index]} relative left-1/2 -translate-x-1/2`}>
+                                <ProjectCard
+                                    project={project}
+                                />
+                            </div>
                         </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
+       
         </div>
     );
 }

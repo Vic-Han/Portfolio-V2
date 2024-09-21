@@ -67,7 +67,7 @@ function ImageToggler({ animation }) {
   }, []);
 
   return (
-    <div className="overflow-hidden w-full pr-3 pl-1">
+    <div className="overflow-hidden w-full px-1">
       <img className={`base-img ${imageState}`} src={mainPictures[index]} alt="PersonalPhoto" />
     </div>
   );

@@ -3,8 +3,8 @@
 .social-container{
     background: linear-gradient(140deg , #497cff 0%, #49acff 50%, #497cff 100%);
     transition: all 0.7s ease;
-    width: 100%;
-    aspect-ratio: 4/9;
+    width: 280px;
+    aspect-ratio: 2/3;
     border-radius: 1.5em;
     position: relative;
     left: 50%;
@@ -41,7 +41,7 @@
     overflow: hidden; /* add this */
 }
 .social-container:hover .social-box{
-    padding-top: 5%;
+    padding-top: 12.5%;
     box-sizing: border-box;
 }
 .social-box span{
@@ -96,4 +96,20 @@
 
 .social-container:hover .insta-box{
     height: 25%;
+}
+
+
+@media (min-width:600px){
+    .social-container{
+        width: 420px;
+    }
+
+}
+
+@media (min-width: 768px){
+    .social-container{
+        width: 100%;
+        aspect-ratio: 4/9;
+    }
+    
 }
