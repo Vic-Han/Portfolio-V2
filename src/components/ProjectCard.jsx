@@ -21,10 +21,10 @@ const ProjectCard = ({ project }) => {
         alt={project.name}
         className="absolute top-0 left-0 w-full h-full object-cover"
       />
-      <div className="absolute top-0 left-0 p-4">
-          <h2 className={`text-xl ${project.titleTextStyle}`}>{project.name}</h2>
+      <div className="absolute top-0 left-0 p-4 z-50">
+          <h2 className={`text-xl z-50 ${project.titleTextStyle}`}>{project.name}</h2>
         </div>
-      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-50 transition-opacity duration-500 ease-in-out z-20"/>
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-0 group-hover:opacity-60 transition-opacity duration-500 ease-in-out z-20"/>
       <div className="absolute bottom-0 left-0 w-full p-4 transition-transform duration-500 ease-in-out transform translate-y-full group-hover:translate-y-0 z-30">
           <p className={project.descriptionTextStyle}>{project.description}</p>
           <div className="flex space-x-4 mt-4">

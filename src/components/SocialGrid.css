@@ -4,7 +4,7 @@
     background: linear-gradient(140deg , #497cff 0%, #49acff 50%, #497cff 100%);
     transition: all 0.7s ease;
     width: 280px;
-    aspect-ratio: 2/3;
+    aspect-ratio: 3/4;
     border-radius: 1.5em;
     position: relative;
     left: 50%;
@@ -113,3 +113,9 @@
     }
     
 }
+/* 
+@media (min-width: 1920px){
+    .social-container{
+        aspect-ratio: 1/2;
+    }
+} */

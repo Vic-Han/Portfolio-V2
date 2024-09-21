@@ -77,12 +77,7 @@ function Settings({close}) {
                 <div className='text-3xl mb-10'>Animation Level:</div>
                 <div> {animation}</div>
                 <div className={`relative -translate-x-1/2 left-1/2 w-fit p-5 ${darkMode ? 'bg-white' : 'bg-gray-50'}`}> <AnimationToggle value={animation} change={setAnimation}/> </div>
-                <div className='flex flex-row'>
-                    <div> Extreme: </div> 
-                    <ReadOnlyStars value={4}/>
-                </div>
-                <div> Completely unecessary </div>
-                <div className='flex flex-row'>
+                    <div className='flex flex-row'>
                     <div> Normal: </div> 
                     <ReadOnlyStars value={3}/>
                 </div>

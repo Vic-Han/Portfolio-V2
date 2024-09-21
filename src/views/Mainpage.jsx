@@ -20,7 +20,6 @@ function Mainpage() {
 
   const animateContentBoxesLow = animateContentBoxes('fade-in', 200);
   const animateContentBoxesNormal = animateContentBoxes('scale-in', 250);
-  const animateContentBoxesExtreme = animateContentBoxes('slam', 300);
 
   // Setup and teardown
   // Set up the content box animation based on the animation prop.
@@ -32,8 +31,6 @@ function Mainpage() {
         animateContentBoxesLow(boxAnimationStates, setBoxAnimationStates);
       } else if (animation === 'Normal') {
         animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates);
-      } else if (animation === 'Extreme') {
-        animateContentBoxesExtreme(boxAnimationStates, setBoxAnimationStates);
       }
     }
   }, []);
@@ -47,16 +44,15 @@ function Mainpage() {
         {/* First content box */}
         <div className={`w-11/12 my-2 relative left-1/2 -translate-x-1/2 2xl:m-10 flex md:flex-row flex-col overflow-hidden items-center ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[0]}`}>
           {/* Image toggler */}
-          <div className='py-1 md:mx-4 flex-shrink-0 w-60 sm:w-96 md:w-80 lg:w-96 xl:w-128 2xl:w-144 xl:py-8 2xl:py-10'>
+          <div className='py-1 md:mx-4 flex-shrink-0 w-60 sm:w-96 md:w-80 lg:w-96 xl:w-128 2xl:w-144 3xl:w-192 xl:py-8 2xl:py-10'>
             <ImageToggler animation={animation}/>
           </div>
           {/* Text content */}
           <div className='text-semibold text-primary flex-shrink-0 p-4 w-full grid place-items-center md:flex-1
-            sm:p-8 md:p-6 xl:py-8 xl:px-2 2xl:py-10 2xl:px-3'>
-              <div className='text-center text-lg sm:text-2xl md:text-3xl xl:text-5xl 2xl:text-7xl'>
+            sm:p-8 md:p-6 xl:py-8 xl:px-2 2xl:py-10 2xl:px-3 3xl:px-2'>
+              <div className='text-center text-lg sm:text-3xl md:text-3xl xl:text-5xl 2xl:text-7xl'>
                 Hi I'm Victor!
               </div>
-            
           </div>
         </div>
 
@@ -73,7 +69,7 @@ function Mainpage() {
 
       {/* Third content box */}
       <div className={`w-full md:w-1/3 lg:w-1/4 xl:w-1/5 flex flex-col md:flex-row justify-center my-2 mx-0 2xl:m-10`}>
-        <div className={`w-11/12 md:w-full relative left-1/2 -translate-x-1/2 flex px-2 p-3 flex-col ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[2]}`}>
+        <div className={`w-11/12 md:w-full relative left-1/2 -translate-x-1/2 flex px-2 p-3 3xl:px-6 flex-col ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[2]}`}>
           {/* Social grid */}
           <div className={`w-11/12 relative left-1/2 -translate-x-1/2 h-full grid items-center xl:text-3xl 2xl:text-4xl text-primary text-center leading-loose`}>          
               
