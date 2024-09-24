@@ -8,7 +8,7 @@ const casualAbout = [
     `
         What's wrong with you? Why would you do that to yourself? 
         I hear this kind of stuff all the time when I talk about my training or races. 
-        I struggled a lot with self esteem and trauma when I was younger. 
+        I struggled a lot with self esteem when I was younger. 
         It held me back in everything I did. 
     `,
     `

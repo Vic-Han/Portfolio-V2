@@ -102,20 +102,6 @@
 
 
 
-
-@keyframes animate-footer {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-.animate-footer {
-  animation: animate-footer 2s forwards;
-}
-
 .flip {
   animation: flip 1s;
   animation-fill-mode: forwards;
