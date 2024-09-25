@@ -33,24 +33,17 @@ function Portfolio() {
     }    
     if (animation === 'Low' || animation === "None"){
       setScreen(page);
+      return;
     }  
-    else if (animation === 'Normal') {      
-      toggleCircleTransition(); 
-      setTimeout(() => {
-        setScreen('none')
-      }, 610);     
-      setTimeout(() => {        
-        setScreen(page);      
-      }, 1200);    
-    } else {      
-      toggleSlideTransition();  
-      setTimeout(() => {
-        setScreen('none')
-      }, 510);      
-      setTimeout(() => {        
-        setScreen(page);      
-      }, 1000);    
-    }  
+
+    toggleCircleTransition(); 
+    setTimeout(() => {
+      setScreen('none')
+    }, 610);     
+    setTimeout(() => {        
+      setScreen(page);      
+    }, 1200);    
+   
   };
 
   // This function simply toggles the settings state on and off.

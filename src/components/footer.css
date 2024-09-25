@@ -1,16 +1,4 @@
 
-@keyframes animate-footer {
-    0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }
-}
-  
-.animate-footer {
-    animation: animate-footer 0.8s forwards;
-}
 
 .footer-bg-dark{
     background: linear-gradient(160deg, #101010 0%, #151515 50% , #101010 100%);

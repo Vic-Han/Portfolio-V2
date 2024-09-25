@@ -59,7 +59,7 @@ function Mainpage() {
         {/* Second content box */}
         <div className={`w-11/12 my-1 relative left-1/2 -translate-x-1/2 2xl:m-10 flex flex-col overflow-auto xl:p-4 2xl:p-5 ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[1]}`}>
           {/* Text content */}
-          <div className={`flex flex-col items-center m-3 xl:m-5 leading-loose text-sm sm:text-base xl:text-2xl 2xl:text-3xl text-secondary`}>
+          <div className={`flex flex-col items-center m-3 xl:m-5 text-sm sm:text-base xl:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl-relaxed text-secondary`}>
             I'm a web developer currently training AI to write code at DataAnnotation. 
             I recently graduated from the University of Calgary with a degree in Computer Science. 
             I'm driven by my curiosity and love for taking on difficult challenges.

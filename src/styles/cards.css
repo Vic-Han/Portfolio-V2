@@ -1,13 +1,13 @@
 .card-dark {
     background: linear-gradient(160deg, #222a4f 0%, #232f5f 50% , #222a4f 100%);
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    border-radius: 2em;
+    border-radius: 1em;
 }
 
 .card-light {
     background: linear-gradient(160deg, #ffffff 0%,  #edefed 100%);
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    border-radius: 20px;
+    border-radius: 1em;
 }
 
 /* Styles for .card-dark */

@@ -2,7 +2,7 @@ const formalAbout = [
     
     `
         I'm not driven by money, I'm driven by impact. It's clear to me that too many technologies are designed purely for profit.
-        They often neglect real issues, or worse, they fuel problems like addiction. 
+        They often neglect real issues, or worse, they fuel problems like addiction, social isolation, and undermine our values. 
         My goal is work with like minded individuals to create software that is ethical, sustainable, and beneficial.
     `,
     `
@@ -13,7 +13,7 @@ const formalAbout = [
     `
        Right now I mostly do web stuff outside my job. 
        I have a lot of experience with the full stack, including React, Vue, Express, Django, SQL, and a lot more.
-       I am trying to get into data engineering and machine learning too, as I find the architectural challenges fascinating.
+       I am trying to get into data science, specfically data engineering and ETL pipelines.
     `    
 ]
 

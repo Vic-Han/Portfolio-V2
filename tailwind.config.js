@@ -10,11 +10,15 @@ export default {
         '144' : '36rem',
         '192' : '48rem',
       },
-      lineHeight: {
-        'extra-loose': '4.5',
+      fontSize: {
+        '2xl-relaxed': ['1.5rem', { lineHeight: '2.25rem' }],
+        '3xl-relaxed': ['1.875rem', { lineHeight: '2.75rem' }],
+        '4xl-relaxed': ['2.25rem', { lineHeight: '3.25rem' }],
+        '5xl-relaxed': ['3rem', { lineHeight: '4.5rem' }],
       },
       screens: {
         '3xl': '1920px',
+        '4xl': '2400px',
       },
     },
   },

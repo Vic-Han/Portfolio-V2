@@ -29,7 +29,7 @@ function Footer() {
   }, [animation]);
 
   return ( 
-    <footer ref={footerRef} className={`mt-12 w-full ${ isVisible ? 'animate-footer overflow-x-hidden' : ''} `}> 
+    <footer ref={footerRef} className={`mt-12 ${ isVisible ? 'animate-footer overflow-x-hidden' : ''} `}> 
         <div className={`flex flex-col items-center justify-between w-screen px-4 py-1 md:flex-row md:py-12 ${darkMode ? 'footer-bg-dark' : 'footer-bg-light'}`}> 
 
           {/* Left Column */}
