@@ -5,48 +5,14 @@
 import React, { useState, useEffect, useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 import { animateContentBoxes } from '../transitions/AnimationHelper';
+import resumeData from "../data/Resume";
 import '../styles/resume.css';
 
 function Resume() {
   // Get the global context states
   const settingsStates = useContext(GlobalContext);
   const { darkMode, animation } = settingsStates;
-
-  const skills = {
-    "Languages": ["JavaScript", "Python", "HTML/CSS", "C/C++", "Go", "Java", "C#"],
-    "Web/REST API": ["React", "Gin", "Vue","Express.js", "Django", "Flask", ],
-    "DBMS": ["MongoDB", "PostgreSQL", "MySQL"],
-    "Data Science": ["Pandas", "Numpy", "Matplotlib", "Tensorflow", "Spark" ],
-    "Tools": ["Git/Github", "Docker",],
-  };
-
-  // Define work experience and education
-  const workExperience = [
-    {
-      title: "Prompt Engineer",
-      company: "DataAnnotation",
-      timeline: "March 2024 - Present",
-      accomplishments: [
-        "Created data science and software engineering prompts to identify and address weak spots in large language models",
-        "Reviewed and ensured the quality of AI generated code",
-        "Ensured clear and comprehensive explanations of technical concepts",
-      ],
-    }
-  ];
-
-  const education = [
-    {
-      qualification: "Bachelor of Science in Computer Science",
-      provider: "Univesity of Calgary",
-      date: "May 2024",
-    },
-    {
-      qualification: "IBM Full Stack Developer Certificate",
-      provider: "IBM & Coursera",
-      date: "Feburary 2024",
-    },
-  ];
-
+  const { skills, workExperience, education } = resumeData;
   // Initialize state variables for category list, item list, box animation states, and item animation states
   const categories = Object.keys(skills);
   const [categoryList, setCategoryList] = useState(categories);
@@ -74,7 +40,6 @@ function Resume() {
   // Define animation functions with different animation classes and durations
   const animateContentBoxesLow = animateContentBoxes('fade-in', 200);
   const animateContentBoxesNormal = animateContentBoxes('slide-in', 250);
-  const animateContentBoxesExtreme = animateContentBoxes('bounce-in', 300);
 
   // Animate items in a category
   const animateItems = (index) => {
@@ -117,8 +82,6 @@ function Resume() {
         animateContentBoxesLow(boxAnimationStates, setBoxAnimationStates, animateItems);
       } else if (animation === 'Normal') {
         animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates, animateItems);
-      } else if (animation === 'Extreme') {
-        animateContentBoxesExtreme(boxAnimationStates, setBoxAnimationStates, animateItems);
       }
     }
     
@@ -186,7 +149,7 @@ function Resume() {
               className={`
                 relative left-1/2 -translate-x-1/2 p-4 
                 ${darkMode ? 'card-dark' : 'card-light'} 
-                ${boxAnimationStates[index + 1]}
+                ${boxAnimationStates[index + 1]} flex-grow min-h-full
               `}
             >
               <h2 className="text-xl font-bold mb-2 text-primary">{category}</h2>
