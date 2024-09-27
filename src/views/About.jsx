@@ -75,7 +75,7 @@ const About = () => {
       return (
         <div key={index} ref={handleTextRef(index)} id={`text-${index}`} className="my-4 h-fit relative">
           
-          <div className={`overflow-hidden animate-footer`}>
+          <div className={`overflow-hidden fade-in-bottom relative left-1/2 -translate-x-1/2`}>
             <div className="text-secondary">{text}</div>
           </div>
         </div>
