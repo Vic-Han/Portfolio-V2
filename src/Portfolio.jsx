@@ -31,7 +31,7 @@ function Portfolio() {
       toggleSettings();      
       return;    
     }    
-    if (animation === 'Low' || animation === "None"){
+    if (animation === 'Normal' || animation === "Minimal"){
       setScreen(page);
       return;
     }  

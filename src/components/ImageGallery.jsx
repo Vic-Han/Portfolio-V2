@@ -13,10 +13,10 @@ const ImageGallery = () => {
     if (animationLevel === "None"){
         return '';
     }
-    if(animationLevel === "Low"){
+    if(animationLevel === "Normal"){
         return imageVisibility[index] ? index % 2 === 0 ? 'fade-in': 'fade-in-right' : ''
     }
-    if(animationLevel === "Normal"){
+    if(animationLevel === "Extreme"){
         return imageVisibility[index] ? "flip" : "before-flip"
     }
   }
@@ -53,7 +53,7 @@ const ImageGallery = () => {
     useEffect(() => {
     },[]);
   useEffect(() => {
-    if (animation === "None") {
+    if (animation === "Minimal") {
         setImageVisibility(new Array(casualPictures.length).fill(true));
     } else {
       return setObserver();

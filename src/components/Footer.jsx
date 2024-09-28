@@ -16,12 +16,12 @@ function Footer() {
   }, { threshold: 0.2 });
   useEffect(() => {
   
-    if (footerRef.current && animation !== 'None') observer.observe(footerRef.current);    
+    if (footerRef.current && animation !== 'Minimal') observer.observe(footerRef.current);    
     return () => { if (footerRef.current) observer.unobserve(footerRef.current); 
     };   
   }, []); 
   useEffect(() => {
-    if (animation === 'None') {
+    if (animation === 'Minimal') {
       if (footerRef.current) observer.unobserve(footerRef.current); 
     } else {
       observer.observe(footerRef.current); 

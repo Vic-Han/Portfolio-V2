@@ -41,7 +41,7 @@ const About = () => {
    * It updates the currentText state gradually to reveal the next text chunk.
    */
   useEffect(() => {
-    if(animation === "Normal"){
+    if(animation === "Extreme"){
       const texts = [...formalAbout, ...casualAbout];
         const interval = setInterval(() => {
           if (currentText.length < texts[currentIndex].length) {
@@ -49,7 +49,7 @@ const About = () => {
           } else {
             clearInterval(interval);
           }
-        }, 10);
+        }, 8);
         return () => clearInterval(interval);
       
     }
@@ -65,13 +65,13 @@ const About = () => {
   const renderText = (text, index) => { 
     const isCurrent = index === currentIndex;
     const margin = 'my-4 3xl:my-6';
-    if (!isCurrent || animation === "None") {
+    if (!isCurrent || animation === "Minimal") {
     return (
       <div key={index} ref={handleTextRef(index)} id={`text-${index}`} className={margin}>
-         <span className={`text-secondary ${index > currentIndex ? "opacity-0" : "opacity-100"}`}>{text}</span> 
+         <span className={`text-secondary`}>{text}</span> 
       </div>)
     }
-    else if (animation === "Low"){
+    else if (animation === "Normal"){
       return (
         <div key={index} ref={handleTextRef(index)} id={`text-${index}`} className="my-4 h-fit relative">
           
@@ -81,7 +81,7 @@ const About = () => {
         </div>
       )
     }
-    else if (animation === "Normal"){
+    else if (animation === "Extreme"){
       return (
       <div key={index} ref={handleTextRef(index)} id={`text-${index}`} className={margin}>
         <span>

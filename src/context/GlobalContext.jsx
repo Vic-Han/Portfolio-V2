@@ -8,7 +8,7 @@ import Cookies from 'js-cookie';
 const GlobalContext = createContext();
 const GlobalProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useState(Cookies.get('darkMode') === 'true');
-  const [animation, setAnimation] = useState(Cookies.get('animationLevel') || 'Low');
+  const [animation, setAnimation] = useState(Cookies.get('animationLevel') || 'Normal');
   const [circleTransition, setCircleTransition] = useState(false);
   const [slideTransition, setSlideTransition] = useState(false);
 

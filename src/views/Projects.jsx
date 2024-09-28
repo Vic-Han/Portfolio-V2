@@ -16,16 +16,12 @@ function Projects() {
     }
 
 
-    const animateContentBoxesLow = animateContentBoxes('fade-in-top', 200);
-    const animateContentBoxesNormal = animateContentBoxes('scale-in', 150);
-    const animateContentBoxesExtreme = animateContentBoxes('slam', 150);
+    const animateContentBoxesNormal = animateContentBoxes('fade-in-top', 200);
+    const animateContentBoxesExtreme = animateContentBoxes('scale-in', 150);
     useEffect(() => {
-        if(animation !== 'None'){
+        if(animation !== 'Minimal'){
         hideContentBoxes();
         switch (animation) {
-            case 'Low':
-                animateContentBoxesLow(boxAnimationStates, setBoxAnimationStates);
-                break
             case 'Normal':
                 animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates);
                 break
@@ -41,7 +37,7 @@ function Projects() {
     return (
         <div>
             <h1 className={`${darkMode ? 'text-white' : 'text-black'} text-4xl font-bold mb-10 text-center relative -translate-x-1/2 left-1/2`}>Check out my Projects</h1>
-                <div className="flex flex-row flex-wrap w-11/12 xl:w-4/5 relative -translate-x-1/2 left-1/2"> 
+                <div className="flex flex-row flex-wrap w-11/12 xl:w-4/5 relative -translate-x-1/2 left-1/2 justify-center"> 
                     {projects.map((project, index) => (
                         <div key={index} className="p-1 m-2 xl:p-2 xl:m-4">
                             <div className={`${boxAnimationStates[index]} relative left-1/2 -translate-x-1/2`}>

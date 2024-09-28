@@ -6,6 +6,14 @@ export default {
   theme: {
     extend: {
       width: {
+        '100' : '25rem',
+        '112':  '28rem',
+        '128' : '32rem',
+        '144' : '36rem',
+        '192' : '48rem',
+      },
+      height: {
+        '100' : '25rem',
         '112':  '28rem',
         '128' : '32rem',
         '144' : '36rem',

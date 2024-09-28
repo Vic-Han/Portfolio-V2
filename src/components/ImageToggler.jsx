@@ -46,16 +46,14 @@ function ImageToggler({ animation }) {
 
   // Trigger the transition effect based on the animation prop
   const transition = () => {
-    if (animation === 'None') {
+    if (animation === 'Minimal') {
       setIndex((prevIndex) => (prevIndex + 1) % length);
     }
-    else if (animation === 'Low') {
+    else if (animation === 'Normal') {
       basicTransition();
-    } else if (animation === 'Normal') {
-      normalTransition();
     } else if (animation === 'Extreme') {
-      extremeTransition();
-    }
+      normalTransition();
+    } 
   }
 
   // Set up an interval to trigger the transition effect every 8 seconds

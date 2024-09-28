@@ -20,7 +20,7 @@ const casualAbout = [
     `
         I want to tackle races like the Artic Ultra and Badwater in the far(?) future.
         I also enjoy trying to craft recipes in the kitchen, but whether I'm actually good at it is up for debate.
-        I love karoake too, but it's not up for debate that I'm horrendous at it.
+        I love karaoke too, but it's not up for debate that I'm horrendous at it.
     `
 ]
 export default casualAbout;

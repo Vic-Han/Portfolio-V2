@@ -25,11 +25,11 @@ function Mainpage() {
   // Set up the content box animation based on the animation prop.
   // Clear the animation when the component unmounts or re-renders.
   useEffect(() => {
-    if(animation !== 'None'){
+    if(animation !== 'Minimal'){
       hideContentBoxes();
-      if (animation === 'Low') {
+      if (animation === 'Normal') {
         animateContentBoxesLow(boxAnimationStates, setBoxAnimationStates);
-      } else if (animation === 'Normal') {
+      } else if (animation === 'Extreme') {
         animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates);
       }
     }

@@ -76,11 +76,11 @@ function Resume() {
   }
 
   useEffect(() => {
-    if(animation !== "None"){
+    if(animation !== "Minimal"){
       hideContentBoxes();
-      if (animation === 'Low') {
+      if (animation === 'Normal') {
         animateContentBoxesLow(boxAnimationStates, setBoxAnimationStates, animateItems);
-      } else if (animation === 'Normal') {
+      } else if (animation === 'Extreme') {
         animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates, animateItems);
       }
     }

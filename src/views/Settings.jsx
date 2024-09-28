@@ -42,15 +42,13 @@ function Settings({close}) {
         }
     }
     useEffect(() => {
-        if(animation !== 'None'){
+        if(animation !== 'Minimal'){
             hideContentBoxes();
-            if (animation === 'Low') {
+            if (animation === 'Normal') {
             animateContentBoxesLow(boxAnimationStates, setBoxAnimationStates);
-            } else if (animation === 'Normal') {
-            animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates);
             } else if (animation === 'Extreme') {
-            animateContentBoxesExtreme(boxAnimationStates, setBoxAnimationStates);
-            }
+            animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates);
+            } 
         }
       }, []);
     
@@ -74,24 +72,24 @@ function Settings({close}) {
                 
                 
             </div>
-                <div className='text-3xl mb-10'>Animation Level:</div>
-                <div> {animation}</div>
-                <div className={`relative -translate-x-1/2 left-1/2 w-fit p-5 ${darkMode ? 'bg-white' : 'bg-gray-50'}`}> <AnimationToggle value={animation} change={setAnimation}/> </div>
+                <div className='text-3xl mb-10 text-primary'>Animation Level:</div>
+                <div className="text-secondary"> {animation}</div>
+                <div className={`relative -translate-x-1/2 left-1/2 w-fit p-5 `}> <AnimationToggle value={animation} change={setAnimation}/> </div>
                     <div className='flex flex-row'>
-                    <div> Normal: </div> 
+                    <div className='text-secondary'> Normal: </div> 
                     <ReadOnlyStars value={3}/>
                 </div>
-                <div> Flashy </div>
+                <div className='text-secondary'> Flashy </div>
                 <div className='flex flex-row'>
-                    <div> Low: </div> 
+                    <div className='text-secondary'> Low: </div> 
                     <ReadOnlyStars value={2}/>
                 </div>
-                <div> Recommended </div>
+                <div className='text-secondary'> Recommended </div>
                 <div className='flex flex-row'>
-                    <div> None: </div> 
+                    <div className='text-secondary'> None: </div> 
                     <ReadOnlyStars value={1}/>
                 </div>
-                <div> No animations </div>
+                <div className='text-secondary'> No animations </div>
                 
             </div>
             
