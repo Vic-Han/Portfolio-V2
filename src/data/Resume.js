@@ -1,12 +1,13 @@
 const resumeData = { 
 
    "skills" : {
-    "Interpersonal":["Leadership"],
+    // "Interpersonal":["Leadership"],
     "Languages": ["JavaScript", "Python", "HTML/CSS", "C/C++", "Go", "Java", "C#"],
-    "Web/REST API": ["React", "Gin", "Vue","Express.js", "Django", "Flask", ],
-    "DBMS": ["MongoDB", "PostgreSQL", "MySQL"],
-    "Data Science": ["Pandas", "Numpy", "Matplotlib", "Tensorflow", "Spark" ],
-    "Tools": ["Git/Github", "Docker",],
+    "Web Development" : ["React", "Vue", "Tailwind"],
+    "API Development": ["Gin","Express.js", "Django", "Flask", ],
+    "Databases": ["MongoDB", "PostgreSQL", "MySQL", "Cassandra"],
+    "Data Engineering": ["Pandas", "Numpy", "Matplotlib", "Tensorflow", "Spark" ],
+    "Tools": ["Git/Github", "Docker","Bash"],
   },
 
   // Define work experience and education
@@ -16,7 +17,7 @@ const resumeData = {
       company: "DataAnnotation",
       timeline: "March 2024 - Present",
       accomplishments: [
-        "Created data science and software engineering prompts to identify and address weak spots in large language models",
+        "Developed data science and software engineering prompts to identify weaknesses in LLMs",
         "Reviewed and ensured the quality of AI generated code",
         "Ensured clear and comprehensive explanations of technical concepts",
       ],

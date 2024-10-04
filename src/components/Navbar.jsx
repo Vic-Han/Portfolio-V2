@@ -5,7 +5,11 @@ import React from "react";
 function Navbar({clickHandler, darkmode}) {
     const dark = 'text-white hover:bg-gray-700';
     const light = 'text-black hover:bg-gray-300';
-    const styles = 'rounded-lg p-4 text-xl cursor-pointer font-bold';
+
+    const cursor = ' cursor-pointer font-bold';
+    const layout = 'rounded-lg p-4 '
+    const textSize = 'text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl'
+    const styles = `${cursor} ${layout} ${textSize}`;
     return (
         <div className="flex flex-row justify-between py-3 px-10">
             

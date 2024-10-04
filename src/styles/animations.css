@@ -76,7 +76,7 @@
 @keyframes fade-in-right {
   0% {
     opacity: 0.5;
-    transform: translateX(20%) translateX(-50%);
+    transform: translateX(50px) translateX(-50%);
   }
   
   100% {

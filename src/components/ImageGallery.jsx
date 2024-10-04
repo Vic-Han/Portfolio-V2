@@ -10,7 +10,7 @@ const ImageGallery = () => {
   const imageRefs = useRef([]);
 
   const animationClass = (index, animationLevel) =>{
-    if (animationLevel === "None"){
+    if (animationLevel === "Miminal"){
         return '';
     }
     if(animationLevel === "Normal"){

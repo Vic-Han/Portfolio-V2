@@ -64,7 +64,7 @@ const About = () => {
   };
   const renderText = (text, index) => { 
     const isCurrent = index === currentIndex;
-    const margin = 'my-4 3xl:my-6';
+    const margin = 'my-6 3xl:my-8';
     if (!isCurrent || animation === "Minimal") {
     return (
       <div key={index} ref={handleTextRef(index)} id={`text-${index}`} className={margin}>
@@ -73,7 +73,7 @@ const About = () => {
     }
     else if (animation === "Normal"){
       return (
-        <div key={index} ref={handleTextRef(index)} id={`text-${index}`} className="my-4 h-fit relative">
+        <div key={index} ref={handleTextRef(index)} id={`text-${index}`} className={margin}>
           
           <div className={`overflow-hidden fade-in-bottom relative left-1/2 -translate-x-1/2`}>
             <div className="text-secondary">{text}</div>
@@ -95,7 +95,7 @@ const About = () => {
     }
   }
   const cardStyle = "w-3/5 p-3 md:p-6 4xl:p-10 relative left-1/2 -translate-x-1/2";
-  const fontSize = " text-xs sm:text-sm md:text-base lg:text-2xl-relaxed xl:text-3xl-relaxed 2xl:text-4xl-relaxed 3xl:text-5xl-relaxed";
+  const fontSize = "text-sm sm:text-base md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl-relaxed";
   return (
     <div className="relative my-4">
       <div className="flex flex-col" ref={parentRef}>

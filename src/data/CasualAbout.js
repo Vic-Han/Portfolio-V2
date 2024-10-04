@@ -6,7 +6,7 @@ const casualAbout = [
         I've been a runner for most my life but I've recently gotten into road cycling too. 
     `,
     `
-        What's wrong with you? Why would you do that to yourself? 
+        "What's wrong with you? Why would you do that to yourself?"
         I hear this kind of stuff all the time when I talk about my training or races. 
         I struggled a lot with self esteem when I was younger. 
         It held me back in everything I did. 
