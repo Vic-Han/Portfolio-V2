@@ -32,3 +32,17 @@
 .btn-primary-dark {
     background: linear-gradient(160deg, #8899aa 0%, #7a6ab7 50%, #8899aa 100%);
 } */
+
+.close-button{
+    background: linear-gradient(160deg, #5589aa 0%, #5595b0 50%, #5589aa 100%);
+    padding: 1em;
+    border-radius: 0.5em;
+    color:#eee;
+
+}
+.close-button::after{
+
+}
+.close-button::before{
+
+}

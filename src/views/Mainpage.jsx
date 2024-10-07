@@ -62,7 +62,7 @@ function Mainpage() {
           <div className={`flex flex-col items-center m-3 xl:m-5 text-sm sm:text-base md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl-relaxed text-secondary`}>
             I'm a web developer currently training AI to write code at DataAnnotation. 
             I recently graduated from the University of Calgary with a degree in Computer Science. 
-            I'm driven by my curiosity and love for taking on difficult challenges.
+            I'm driven by my desire to make an impact and love for challenges.
           </div>
         </div>
       </div>

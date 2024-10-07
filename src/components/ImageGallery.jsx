@@ -20,7 +20,15 @@ const ImageGallery = () => {
         return imageVisibility[index] ? "flip" : "before-flip"
     }
   }
-
+  const negMargin = (index) =>{
+    if(index === 0){
+        return '-mb-40'
+    }
+    if(index === casualPictures.length - 1){
+      return '-mt-40'
+    }
+    return '-my-40'
+  }
   const setObserver = () => {
     const initialVisibility = new Array(casualPictures.length).fill(false);
     setImageVisibility(initialVisibility);
@@ -66,7 +74,7 @@ const ImageGallery = () => {
         <div
           key={index}
           ref={(el) => (imageRefs.current[index] = el)}
-          className={`relative w-1/6 transform ${
+          className={`relative w-1/6 transform ${negMargin(index)} ${
             index % 2 === 0 ? "left-0" : "left-full -translate-x-full"
           } ${imageVisibility[index] ? "opacity-100" : "opacity-0"}`}
         >

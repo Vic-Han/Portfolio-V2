@@ -1,6 +1,6 @@
 .stars {
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     gap: 0.3rem;
     --stroke: #666;
     --fill: #ffc73a;

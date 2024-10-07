@@ -64,7 +64,7 @@ const About = () => {
   };
   const renderText = (text, index) => { 
     const isCurrent = index === currentIndex;
-    const margin = 'my-6 3xl:my-8';
+    const margin = 'my-6 3xl:my-10';
     if (!isCurrent || animation === "Minimal") {
     return (
       <div key={index} ref={handleTextRef(index)} id={`text-${index}`} className={margin}>
@@ -94,17 +94,18 @@ const About = () => {
       return (<></>)
     }
   }
-  const cardStyle = "w-3/5 p-3 md:p-6 4xl:p-10 relative left-1/2 -translate-x-1/2";
-  const fontSize = "text-sm sm:text-base md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl-relaxed";
+  const cardStyle = "w-3/5 p-3 md:p-6 2xl:p-10 4xl:p-14 relative left-1/2 -translate-x-1/2";
+  const fontSize = "text-sm sm:text-base md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl-relaxed"
+  const fontSizeHeader = "text-primary text-center text-base sm:text-lg md:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl-relaxed"
   return (
     <div className="relative my-4">
       <div className="flex flex-col" ref={parentRef}>
         <div className={`${darkMode ? "card-dark" : "card-light"} ${cardStyle} mb-8 ${fontSize}`}>
-          <div className="text-primary"> About me</div>
+          <div className={fontSizeHeader}> About me</div>
           {formalAbout.map((text, index) => renderText(text, index))}
         </div>
         <div className={`${darkMode ? "card-dark" : "card-light"} ${cardStyle} ${fontSize}`}>
-          <div className="text-primary">Even more about me</div>
+          <div className={fontSizeHeader}>Even more about me</div>
           {casualAbout.map((text, index) =>
             renderText(text, formalAbout.length + index)
           )}

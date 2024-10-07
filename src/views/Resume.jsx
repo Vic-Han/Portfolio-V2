@@ -15,10 +15,8 @@ function Resume() {
   const { skills, workExperience, education } = resumeData;
   // Initialize state variables for category list, item list, box animation states, and item animation states
   const categories = Object.keys(skills);
-  const [categoryList, setCategoryList] = useState(categories);
-  const [itemList, setItemList] = useState(
-    categories.map(category => skills[category])
-  );
+  const itemList = categories.map(category => skills[category])
+  
   const [boxAnimationStates, setBoxAnimationStates] = useState(
     [...categories.map(() => ""), ""]
   );
@@ -94,15 +92,10 @@ function Resume() {
   return (
     <div className="flex flex-wrap justify-center w-full">
       <div key={0} className="w-full md:w-3/4 lg:w-2/3 px-4 mb-8">
-        <div
-          className={`
-            relative left-1/2 -translate-x-1/2 py-4 px-10 flex flex-col w-full
-            ${darkMode ? 'card-dark' : 'card-light'} 
-            ${boxAnimationStates[0]}
-          `}
-        >
-          <h2 className="text-xl text-primary mb-2">Resume</h2>
-          <div className = 'w-fit mx-2'>
+        <div className={`relative left-1/2 -translate-x-1/2 py-4 px-10 flex flex-col w-full
+            ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[0]}`}>
+          <h2 className="text-xl text-primary mb-2 relative left-1/2 -translate-x-1/2 text-center">Resume</h2>
+          <div className = 'w-full mx-2'>
             <div className={`relative left-1/2 -translate-x-1/2 ${mainCardAnimationStates[0]}`}>
               <div className="flex flex-wrap justify-center mb-4">
                 <a href="resume.pdf" download className={`download ${animation !== 'Minimal' ? 'animate-glow' : ''}`}>
@@ -111,7 +104,7 @@ function Resume() {
               </div>
             </div>
           </div>
-          <h2 className="text-xl font-bold text-primary mb-2">Experience:</h2>
+          <h2 className="text-xl font-bold text-primary mb-2 mt-4 text-center">Experience:</h2>
           <div className = 'mx-2'>
             <div className={`relative left-1/2 -translate-x-1/2 ${mainCardAnimationStates[1]}`}>
               {workExperience.map((experience, experienceIndex) => (
@@ -132,7 +125,7 @@ function Resume() {
               ))}
             </div>
           </div>
-          <h2 className="text-xl text-primary mb-2"> Education and Certificates: </h2>
+          <h2 className="text-xl text-primary mb-2 text-center"> Education and Certificates: </h2>
           <div className = 'mx-2'>
             <div className={`relative left-1/2 -translate-x-1/2 ${mainCardAnimationStates[2]}`}>
               {education.map((qualification, qualificationIndex) => (
@@ -148,8 +141,8 @@ function Resume() {
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-wrap justify-center">
-        {categoryList.map((category, index) => (
+      <div className="w-full flex flex-row flex-wrap justify-center">
+        {categories.map((category, index) => (
           <div key={index} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
             <div
               className={`
