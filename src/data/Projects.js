@@ -102,7 +102,7 @@ const projects = [
         video : 'https://www.youtube.com/watch?v=DuWW8eVc-Mw',
         titleTextStyle: 'text-gray-950 font-semibold',
         descriptionTextStyle: 'text-white',
-        buttonStyle: "bg-white text-black px-4 py-2 rounded"
+        buttonStyle: "bg-white text-black rounded"
 
     },
     {
@@ -115,7 +115,7 @@ const projects = [
         textColor: 'text-white',
         titleTextStyle: 'text-gray-50 font-semibold',
         descriptionTextStyle: 'text-white',
-        buttonStyle: "bg-white text-black px-4 py-2 rounded"
+        buttonStyle: "bg-white text-black rounded"
     },
     {
         name: 'Twitter Bot Detection',
@@ -128,7 +128,7 @@ const projects = [
         textColor: 'text-black',
         titleTextStyle: 'text-gray-950 font-semibold',
         descriptionTextStyle: 'text-white',
-        buttonStyle: "bg-white text-black px-4 py-2 rounded"
+        buttonStyle: "bg-white text-black rounded"
     },
   
     {
@@ -140,7 +140,7 @@ const projects = [
         video : 'https://www.youtube.com/watch?v=KEn2bstXrFY',
         titleTextStyle: 'text-gray-50 font-semibold',
         descriptionTextStyle: 'text-white',
-        buttonStyle: "bg-white text-black px-4 py-2 rounded"
+        buttonStyle: "bg-white text-black rounded"
     },
     {
         name: 'Pass n Play Texas Holdem',
@@ -151,7 +151,7 @@ const projects = [
         video : null,
         titleTextStyle: 'text-gray-50 font-semibold',
         descriptionTextStyle: 'text-white',
-        buttonStyle: "bg-white text-black px-4 py-2 rounded"
+        buttonStyle: "bg-white text-black rounded"
     },
     {
         name: 'Ultimate Tic Tac Toe',
@@ -162,7 +162,7 @@ const projects = [
         video : null,
         titleTextStyle: 'text-gray-950 font-semibold',
         descriptionTextStyle: 'text-white',
-        buttonStyle: "bg-white text-black px-4 py-2 rounded"
+        buttonStyle: "bg-white text-black rounded"
     },
 
 ]

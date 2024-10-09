@@ -25,6 +25,7 @@ function Footer() {
       if (footerRef.current) observer.unobserve(footerRef.current); 
     } else {
       observer.observe(footerRef.current); 
+      return () => { if (footerRef.current) observer.unobserve(footerRef.current); };
     }
   }, [animation]);
 

@@ -67,7 +67,7 @@ function Portfolio() {
       {screen === 'projects' && <Projects />}
       {screen === 'resume' && <Resume />}
       {screen === 'about' && <About/>}
-      <Footer/>
+      {screen !== 'none' && <Footer/>}
     </div>  
   );
 }

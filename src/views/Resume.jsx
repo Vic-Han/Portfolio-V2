@@ -50,7 +50,7 @@ function Resume() {
         setTimeout(() => {
           setMainCardAnimationStates((prevMainCardAnimationStates) => {
             const newMainCardAnimationStates = [...prevMainCardAnimationStates];
-            newMainCardAnimationStates[i] = `fade-in-right`;
+            newMainCardAnimationStates[i] = `width-shrink`;
             return newMainCardAnimationStates;
           });
         }, i * 300);

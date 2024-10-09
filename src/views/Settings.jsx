@@ -17,7 +17,6 @@ function Settings({close}) {
 
     const animateContentBoxesLow = animateContentBoxes('fade-in', 200);
     const animateContentBoxesNormal = animateContentBoxes('scale-in', 250);
-    const animateContentBoxesExtreme = animateContentBoxes('slam', 300);
     const changeDarkMode = (value) => { 
         if(animation === 'Extreme'){
             toggleSlideTransition()
@@ -26,7 +25,7 @@ function Settings({close}) {
                 hideContentBoxes()
             },500);
             setTimeout(() => {
-                animateContentBoxesExtreme(boxAnimationStates, setBoxAnimationStates);
+                animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates);
             }, 1000);
             
         }

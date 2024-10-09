@@ -78,3 +78,18 @@
                   0 0 18px rgba(85, 175, 255, 0.5);
     }
   }
+
+
+.width-shrink{
+  animation: width-shrink 1.5s;
+}
+@keyframes width-shrink {
+    0%{
+      opacity: 0.4;
+      width:110%;
+    }
+    100%{
+      opacity: 1;
+      width:100%;
+    }
+}

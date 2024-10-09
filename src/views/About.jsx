@@ -65,11 +65,17 @@ const About = () => {
   const renderText = (text, index) => { 
     const isCurrent = index === currentIndex;
     const margin = 'my-6 3xl:my-10';
-    if (!isCurrent || animation === "Minimal") {
+    if (animation === "Minimal" || index < currentIndex) {
     return (
       <div key={index} ref={handleTextRef(index)} id={`text-${index}`} className={margin}>
          <span className={`text-secondary`}>{text}</span> 
       </div>)
+    }
+    if(!isCurrent){
+      return (
+        <div key={index} ref={handleTextRef(index)} id={`text-${index}`} className={margin}>
+            <span className="opacity-0">{text}</span>
+        </div>)
     }
     else if (animation === "Normal"){
       return (
