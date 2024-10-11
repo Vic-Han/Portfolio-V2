@@ -62,7 +62,8 @@ function ImageToggler({ animation }) {
         transition()
     }, 8000);
     return () => clearInterval(interval); // Clear the interval when the component unmounts or re-renders
-  }, []);
+  }, [animation]);
+
 
   return (
     <div className="overflow-hidden w-full px-1">

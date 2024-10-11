@@ -35,14 +35,39 @@
 
 .close-button{
     background: linear-gradient(160deg, #5589aa 0%, #5595b0 50%, #5589aa 100%);
-    padding: 1em;
     border-radius: 0.5em;
-    color:#eee;
+    aspect-ratio: 1/1;
+    border: solid 2px black;
 
+}
+.close-button::after,.close-button::before{
+    width: 85%;
+    height: 18%;
+    position: absolute;
+    display: inline-block;
+    content: "";
+    border-radius: 0.2em;
 }
 .close-button::after{
-
+    background-color: #fff;
+    rotate: 135deg;
+    top: 41%;
+    left: 8%;
 }
 .close-button::before{
+    background-color: #fff;
+    rotate: 45deg;
+    top:41%;
+    left:8%;
+}
+.close-button.close-hover{
+    transition: 10s ease all;
+}
+.close-button.close-hover:hover::after{
+    rotate: 225deg;
 
+}
+
+.close-button.close-hover:hover::before{
+    rotate: 145deg;
 }

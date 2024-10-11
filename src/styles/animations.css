@@ -6,16 +6,15 @@
   animation: fade-in-top 0.8s ease-in-out;
 }
 .fade-in-bottom{
-  animation: fade-in-bottom 0.8s ease-in-out;
+  animation: fade-in-bottom 0.4s ease-in-out;
 }
 .fade-in-right{
-  animation: fade-in-right 0.8s ease-in-out;
+  animation: fade-in-right 1.2s ease-in-out;
 
 }
 
 .scale-in{
-   animation: scale-in 1.2s ease-in-out;
-   /* transform-origin: center; */
+   animation: scale-in 0.9s ease-in-out;
 }
 
 
@@ -76,7 +75,7 @@
 @keyframes fade-in-right {
   0% {
     opacity: 0.5;
-    transform: translateX(50px) translateX(-50%);
+    transform: translateX(20%) translateX(-50%);
   }
   
   100% {
@@ -88,11 +87,11 @@
 
 @keyframes scale-in {
   0% {
-    transform: translateX(-50%) scale(0.2); 
-    opacity: 0.7;
+    transform: translateX(-50%) scale(0.5); 
+    opacity: 0.5;
   }
   90%{
-    transform: translateX(-50%) scale(1.2);
+    transform: translateX(-50%) scale(1.15);
     opacity: 1;
   }
   100% {

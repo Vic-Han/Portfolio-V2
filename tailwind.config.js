@@ -19,7 +19,13 @@ export default {
         '144' : '36rem',
         '192' : '48rem',
       },
+      scale:{
+          '60' : '0.6',
+          '175' : '1.75'
+      },
       fontSize: {
+        '3xs' : ['0.6rem', {lineHeight: '0.8rem'}],
+        '2xs' : ['0.65rem', {lineHeight: '0.9rem'}],
         '2xl-relaxed': ['1.5rem', { lineHeight: '2.25rem' }],
         '3xl-relaxed': ['1.875rem', { lineHeight: '2.75rem' }],
         '4xl-relaxed': ['2.25rem', { lineHeight: '3.25rem' }],

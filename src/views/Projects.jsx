@@ -20,19 +20,17 @@ function Projects() {
     const animateContentBoxesExtreme = animateContentBoxes('scale-in', 150);
     useEffect(() => {
         if(animation !== 'Minimal'){
-        hideContentBoxes();
-        switch (animation) {
-            case 'Normal':
-                animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates);
-                break
-            case 'Extreme':
-                animateContentBoxesExtreme(boxAnimationStates, setBoxAnimationStates);
-                break
-            
+            hideContentBoxes();
+            switch (animation) {
+                case 'Normal':
+                    animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates);
+                    break
+                case 'Extreme':
+                    animateContentBoxesExtreme(boxAnimationStates, setBoxAnimationStates);
+                    break       
+            }
         }
-    }
-
-    }, [animation]);
+    }, []);
     const textSize = 'text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl'
     const margin = 'mb-3 md:mb-5 lg:mb-6 xl:mb-8 2xl:mb-10 3xl:mb-12'
     return (

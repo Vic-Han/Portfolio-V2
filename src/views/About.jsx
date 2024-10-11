@@ -10,24 +10,21 @@ import ImageGallery from "../components/ImageGallery";
  */
 const About = () => {
   const { darkMode, animation } = useContext(GlobalContext);
-  const [currentText, setCurrentText] = useState("");
+  const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const textRefs = useRef([]);
   const parentRef = useRef(null);
   const textObserver = useRef(null);
-
-  
 
   useEffect(() => {
     textObserver.current = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const textIndex = parseInt(entry.target.id.slice(5));
-          setCurrentIndex((prevIndex) => Math.max(prevIndex, textIndex));
-          console.log(textIndex);
+          setCurrentIndex((prev) => Math.max(textIndex,prev));
         }
       });
-    }, { threshold: 1.0 });
+    }, { threshold: 0.8 });
 
     textRefs.current.forEach((element) => {
       textObserver.current.observe(element);
@@ -41,19 +38,20 @@ const About = () => {
    * It updates the currentText state gradually to reveal the next text chunk.
    */
   useEffect(() => {
+    setCurrentTextIndex(0)
     if(animation === "Extreme"){
       const texts = [...formalAbout, ...casualAbout];
         const interval = setInterval(() => {
-          if (currentText.length < texts[currentIndex].length) {
-            setCurrentText(texts[currentIndex].slice(0, currentText.length + 1));
+          if (currentTextIndex < texts[currentIndex].length) {
+            setCurrentTextIndex((prev) => prev + 1 );
           } else {
             clearInterval(interval);
           }
-        }, 8);
+        }, 7);
         return () => clearInterval(interval);
       
     }
-  }, [currentIndex, currentText]);
+  }, [currentIndex]);
 
   /**
    * Helper function to store refs of text chunk elements in the textRefs array.
@@ -91,8 +89,8 @@ const About = () => {
       return (
       <div key={index} ref={handleTextRef(index)} id={`text-${index}`} className={margin}>
         <span>
-          <span className="text-secondary">{currentText}</span>
-          <span className="opacity-0">{text.slice(currentText.length)}</span>
+          <span className="text-secondary">{text.slice(0,currentTextIndex-1)}</span>
+          <span className="opacity-0">{(currentTextIndex !== text.length - 1) ? text.slice(currentTextIndex) : null}</span>
         </span>
       </div>)
     }
@@ -100,7 +98,7 @@ const About = () => {
       return (<></>)
     }
   }
-  const cardStyle = "w-3/5 p-3 md:p-6 2xl:p-10 4xl:p-14 relative left-1/2 -translate-x-1/2";
+  const cardStyle = "w-4/5 sm:w-3/5 p-3 md:p-6 2xl:p-10 4xl:p-14 relative translate-x-1/2 sm:left-1/2 sm:-translate-x-1/2";
   const fontSize = "text-sm sm:text-base md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl-relaxed"
   const fontSizeHeader = "text-primary text-center text-base sm:text-lg md:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl-relaxed"
   return (

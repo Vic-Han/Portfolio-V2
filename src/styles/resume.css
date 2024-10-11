@@ -1,27 +1,29 @@
 .download{
   background-color: #4299e1;
   transition: 0.3s;
-  border-radius: 0.5rem;
+  border-radius: 0.3rem;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   font-weight: 600;
+  font-size: 14px;
 }
 
 .download:hover {
   background-color: #2b6cb0;
   scale: 1.05;
 }
-.skill{
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    overflow-x: hidden;
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    margin: 0.5rem;
-    border-radius: 0.5rem;
-}
 
+.skill{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow-x: hidden;
+  display: inline-block;
+  font-size: 12px;
+  padding: 0.35rem 0.7rem;
+  margin: 0.3rem;
+  border-radius: 0.25rem;
+}
 .card-dark .skill{
 
     background: linear-gradient(160deg, #64748B 0%, #64748B 50% , #64748B 100%);
@@ -92,4 +94,46 @@
       opacity: 1;
       width:100%;
     }
+}
+
+@media (min-width:640px) {
+  .skill{
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  .download{
+    font-size: 16px;
+    padding: 0.5rem 1rem;
+    border-radius: 0.4rem;
+  }
+}
+@media (min-width:768px) {
+  .download{
+    font-size: 24px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+  }
+}
+@media (min-width:1920px) {
+  .skill{
+    font-size: 20px;
+    padding: 0.65rem 1.3rem;
+    margin: 0.65rem;
+    border-radius: 0.65rem;
+  }
+  .download{
+    font-size: 30px;
+    padding: 0.7rem 1.4rem;
+    border-radius: 0.6rem;
+  }
+}
+@media (min-width:2400px) {
+  .skill{
+    font-size: 24px;
+    padding: 0.75rem 1.5rem;
+    margin: 0.75rem;
+    border-radius: 0.75rem;
+  }
 }
