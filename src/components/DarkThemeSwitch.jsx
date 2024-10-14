@@ -12,7 +12,7 @@ const DarkThemeSwitch = ({ value, change }) => {
             setTimeout(() => {
                 change(!on);
                 setIsClickable(true);
-            }, 200);
+            }, 550);
         }
     }
     return (

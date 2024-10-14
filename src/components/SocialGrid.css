@@ -33,7 +33,7 @@
     bottom:0;
     width: 100%;
     height: 0;
-    transition: all 0.9s ease;
+    transition: all 0.7s ease;
     justify-content: center;
     color: white;
     font-size: 100%;
@@ -67,20 +67,20 @@
 .git-box{
     background: linear-gradient(45deg , #151313 0%, #1a1717 100%);
     z-index: 11;
-    transition-delay: 0.08s;
+    transition-delay: 0.06s;
 }
 
 .insta-box{
     background: linear-gradient(45deg , #bc3381 0%, #c43787 100%);
     z-index: 12;
-    transition-delay: 0.16s;
+    transition-delay: 0.12s;
 }
 .social-container:not(:hover) .linkedin-box{
-    transition-delay: 0.16s;
+    transition-delay: 0.12s;
 }
 
 .social-container:not(:hover) .git-box{
-    transition-delay: 0.08s; 
+    transition-delay: 0.06s; 
 }
 
 .social-container:not(:hover) .insta-box{

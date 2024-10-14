@@ -9,6 +9,12 @@
 @tailwind utilities;
 
 
+#root{
+  height: 100vh;
+  overflow: auto;
+  scrollbar-width: thick;
+  scrollbar-color: #377cd0 #efefef;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',

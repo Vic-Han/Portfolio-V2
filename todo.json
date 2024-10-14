@@ -1,23 +1,14 @@
 {
     "general": [
-        "Figure out Custom domain =(",
-        "Async image loading??",
-        "Either ajdust the 'scale-in' animation or pick an entirely new one for 'Extreme' animation",
-        "Style the scrollbar"
+        "Figure out Custom domain =("
     ],
-    "settings": [
-        "Close button on settings page"
-    ],
+    "settings": [],
     "home": [
-        "Image toggler needs one more formal image"
+        "Redo linkedIn image then use it for image toggler"
     ],
     "projects": [],
     "resume": [],
     "about": [],
-    "navbar": [
-        "Navbar should let user know which option is selected"
-    ],
-    "footer": [
-        "Footer is not responsive"
-    ]
+    "navbar": [],
+    "footer": []
 }

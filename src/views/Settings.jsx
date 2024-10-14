@@ -17,17 +17,18 @@ function Settings({close}) {
 
     const animateContentBoxesLow = animateContentBoxes('fade-in', 200);
     const animateContentBoxesNormal = animateContentBoxes('scale-in', 250);
-    const changeDarkMode = (value) => { 
-         if(animation === 'Extreme'){
-            toggleCircleTransition()            
-            setTimeout(() => {
-                setDarkMode(value)
-            }, 650);
+    const closeButtonStyle = (animation) =>{
+        if(animation === 'Minimal'){
+            return ''
         }
-        else{
-            setDarkMode(value)
-        }
+        if (animation === 'Normal') {
+            return 'hover:scale-105 transition duration-400'
+        }  
+        if (animation === 'Extreme') {
+            return 'hover:scale-105 transition duration-400 close-hover'
+        } 
     }
+
     useEffect(() => {
         if(animation !== 'Minimal'){
             hideContentBoxes();
@@ -48,14 +49,12 @@ function Settings({close}) {
                     <div className="w-1/2 p-0">
                         <div className='relative left-0 w-fit'>
                             <div className={`text-sm sm:text-base xl:text-3xl 2xl:text-4xl 3xl:text-5xl text-primary w-fit mb-0.5 sm:mb-1 md:mb-2 lg-mb-3 xl:mb-4 2xl:mb-4 3xl:mb-6`}>Dark Theme?</div>
-                            <DarkThemeSwitch value={darkMode} change={changeDarkMode}/>
+                            <DarkThemeSwitch value={darkMode} change={setDarkMode}/>
                         </div>
-                        
-
                     </div>
                     <div className='w-1/2 p-0'>
                         <div className='relative left-full -translate-x-full w-fit'>
-                            <button onClick={close} className='close-button w-24 close-hover'>  </button>
+                            <button onClick={close} className={`close-button w-10 sm:w-14 xl:w-20 2xl:w-24 3xl:w-28 4xl:w-32 ${closeButtonStyle(animation)}`}>  </button>
                         </div>
                     </div> 
                 </div>

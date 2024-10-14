@@ -37,10 +37,10 @@
     background: linear-gradient(160deg, #5589aa 0%, #5595b0 50%, #5589aa 100%);
     border-radius: 0.5em;
     aspect-ratio: 1/1;
-    border: solid 2px black;
 
 }
 .close-button::after,.close-button::before{
+    transition: 0.4s ease all;
     width: 85%;
     height: 18%;
     position: absolute;
@@ -60,14 +60,11 @@
     top:41%;
     left:8%;
 }
-.close-button.close-hover{
-    transition: 10s ease all;
-}
 .close-button.close-hover:hover::after{
-    rotate: 225deg;
+    rotate: 495deg;
 
 }
 
 .close-button.close-hover:hover::before{
-    rotate: 145deg;
+    rotate: 405deg;
 }
