@@ -30,25 +30,25 @@ function Footer() {
   }, [animation]);
 
   return ( 
-    <footer ref={footerRef} className={`mt-12 ${ isVisible ? 'animate-footer overflow-x-hidden' : ''} `}> 
-        <div className={`flex flex-col items-center justify-between w-screen px-4 py-1 md:flex-row md:py-12 ${darkMode ? 'footer-bg-dark' : 'footer-bg-light'}`}> 
+    <footer ref={footerRef} className={`mt-4 2xl:mt-12 ${ isVisible ? 'animate-footer overflow-x-hidden' : ''} `}> 
+        <div className={`flex flex-col items-center justify-between w-screen px-4 py-1 md:flex-row md:flex-wrap md:py-12 ${darkMode ? 'footer-bg-dark' : 'footer-bg-light'}`}> 
 
           {/* Left Column */}
-          <div className='text-sm xl:text-lg footer-text xl:w-1/4 text-center'>
+          <div className='text-xs my-1 sm:text-sm md:text-base xl:text-lg 2xl:text-xl 3xl:text-2xl footer-text md:w-1/2 xl:w-1/4 text-center'>
             &copy; 2024 Victor Han
           </div>
 
           {/* Center Column */}
-          <div className="px-4 xl:w-1/4 flex-col flex text-center">
-            <div className="text-sm footer-text xl:text-base">Contact Me! </div>
-            <div className="text-sm footer-link xl:text-base">victor.han72@gmail.com </div>
+          <div className="my-1 px-4 md:w-1/2 xl:w-1/4 flex-col flex text-center">
+            <div className="text-2xs sm:text-xs md:text-sm footer-text xl:text-base 2xl:text-lg 3xl:text-xl">Contact Me! </div>
+            <div className="text-2xs sm:text-xs md:text-sm footer-link xl:text-base 2xl:text-lg 3xl:text-xl">victor.han72@gmail.com </div>
           </div>
 
-          <div className='footer-text px-3 xl:1/4'> Programmed by yours truly, with React and Tailwind CSS - 
+          <div className='text-2xs sm:text-xs md:text-sm xl:text-base 2xl:text-lg 3xl:text-xl footer-text px-0 md:px-3 w-2/3 md:w-1/2 xl:w-1/4'> Programmed by yours truly, with React and Tailwind CSS - 
               <a href="https://github.com/Vic-Han/Portfolio-V2" className="footer-link"> Source code</a>
           </div>
           {/* Right Column */}
-          <div className="xl:w-1/4">
+          <div className="my-1 w-2/3 md:w-1/2 xl:w-1/4 md:px-3 text-2xs sm:text-xs md:text-sm xl:text-base 2xl:text-lg 3xl:text-xl">
             <div className = "footer-text"> I also took some components and a lot of inspiration from 
               <a href ={UIverseLink} className="footer-link"> UIverse </a> 
               

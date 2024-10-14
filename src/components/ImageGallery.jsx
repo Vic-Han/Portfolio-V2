@@ -1,10 +1,9 @@
 
 import React, { useEffect, useRef, useState, useContext } from "react";
-import casualPictures from "../data/CasualPictures";
 import { GlobalContext } from "../context/GlobalContext";
 
 const ImageGallery = () => {
-  const { animation } = useContext(GlobalContext);
+  const { animation, casualPictures } = useContext(GlobalContext);
   const [imageVisibility, setImageVisibility] = useState([]);
   const observer = useRef(null);
   const imageRefs = useRef([]);
@@ -72,9 +71,9 @@ const ImageGallery = () => {
     <div className="absolute top-0 w-full h-full px-1 md:px-6 flex flex-col justify-between">
       {casualPictures.map((image, index) => (
         <div key={index} ref={(el) => (imageRefs.current[index] = el)} className={`relative w-1/6 transform ${negMargin(index)} ${
-            index % 2 === 0 ? "left-0" : "left-0 translate-x-0 sm:left-full sm:-translate-x-full"
+            index % 2 === 0 ? "left-full -translate-x-full sm:left-0 sm:translate-x-0" : "left-full -translate-x-full"
           } ${imageVisibility[index] ? "opacity-100" : "opacity-0"}`}>
-          <img src={image} alt={`Casual Picture ${index + 1}`} className={`${animationClass(index,animation)} 2xl:max-w-64 3xl:max-w-96 4xl:max-w-128 relative left-1/2 -translate-x-1/2 rounded-lg 2xl:rounded-3xl`}/>
+          <img src={image} alt={`Casual Picture ${index + 1}`} className={`${animationClass(index,animation)} min-w-16 2xl:max-w-64 3xl:max-w-96 4xl:max-w-128 relative left-1/2 -translate-x-1/2 rounded-lg 2xl:rounded-3xl`}/>
         </div>
       ))}
     </div>

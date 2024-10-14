@@ -110,6 +110,7 @@
     .social-container{
         width: 100%;
         aspect-ratio: 4/9;
+        max-width: 480px;
     }
     
 }

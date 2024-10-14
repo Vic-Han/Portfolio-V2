@@ -19,7 +19,7 @@ function Portfolio() {
   
   // Initialize state and context
   const GlobalStates = useContext(GlobalContext);
-  const { darkMode, animation, circleTransition, slideTransition, toggleCircleTransition,  toggleSlideTransition} = GlobalStates;
+  const {darkMode, animation, circleTransition, toggleCircleTransition} = GlobalStates;
   const [screen, setScreen] = useState(null);
   const [settings, setSettings] = useState(false);
 
@@ -60,7 +60,6 @@ function Portfolio() {
     <div className=''>
       <div className={`w-screen h-screen fixed top-0 left-0 -z-50 ${darkMode ? 'bg-dark' : 'bg-light'}`}/>
       <Navbar clickHandler={toggleScreen} darkmode={darkMode}/>
-      {slideTransition && <SlideCoverTransition/>}
       {circleTransition && <FadeCircleTransition/>}
       {settings && <Settings close={toggleSettings}/>}
       {screen === 'mainpage' && <Mainpage/>}

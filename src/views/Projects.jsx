@@ -1,12 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
-import projects from "../data/Projects";
 import ProjectCard from "../components/ProjectCard";
 import { animateContentBoxes } from "../transitions/AnimationHelper";
 
 function Projects() {
     const settingsStates = useContext(GlobalContext);
-    const { darkMode, animation } = settingsStates;
+    const { darkMode, animation, projects } = settingsStates;
     const [boxAnimationStates, setBoxAnimationStates] = useState(new Array(projects.length).fill(''));
 
 

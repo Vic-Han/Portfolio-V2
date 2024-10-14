@@ -45,7 +45,7 @@ function Mainpage() {
         <div className={`w-11/12 my-2 relative left-1/2 -translate-x-1/2 md:m-3 lg:m-6 xl:m-8 2xl:m-10 flex md:flex-row flex-col overflow-hidden items-center ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[0]}`}>
           {/* Image toggler */}
           <div className='py-1 md:mx-4 md:py-6 lg:p-2 flex-shrink-0 w-60 sm:w-96 md:w-80 lg:w-112 xl:w-128 2xl:w-144 3xl:w-192 xl:py-8 2xl:py-10'>
-            <ImageToggler animation={animation}/>
+            <ImageToggler/>
           </div>
           {/* Text content */}
           <div className='text-semibold text-primary flex-shrink-0 p-4 w-full grid place-items-center md:flex-1
@@ -71,7 +71,7 @@ function Mainpage() {
       <div className={`w-full md:w-1/4 lg:w-1/5 flex flex-col md:flex-row justify-center my-2 mx-0 md:m-3 lg:m-6 xl:m-8 2xl:m-10`}>
         <div className={`w-11/12 md:w-full relative left-1/2 -translate-x-1/2 flex p-3 md:px-4 md:py-2 3xl:px-6 flex-col ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[2]}`}>
           {/* Social grid */}
-          <div className={`w-11/12 relative left-1/2 -translate-x-1/2 h-full grid items-center xl:text-3xl 2xl:text-4xl text-primary text-center leading-loose`}>          
+          <div className={`w-11/12 relative left-1/2 -translate-x-1/2 h-full grid items-center xl:text-3xl 2xl:text-4xl 3xl:px-4 text-primary text-center leading-loose`}>          
               
               <div>Stay in touch!</div>
             <SocialGrid />

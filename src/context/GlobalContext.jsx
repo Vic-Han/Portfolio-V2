@@ -1,6 +1,8 @@
 import React, { useState, createContext, useEffect } from 'react';
 import Cookies from 'js-cookie';
-
+import mainPictures from '../data/MainPictures';
+import casualPictures from '../data/CasualPictures';
+import projects from '../data/Projects'
 
 // Global context provider
 // This component provides a global context for the application,
@@ -40,7 +42,7 @@ const GlobalProvider = ({ children }) => {
   }, [animation]);
 
   return (
-    <GlobalContext.Provider value={{ darkMode, setDarkMode, animation, setAnimation, circleTransition, toggleCircleTransition, slideTransition, toggleSlideTransition }}>
+    <GlobalContext.Provider value={{ darkMode, setDarkMode, animation, setAnimation, circleTransition, toggleCircleTransition, mainPictures, casualPictures, projects }}>
       {children}
     </GlobalContext.Provider>
   );

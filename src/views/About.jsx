@@ -98,7 +98,7 @@ const About = () => {
       return (<></>)
     }
   }
-  const cardStyle = "w-4/5 sm:w-3/5 p-3 md:p-6 2xl:p-10 4xl:p-14 relative translate-x-1/2 sm:left-1/2 sm:-translate-x-1/2";
+  const cardStyle = "w-4/5 sm:w-3/5 p-3 md:p-6 2xl:p-10 4xl:p-14 relative left-0 sm:left-1/2 sm:-translate-x-1/2";
   const fontSize = "text-sm sm:text-base md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl-relaxed"
   const fontSizeHeader = "text-primary text-center text-base sm:text-lg md:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl-relaxed"
   return (

@@ -1,9 +1,11 @@
-import { useState, useEffect, useCallback } from 'react';
-import mainPictures from "../data/MainPictures";
+import { useState, useEffect, useCallback, useContext } from 'react';
 import './ImageToggler.css';
+import { GlobalContext } from '../context/GlobalContext';
 
 // ImageToggler component displays a slideshow of images with different transition effects
-function ImageToggler({ animation }) {
+function ImageToggler() {
+  const settingsStates = useContext(GlobalContext);
+  const { animation, mainPictures } = settingsStates;
   const length = mainPictures.length;
   const [index, setIndex] = useState(0); // current image index
   const [imageState, setImageState] = useState(''); // state of the image (e.g., "slide-out-img", "flip-in-img", etc.)

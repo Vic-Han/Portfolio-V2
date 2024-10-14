@@ -47,7 +47,7 @@
   }
   
   .moon svg {
-    fill: #73C0FC;
+    fill: #74C2FF;
     position: absolute;
     top: 5px;
     left: 5px;
@@ -95,11 +95,11 @@
   }
   
   .input:checked + .slider {
-    background-color: #183153;
+    background-color: #193356;
   }
   
   .input:focus + .slider {
-    box-shadow: 0 0 1px #183153;
+    box-shadow: 0 0 1px #193356;
   }
   
   .input:checked + .slider:before {
