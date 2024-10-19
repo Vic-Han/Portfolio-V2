@@ -87,7 +87,7 @@
 }
 @keyframes width-shrink {
     0%{
-      opacity: 0.4;
+      opacity: 0.0;
       width:110%;
     }
     100%{

@@ -9,7 +9,6 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
 import FadeCircleTransition from './transitions/FadeCircleTransition';
-import SlideCoverTransition from './transitions/SlideCoverTransition';
 import { GlobalContext } from './context/GlobalContext';
 
 

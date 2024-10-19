@@ -1,18 +1,11 @@
-
-
 .footer-bg-dark{
     background: linear-gradient(160deg, #101010 0%, #151515 50% , #101010 100%);
     color: white;
 }
 .footer-bg-light{
-    /* background: linear-gradient(20deg, #3275e5 0%, #3c80f0 50% , #3275e5 100%); */
-    /* background: linear-gradient(20deg, #3275e5 0%, #3c80f0 50% , #3275e5 100%); */
     background: linear-gradient(80deg, #f2f2f2 0%, #e9e9e9 50%, #ffffff 100%);
     box-shadow: 5px -5px 10px rgba(0, 0, 0, 0.2);
-
-    /* background: linear-gradient(20deg, #fff 0%, #fff 50% , #fff 100%); */
 }
-
 .footer-bg-light .footer-text{
     color: #101010;
 }
@@ -33,4 +26,18 @@
 }
 .footer-bg-dark .footer-link:hover{
     color: rgb(80, 220, 255);
+}
+
+@keyframes animate-footer {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+.animate-footer {
+    animation: animate-footer 0.8s forwards;
+    width: 100%;
 }

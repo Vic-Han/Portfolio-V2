@@ -19,7 +19,7 @@ function Mainpage() {
   }
 
   const animateContentBoxesLow = animateContentBoxes('fade-in', 200);
-  const animateContentBoxesNormal = animateContentBoxes('scale-in', 250);
+  const animateContentBoxesNormal = animateContentBoxes('smooth-reveal', 250);
 
   // Setup and teardown
   // Set up the content box animation based on the animation prop.

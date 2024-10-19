@@ -12,7 +12,6 @@ const GlobalProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useState(Cookies.get('darkMode') === 'true');
   const [animation, setAnimation] = useState(Cookies.get('animationLevel') || 'Normal');
   const [circleTransition, setCircleTransition] = useState(false);
-  const [slideTransition, setSlideTransition] = useState(false);
 
   // Function to toggle circle transition
   // This function plays the circle transition animation by setting the circleTransition state to true for 1.2 seconds.
@@ -21,15 +20,6 @@ const GlobalProvider = ({ children }) => {
     setTimeout(() => {
       setCircleTransition(false)
     }, 1200);
-  }
-
-  // Function to toggle slide transition
-  // This function plays the slide transition animation by setting the slideTransition state to true for 1 second.
-  const toggleSlideTransition = () => { 
-    setSlideTransition(true);
-    setTimeout(() => {
-      setSlideTransition(false);
-    }, 1000);
   }
 
   // Update cookies when dark mode or animation level changes

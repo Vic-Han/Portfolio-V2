@@ -133,7 +133,7 @@ const projects = [
   
     {
         name: 'Esports Zone',
-        description: 'Exlcusive gaming media platform. Many features included and designed for gamers.',
+        description: 'Exclusive gaming media platform. Many features included and designed for gamers.',
         image : EsportsZone,
         github: 'https://github.com/Vic-Han/Esports-Zone',
         link: null,

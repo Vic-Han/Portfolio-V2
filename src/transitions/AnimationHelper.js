@@ -1,13 +1,13 @@
 // AnimationHelper.js
 
-/**
- *  Animation durations for different animation classes
- */
+
+// Animation durations for different animation classes
 const animationDurations = {
   'fade-in': 1200,
-  'scale-in': 1200,
-  'slam': 200,
-  'fade-in-top' : 800,
+  'fade-in-top': 800,
+  'pop-in': 800,
+  'scale-in': 800,
+  'smooth-reveal': 1100,
 };
 
 /**

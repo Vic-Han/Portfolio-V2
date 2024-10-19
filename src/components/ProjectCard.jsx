@@ -1,3 +1,36 @@
+/**
+ * ProjectCard Component
+ * 
+ * This component displays information about a single project.
+ * It includes an image, title, description, and relevant links.
+ * 
+ * @component
+ * @param {Object} props.project - The project data object
+ * @param {string} props.project.name - The name of the project
+ * @param {string} props.project.image - URL of the project image
+ * @param {string} props.project.description - Short description of the project
+ * @param {string} props.project.github - GitHub repository URL (optional)
+ * @param {string} props.project.report - Project report URL (optional)
+ * @param {string} props.project.link - Live site URL (optional)
+ * @param {string} props.project.video - Project video URL (optional)
+ * @param {string} props.project.buttonStyle - CSS classes for button styling
+ * @param {string} props.project.titleTextStyle - CSS classes for title text styling
+ * @param {string} props.project.descriptionTextStyle - CSS classes for description text styling
+ * 
+ * @example
+ * const project = {
+ *   name: "My Project",
+ *   image: "/path/to/image.jpg",
+ *   description: "A short description",
+ *   github: "https://github.com/user/repo",
+ *   buttonStyle: "bg-blue-500 text-white",
+ *   titleTextStyle: "text-xl font-bold",
+ *   descriptionTextStyle: "text-sm text-gray-600"
+ * }
+ * return (
+ *   <ProjectCard project={project} />
+ * )
+ */
 import React from 'react';
 
 

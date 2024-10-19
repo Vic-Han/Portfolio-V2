@@ -37,10 +37,10 @@
 }
 
 .slide-out-img{
-    animation: slide-out-img 1s ease-in-out;
+    animation: slide-out-img 0.9s ease-in-out;
 }
 .slide-in-img{
-    animation: slide-in-img 1s ease-in-out;
+    animation: slide-in-img 0.9s ease-in-out;
 }
 
 @keyframes flip-out-img {

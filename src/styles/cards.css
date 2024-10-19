@@ -3,13 +3,11 @@
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
     border-radius: 1em;
 }
-
 .card-light {
     background: linear-gradient(160deg, #ffffff 0%,  #edefed 100%);
     box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
     border-radius: 1em;
 }
-
 /* Styles for .card-dark */
 .card-dark .text-primary {
     color: #f2f2f2; /* Bright white for primary text on dark cards */
@@ -19,15 +17,6 @@
 .card-dark .text-secondary {
     color: #e0e1dd; /* Vibrant yellow for secondary text on dark cards */
 }
-
-.card-dark .text-accent {
-    color: #00ffcc; /* Bright teal for accent text on dark cards */
-}
-
-.card-dark .text-highlight {
-    color: #ffcc00; /* Light grey for highlighted text on dark cards */
-}
-
 /* Styles for .card-light */
 .card-light .text-primary {
     color: #111111; /* Dark grey for primary text on light cards */
@@ -36,12 +25,4 @@
 
 .card-light .text-secondary {
     color: #3e3e3e; /* Deep blue for secondary text on light cards */
-}
-
-.card-light .text-accent {
-    color: #cc0099; /* Bold pink for accent text on light cards */
-}
-
-.card-light .text-highlight {
-    color: #006699; /* Medium grey for highlighted text on light cards */
 }

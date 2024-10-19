@@ -7,7 +7,7 @@ import {GlobalContext} from '../context/GlobalContext';
 import { animateContentBoxes } from '../transitions/AnimationHelper';
 function Settings({close}) {
     const settingsStates = useContext(GlobalContext);
-    const {darkMode, setDarkMode, animation, setAnimation, toggleCircleTransition} = settingsStates;
+    const {darkMode, setDarkMode, animation, setAnimation} = settingsStates;
     const [boxAnimationStates, setBoxAnimationStates] = useState(['']);
 
     const hideContentBoxes = () => {    
@@ -16,17 +16,11 @@ function Settings({close}) {
     }
 
     const animateContentBoxesLow = animateContentBoxes('fade-in', 200);
-    const animateContentBoxesNormal = animateContentBoxes('scale-in', 250);
+    const animateContentBoxesNormal = animateContentBoxes('smooth-reveal', 250);
     const closeButtonStyle = (animation) =>{
-        if(animation === 'Minimal'){
-            return ''
-        }
-        if (animation === 'Normal') {
-            return 'hover:scale-105 transition duration-400'
-        }  
-        if (animation === 'Extreme') {
-            return 'hover:scale-105 transition duration-400 close-hover'
-        } 
+        if(animation === 'Minimal'){return ''}
+        if (animation === 'Normal') {return 'hover:scale-105 transition duration-400'}  
+        if (animation === 'Extreme') {return 'hover:scale-105 transition duration-400 close-hover'} 
     }
 
     useEffect(() => {

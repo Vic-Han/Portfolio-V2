@@ -1,3 +1,11 @@
+/**
+ * Projects Component
+ * 
+ * This component displays a grid of project cards with animation capabilities.
+ * It uses the global context for theming and animation settings.
+ * 
+ */
+
 import React, { useState, useEffect, useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 import ProjectCard from "../components/ProjectCard";
@@ -16,7 +24,7 @@ function Projects() {
 
 
     const animateContentBoxesNormal = animateContentBoxes('fade-in-top', 200);
-    const animateContentBoxesExtreme = animateContentBoxes('scale-in', 150);
+    const animateContentBoxesExtreme = animateContentBoxes('smooth-reveal', 200);
     useEffect(() => {
         if(animation !== 'Minimal'){
             hideContentBoxes();
