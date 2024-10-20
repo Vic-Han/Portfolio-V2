@@ -27,9 +27,6 @@
  *   titleTextStyle: "text-xl font-bold",
  *   descriptionTextStyle: "text-sm text-gray-600"
  * }
- * return (
- *   <ProjectCard project={project} />
- * )
  */
 import React from 'react';
 

@@ -24,16 +24,23 @@ function SocialGrid() {
         The links target blank pages to prevent the current page from refreshing when clicked.
         */}
         <a href='https://www.linkedin.com/in/victor-han-vh45/' className="social-box linkedin-box" target='_blank' rel='noreferrer'>
-          <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: "1em", color: 'white' }} />
-          <span>LinkedIn</span>
+          <div className="social-content">
+            <FontAwesomeIcon icon={faLinkedin} style={{ fontSize: "1em", color: 'white' }} />
+            <span>LinkedIn</span>
+          </div>  
         </a>
         <a href='https://github.com/Vic-Han' className="social-box git-box" target='_blank' rel='noreferrer'>
-          <FontAwesomeIcon icon={faGithub} style={{ fontSize: "1em", color: 'white' }} />
-          <span>GitHub</span>
+          <div className="social-content">
+            <FontAwesomeIcon icon={faGithub} style={{ fontSize: "1em", color: 'white' }} />
+            <span>GitHub</span>
+          </div>
+         
         </a>
         <a href='https://www.instagram.com/viccccc_h/' className="social-box insta-box" target='_blank' rel='noreferrer'>
-          <FontAwesomeIcon icon={faInstagram} style={{ fontSize: "1em", color: 'white' }} />
-          <span>Instagram</span>
+          <div className="social-content">
+            <FontAwesomeIcon icon={faInstagram} style={{ fontSize: "1em", color: 'white' }} />
+            <span>Instagram</span>
+          </div>
         </a>
       </div>
     </div>

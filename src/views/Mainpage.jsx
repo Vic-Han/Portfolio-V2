@@ -18,8 +18,8 @@ function Mainpage() {
     setBoxAnimationStates(newAnimationStates);
   }
 
-  const animateContentBoxesLow = animateContentBoxes('fade-in', 200);
-  const animateContentBoxesNormal = animateContentBoxes('smooth-reveal', 250);
+  const animateContentBoxesNormal = animateContentBoxes('fade-in', 200);
+  const animateContentBoxesExtreme = animateContentBoxes('smooth-reveal', 250);
 
   // Setup and teardown
   // Set up the content box animation based on the animation prop.
@@ -28,9 +28,9 @@ function Mainpage() {
     if(animation !== 'Minimal'){
       hideContentBoxes();
       if (animation === 'Normal') {
-        animateContentBoxesLow(boxAnimationStates, setBoxAnimationStates);
-      } else if (animation === 'Extreme') {
         animateContentBoxesNormal(boxAnimationStates, setBoxAnimationStates);
+      } else if (animation === 'Extreme') {
+        animateContentBoxesExtreme(boxAnimationStates, setBoxAnimationStates);
       }
     }
   }, []);

@@ -99,7 +99,7 @@ const About = () => {
       <div key={index} ref={handleTextRef(index)} id={`text-${index}`} className={margin}>
         <span>
           <span className="text-secondary">{text.slice(0,currentTextIndex-1)}</span>
-          <span className="opacity-0">{(currentTextIndex !== text.length - 1) ? text.slice(currentTextIndex) : null}</span>
+          <span className="opacity-0">{(currentTextIndex < text.length - 1) ? text.slice(currentTextIndex) : null}</span>
         </span>
       </div>)
     }
@@ -111,8 +111,8 @@ const About = () => {
   
    // Responsive styling constants for consistent layout and typography
    
-  const cardStyle = "w-4/5 sm:w-3/5 p-3 md:p-6 2xl:p-10 4xl:p-14 relative left-0 sm:left-1/2 sm:-translate-x-1/2";
-  const fontSize = "text-sm sm:text-base md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl-relaxed"
+  const cardStyle = "w-4/5 sm:w-3/5 md:w-1/2 p-3 md:p-6 2xl:p-10 4xl:p-14 relative left-0 sm:left-1/2 sm:-translate-x-1/2";
+  const fontSize = "text-xs sm:text-sm md:text-lg lg:text-lg xl:text-xl 2xl:text-xl 3xl:text-3xl 4xl:text-4xl-relaxed"
   const fontSizeHeader = "text-primary text-center text-base sm:text-lg md:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl-relaxed"
 
   /**

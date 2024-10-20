@@ -1,142 +1,17 @@
-/* 
-
 .social-container{
-    background: linear-gradient(140deg , #497cff 0%, #49acff 50%, #497cff 100%);
-    transition: all 0.7s ease;
-    width: 280px;
-    aspect-ratio: 1/1;
-    border-radius: 1.5em;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    overflow-x: hidden;
-}
-
-.social-text{
-    position: absolute;
-    font-size: 120%;
-    color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transition: all 0.5s ease;
-}
-
-.social-container:hover .social-text{
-    top: 10%;
-}
-
-
-.social-box{
-    position:absolute;
-    left:0;
-    bottom:0;
-    width: 100%;
-    height: 0;
-    transition: all 0.7s ease;
-    justify-content: center;
-    color: white;
-    font-size: 100%;
-    text-decoration: none;
-    overflow: hidden; 
-}
-.social-container:hover .social-box{
-    padding-top: 12.5%;
-    box-sizing: border-box;
-}
-.social-box span{
-    opacity: 0; 
-    transition: opacity 0.3s ease;
-}
-
-.social-container:hover .social-box span{
-    opacity: 1; 
-}
-
-
-.social-box i{
-    margin-right: 10px;
-}
-
-.linkedin-box{
-    background: linear-gradient(45deg , #0069ab 0%, #0075b6 100%);
-    z-index: 10;
-    transition-delay: 0s;
-}
-
-.git-box{
-    background: linear-gradient(45deg , #151313 0%, #1a1717 100%);
-    z-index: 11;
-    transition-delay: 0.06s;
-}
-
-.insta-box{
-    background: linear-gradient(45deg , #bc3381 0%, #c43787 100%);
-    z-index: 12;
-    transition-delay: 0.12s;
-}
-.social-container:not(:hover) .linkedin-box{
-    transition-delay: 0.12s;
-}
-
-.social-container:not(:hover) .git-box{
-    transition-delay: 0.06s; 
-}
-
-.social-container:not(:hover) .insta-box{
-    transition-delay: 0s; 
-}
-.social-container:hover .linkedin-box{
-    height: 75%;
-}
-
-.social-container:hover .git-box{
-    height: 50%;
-}
-
-.social-container:hover .insta-box{
-    height: 25%;
-}
-
-
-@media (min-width:600px){
-    .social-container{
-        width: 420px;
-    }
-
-}
-
-@media (min-width: 768px){
-    .social-container{
-        width: 100%;
-        aspect-ratio: 4/9;
-        max-width: 480px;
-    }
-    
-}
-
-@media (min-width: 2400px){
-    .social-container{
-        aspect-ratio: 1/2;
-    }
-} */.social-container{
-    /* Softer, more modern gradient with three color stops */
     background: linear-gradient(140deg, 
         #497cff 0%, 
         #49acff 50%, 
         #497cff 100%
     );
-    /* Slightly longer transition for smoother effect */
     transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     width: 280px;
     aspect-ratio: 1/1;
-    /* Slightly larger border radius for modern look */
     border-radius: 1.75em;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    overflow: hidden; /* Changed from overflow-x */
-    /* Optional: Subtle shadow for depth */
+    overflow: hidden;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
@@ -148,13 +23,11 @@
     left: 50%;
     transform: translate(-50%, -50%);
     transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-    /* Optional: Add text shadow for better contrast */
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .social-container:hover .social-text{
-    top: 10%;
-    /* Optional: Scale text slightly on hover */
+    top: 12.5%;
     transform: translate(-50%, -50%) scale(1.05);
 }
 
@@ -165,9 +38,6 @@
     width: 100%;
     height: 0;
     transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: white;
     font-size: 100%;
     text-decoration: none;
@@ -175,9 +45,7 @@
 }
 
 .social-container:hover .social-box{
-    height: 25%; /* Set a fixed height instead of padding */
     box-sizing: border-box;
-    transform: translateY(0);
 }
 
 .social-box span{
@@ -191,23 +59,6 @@
     transform: scale(1);
 }
 
-/* Add styles for FontAwesome icons */
-.social-box i {
-    margin-right: 10px;
-    font-size: 1.2em; /* Adjust size as needed */
-}
-
-/* Ensure content is visible */
-.social-box > * {
-    transform: translateY(100%);
-    transition: transform 0.4s ease;
-}
-
-.social-container:hover .social-box > * {
-    transform: translateY(0);
-}
-
-/* Enhanced gradients for each social box */
 .linkedin-box{
     background: linear-gradient(45deg,
         #0069ab 0%,
@@ -238,20 +89,16 @@
     transition-delay: 0.12s;
 }
 
-/* Hover state transitions */
 .social-container:not(:hover) .linkedin-box{
     transition-delay: 0.12s;
-    transform: translateY(5px); /* Added subtle transform */
 }
 
 .social-container:not(:hover) .git-box{
     transition-delay: 0.06s;
-    transform: translateY(5px);
 }
 
 .social-container:not(:hover) .insta-box{
     transition-delay: 0s;
-    transform: translateY(5px);
 }
 
 .social-container:hover .linkedin-box{
@@ -265,14 +112,51 @@
 .social-container:hover .insta-box{
     height: 25%;
 }
-
-/* Enhanced hover effects for individual boxes */
-.social-box:hover {
-    filter: brightness(1.1);
-    transform: translateY(-2px);
+.social-content{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+.linkedin-box .social-content{
+    top: 17%;
+}
+.git-box .social-content{
+    top: 25%;
+}
+.insta-box .social-content{
+    top: 50%;
+}
+/* Shimmer effect */
+.social-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.3) 100%
+    );
+    transform: skewX(-25deg);
+    transition: none;
+    opacity: 0;
 }
 
-/* Media queries remain the same */
+.social-box:hover::before {
+    opacity: 1;
+    animation: shine 0.85s ease-out;
+}
+
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+}
+
+/* Media queries */
 @media (min-width:600px){
     .social-container{
         width: 420px;

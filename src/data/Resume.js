@@ -27,13 +27,13 @@ const resumeData = {
    "education":[
     {
       qualification: "Bachelor of Science in Computer Science",
-      provider: "Univesity of Calgary",
+      provider: "University of Calgary",
       date: "May 2024",
     },
     {
       qualification: "IBM Full Stack Developer Certificate",
       provider: "IBM & Coursera",
-      date: "Feburary 2024",
+      date: "February 2024",
     },
   ]
 }

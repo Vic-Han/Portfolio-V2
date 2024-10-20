@@ -65,7 +65,7 @@ function Settings({close}) {
                         <div className='relative mt-4 -translate-y-1/2 text-secondary text-lg w-16 text-left h-fit mr-1'> Extreme: </div> 
                         <div className='w-28'><ReadOnlyStars value={3}/></div>
                     </div>
-                    <div className='relative -translate-x-1/2 left-1/2 text-secondary w-fit text-sm'> Completely unecessary, but I wanna see it anyways! </div>
+                    <div className='relative -translate-x-1/2 left-1/2 text-secondary w-fit text-sm'> Completely unnecessary, but I wanna see it anyways! </div>
                     <div className='relative -translate-x-1/2 left-1/2 w-fit flex flex-row my-2 xl:my-4 h-10'>
                         <div className='relative mt-4 -translate-y-1/2 text-secondary text-lg w-16 text-left h-fit mr-1'> Normal: </div> 
                         <div className='w-28'><ReadOnlyStars value={2}/></div>
