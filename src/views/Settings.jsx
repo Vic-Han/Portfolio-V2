@@ -36,13 +36,13 @@ function Settings({close}) {
     
 
     return(
-        <div className={`${darkMode ? 'bg-dark' : 'bg-light'} p-2 xm:p-4 xl:p-10 box-border w-screen h-screen fixed top-0 left-0 z-30`}>
+        <div className={`${darkMode ? 'bg-dark' : 'bg-light'} p-2 sm:p-4 xl:p-10 box-border w-screen h-screen fixed top-0 left-0 z-30`}>
           
             <div className={`relative -translate-x-1/2 left-1/2 ${darkMode ? 'card-dark' : 'card-light'} rounded-xl my-2 sm:my-4 xl:my-10 p-3 sm:p-4 xl:p-6 3xl:p-10 w-11/12 sm:w-5/6 xl:w-2/3 text-center ${boxAnimationStates[0]}`}>
                 <div className='flex flex-row'>
                     <div className="w-1/2 p-0">
                         <div className='relative left-0 w-fit'>
-                            <div className={`text-sm sm:text-base xl:text-3xl 2xl:text-4xl 3xl:text-5xl text-primary w-fit mb-0.5 sm:mb-1 md:mb-2 lg-mb-3 xl:mb-4 2xl:mb-4 3xl:mb-6`}>Dark Theme?</div>
+                            <div className="text-sm sm:text-base xl:text-3xl 2xl:text-4xl 3xl:text-5xl text-primary w-fit mb-0.5 sm:mb-1 md:mb-2 lg-mb-3 xl:mb-4 2xl:mb-4 3xl:mb-6">Dark Theme?</div>
                             <DarkThemeSwitch value={darkMode} change={setDarkMode}/>
                         </div>
                     </div>
@@ -55,27 +55,27 @@ function Settings({close}) {
                 <div className="flex flex-row -my-6 md:my-0 3xl:my-8">
                     <div className='min-h-full w-1/3'>
                         <div className='relative left-0 w-fit top-1/2 -translate-y-1/2'>
-                            <div className='text-sm sm:text-base xl:text-3xl 2xl:text-4xl 3xl:text-5xl mb-2 sm:mb-4 lg:mb-6 xl:mb-10 text-primary'>Animation Level:</div>
+                            <div className='text-sm sm:text-base xl:text-3xl 2xl:text-4xl 3xl:text-5xl mb-2 sm:mb-4 lg:mb-6 xl:mb-10 text-primary xl:-translate-x-0.5'>Animation Level:</div>
                             <div className="text-secondary text-xs sm:text-base xl:text-xl 2xl:text-2xl 3xl:text-3xl"> {animation}</div>
                             <div className={`relative -translate-x-1/2 left-1/2 p-0 sm:p-1 md:p-2 lg:p-3 xl:w-fit 3xl:p-8 scale-50 sm:scale-60 md:scale-95 lg:scale-110 xl:scale-125 3xl:scale-150`}> <AnimationToggle value={animation} change={setAnimation} dark={darkMode}/> </div>
                         </div>
                     </div>
                     <div className='min-h-full p-0 lg:p-6 w-2/3 scale-50 sm:scale-60 md:scale-95 lg:scale-110 xl:scale-125 3xl:scale-150 xl:p-8'>
-                    <div className='relative -translate-x-1/2 left-1/2 w-fit flex flex-row my-2 xl:my-4 h-10'>
+                    <div className='relative -translate-x-1/2 left-1/2 w-fit flex flex-row mt-2 xl:mt-4 h-10'>
                         <div className='relative mt-4 -translate-y-1/2 text-secondary text-lg w-16 text-left h-fit mr-1'> Extreme: </div> 
                         <div className='w-28'><ReadOnlyStars value={3}/></div>
                     </div>
-                    <div className='relative -translate-x-1/2 left-1/2 text-secondary w-fit text-sm'> Completely unnecessary, but I wanna see it anyways! </div>
-                    <div className='relative -translate-x-1/2 left-1/2 w-fit flex flex-row my-2 xl:my-4 h-10'>
+                    <div className='relative -translate-x-1/2 left-1/2 text-secondary w-fit text-sm mb-8'> Completely unnecessary, but I wanna see it anyways! </div>
+                    <div className='relative -translate-x-1/2 left-1/2 w-fit flex flex-row h-10'>
                         <div className='relative mt-4 -translate-y-1/2 text-secondary text-lg w-16 text-left h-fit mr-1'> Normal: </div> 
                         <div className='w-28'><ReadOnlyStars value={2}/></div>
                     </div>
-                    <div className='relative -translate-x-1/2 left-1/2 text-secondary w-fit text-sm'> Dynamic stuff will enhance my experience. </div>
-                    <div className='relative -translate-x-1/2 left-1/2 w-fit flex flex-row my-2 xl:my-4 h-10'>
+                    <div className='relative -translate-x-1/2 left-1/2 text-secondary w-fit text-sm mb-8'> Dynamic stuff will enhance my experience. </div>
+                    <div className='relative -translate-x-1/2 left-1/2 w-fit flex flex-row h-10'>
                         <div className='relative mt-4 -translate-y-1/2 text-secondary text-lg w-16 text-left h-fit mr-1'> Minimal: </div> 
                         <div className='w-28'><ReadOnlyStars value={1}/></div>
                     </div>
-                    <div className='relative -translate-x-1/2 left-1/2 text-secondary w-fit text-sm'> No thanks, I just want to browse the website. </div>
+                    <div className='relative -translate-x-1/2 left-1/2 text-secondary w-fit text-sm mb-2'> No thanks, I just want to browse the website. </div>
                     </div>
                 </div>
             </div>
