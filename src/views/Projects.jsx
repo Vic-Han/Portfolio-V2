@@ -1,3 +1,7 @@
+import React, { useState, useEffect, useContext } from "react";
+import { GlobalContext } from "../context/GlobalContext";
+import ProjectCard from "../components/ProjectCard";
+import { animateContentBoxes } from "../transitions/AnimationHelper";
 /**
  * Projects Component
  * 
@@ -5,12 +9,6 @@
  * It uses the global context for theming and animation settings.
  * 
  */
-
-import React, { useState, useEffect, useContext } from "react";
-import { GlobalContext } from "../context/GlobalContext";
-import ProjectCard from "../components/ProjectCard";
-import { animateContentBoxes } from "../transitions/AnimationHelper";
-
 function Projects() {
     const settingsStates = useContext(GlobalContext);
     const { darkMode, animation, projects } = settingsStates;

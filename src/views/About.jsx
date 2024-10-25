@@ -5,13 +5,44 @@ import { GlobalContext } from "../context/GlobalContext";
 import casualAbout from "../data/CasualAbout";
 import formalAbout from "../data/FormalAbout";
 import ImageGallery from "../components/ImageGallery";
-
+/**
+ * About Component
+ * 
+ * Purpose:
+ * Renders an animated biography section with formal and casual content cards
+ * alongside a decorative image gallery.
+ * 
+ * Key Features:
+ * - Dual content sections (formal/casual)
+ * - Progressive text reveal animations with multiple modes
+ * - Scroll-based content visibility
+ * - Responsive design
+ * - Dark/Light mode support
+ * 
+ * Dependencies:
+ * - GlobalContext: {darkMode, animation}
+ * - Data files: formalAbout, casualAbout arrays
+ * 
+ * Implementation Overview:
+ * 1. Text Animation System
+ *    - Intersection Observer for visibility
+ *    - Three animation modes: Minimal, Normal, Extreme
+ * 
+ * 2. Content Cards
+ *    - Separate formal/casual biography sections
+ *    - Responsive layout with theme support
+ * 
+ * 3. Image Gallery
+ *    - Integrated decorative images
+ *    - Managed by ImageGallery component
+ * 
+ * Styling:
+ * - Tailwind CSS
+ * - Responsive typography
+ * - Dark/Light theme support
+ */
 const About = () => {
-  /**
-   * Manages component state and context
-   * - Controls text animations and dark mode
-   * - Tracks which text sections are currently in view
-   */
+
   const { darkMode, animation } = useContext(GlobalContext);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -19,10 +50,6 @@ const About = () => {
   const parentRef = useRef(null);
   const textObserver = useRef(null);
 
-  /**
-   * Sets up an Intersection Observer to track visible text sections
-   * Allows for progressive revealing of content as user scrolls
-   */
   useEffect(() => {
     textObserver.current = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -40,10 +67,6 @@ const About = () => {
     return () => textObserver.current.disconnect();
   }, []);
 
-  /**
-   * Handles character-by-character text reveal for "Extreme" animation
-   * Creates a typewriter-like effect for selected text sections
-   */
   useEffect(() => {
     setCurrentTextIndex(0)
     if(animation === "Extreme"){
@@ -60,16 +83,11 @@ const About = () => {
   }, [currentIndex]);
 
 
-  // Creates a ref for each text section to enable intersection tracking
    
   const handleTextRef = (index) => (el) => {
     textRefs.current[index] = el;
   };
 
-  /**
-   * Renders text with different animations based on current state
-   * Supports multiple animation modes: Minimal, Normal, and Extreme
-   */
   const renderText = (text, index) => { 
     const isCurrent = index === currentIndex;
     const margin = 'my-6 3xl:my-10';
@@ -109,16 +127,11 @@ const About = () => {
   }
 
   
-   // Responsive styling constants for consistent layout and typography
    
-  const cardStyle = "w-4/5 sm:w-3/5 md:w-1/2 p-3 md:p-6 2xl:p-10 4xl:p-14 relative left-0 sm:left-1/2 sm:-translate-x-1/2";
+  const cardStyle = "w-4/5 sm:w-3/5 md:w-1/2 xl:w-2/5 p-3 md:p-6 2xl:p-10 4xl:p-14 relative left-0 sm:left-1/2 sm:-translate-x-1/2";
   const fontSize = "text-xs sm:text-sm md:text-lg lg:text-lg xl:text-xl 2xl:text-xl 3xl:text-3xl 4xl:text-4xl-relaxed"
   const fontSizeHeader = "text-primary text-center text-base sm:text-lg md:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl-relaxed"
 
-  /**
-   * Main component render
-   * Structured with two text sections and an image gallery
-   */
   return (
     <div className="relative my-4">
       <div className="flex flex-col" ref={parentRef}>

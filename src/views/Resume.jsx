@@ -10,7 +10,6 @@ function Resume() {
   const categories = Object.keys(skills);
   const itemList = categories.map(category => skills[category]);
 
-  // Consolidated state initialization
   const createInitialAnimationState = (count, nested = false) => 
     nested ? categories.map(category => itemList[categories.indexOf(category)].map(() => ""))
       : [...Array(count)].map(() => "");
@@ -19,18 +18,15 @@ function Resume() {
   const [itemAnimationStates, setItemAnimationStates] = useState(createInitialAnimationState(0, true));
   const [mainCardAnimationStates, setMainCardAnimationStates] = useState(createInitialAnimationState(3));
 
-  // Simplified animation functions
   const hideStates = (setState, hideValue = 'opacity-0') => {
     setState(current => 
       Array.isArray(current[0]) ? current.map(category => category.map(() => hideValue))
         : current.map(() => hideValue));
   };
 
-  // Define animation functions with different animation classes and durations
   const animateContentBoxesLow = animateContentBoxes('fade-in', 200);
   const animateContentBoxesNormal = animateContentBoxes('smooth-reveal', 250);
 
-  // Simplified items animation
   const animateItems = (index) => {
     if (index === 0) {
       mainCardAnimationStates.forEach((_, i) => {
@@ -76,7 +72,6 @@ function Resume() {
     }
   }, []);
 
-  // Text and layout classes
   const titleClasses = "text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary";
   const subtitleClasses = "text-xs sm:text-sm md:text-lg 2xl:text-xl 3xl:text-2xl text-secondary";
   const jobTitleClasses = "text-sm sm:text-base md:text-xl 2xl:text-2xl 3xl:text-3xl text-primary";
@@ -193,3 +188,4 @@ function Resume() {
 }
 
 export default Resume;
+
