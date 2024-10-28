@@ -12,7 +12,7 @@ function Navbar({clickHandler, darkmode}) {
 
     const cursor = 'cursor-pointer font-bold';
     const layout = 'rounded-lg 2xl:rounded-xl p-1 md:p-2 lg:p-3 xl:p-4 2xl:p-5 3xl:p-6 4xl:p-7';
-    const textSize = 'text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl'
+    const textSize = 'text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl'
     const styles = `${cursor} ${layout} ${textSize}`
 
     const click = (page) => {

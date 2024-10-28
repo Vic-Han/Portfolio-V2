@@ -79,7 +79,7 @@ function Mainpage() {
           <div className='text-semibold text-primary flex-shrink-0 p-4 w-full grid place-items-center md:flex-1
             sm:p-8 md:px-0 xl:py-8 2xl:py-10 2xl:px-3 3xl:px-2'>
               <div className='text-center text-lg sm:text-3xl md:text-2xl lg:text-4xl xl:text-5xl 2xl:text-7xl'>
-                Welcome!
+                Hi I'm Victor!
               </div>
           </div>
         </div>
