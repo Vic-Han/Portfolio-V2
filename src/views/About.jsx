@@ -90,7 +90,7 @@ const About = () => {
 
   const renderText = (text, index) => { 
     const isCurrent = index === currentIndex;
-    const margin = 'my-6 3xl:my-10';
+    const margin = 'my-6 xl:my-8 3xl:my-10';
     if (animation === "Minimal" || index < currentIndex) {
       return (
         <div key={index} ref={handleTextRef(index)} id={`text-${index}`} className={margin}>
@@ -128,9 +128,9 @@ const About = () => {
 
   
    
-  const cardStyle = "w-4/5 sm:w-3/5 md:w-1/2 xl:w-2/5 p-3 md:p-6 2xl:p-10 4xl:p-14 relative left-0 sm:left-1/2 sm:-translate-x-1/2";
-  const fontSize = "text-xs sm:text-sm md:text-lg lg:text-lg xl:text-xl 2xl:text-xl 3xl:text-3xl 4xl:text-4xl-relaxed"
-  const fontSizeHeader = "text-primary text-center text-base sm:text-lg md:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl-relaxed"
+  const cardStyle = "w-4/5 sm:w-3/5 md:w-1/2 xl:w-2/5 p-3 md:p-6 2xl:p-10 4xl:p-14 relative left-0 ml-1 sm:ml-0 sm:left-1/2 sm:-translate-x-1/2";
+  const fontSize = "text-xs sm:text-sm md:text-base lg:text-lg-relaxed xl:text-xl-relaxed 3xl:text-2xl-relaxed 4xl:text-3xl-relaxed"
+  const fontSizeHeader = "text-primary text-center text-base sm:text-lg md:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl"
 
   return (
     <div className="relative my-4">
