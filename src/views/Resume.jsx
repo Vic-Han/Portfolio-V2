@@ -4,6 +4,7 @@ import { animateContentBoxes } from '../transitions/AnimationHelper';
 import resumeData from "../data/Resume";
 import '../styles/resume.css';
 
+
 function Resume() {
   const { darkMode, animation } = useContext(GlobalContext);
   const { skills, workExperience, education } = resumeData;
@@ -72,27 +73,63 @@ function Resume() {
     }
   }, []);
 
-  const titleClasses = "text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary";
-  const subtitleClasses = "text-xs sm:text-sm md:text-lg 2xl:text-xl 3xl:text-2xl text-secondary";
-  const jobTitleClasses = "text-sm sm:text-base md:text-xl 2xl:text-2xl 3xl:text-3xl text-primary";
-  const centeredClasses = "relative left-1/2 -translate-x-1/2";
+  const renderExperienceItem = (experience, index) => (
+    <div key={index} className="mb-4">
+      <div className="flex flex-row mb-2">
+        <div className="w-1/2">
+          <p className="text-sm sm:text-base md:text-xl 2xl:text-2xl 3xl:text-3xl text-primary">
+            {experience.title}
+          </p>
+          <p className="text-xs sm:text-sm md:text-lg 2xl:text-xl 3xl:text-2xl text-secondary">
+            {experience.company}
+          </p>
+        </div>
+        <p className="text-xs sm:text-sm md:text-lg 2xl:text-xl 3xl:text-2xl text-secondary w-1/2 text-right">
+          {experience.timeline}
+        </p>
+      </div>
+      <ul>
+        {experience.accomplishments.map((accomplishment, accomplishmentIndex) => (
+          <li key={accomplishmentIndex} className="text-2xs md:text-base text-secondary">
+            • {accomplishment}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+
+  const renderEducationItem = (qualification, index) => (
+    <div key={index} className="mb-4 flex flex-row">
+      <div className="w-2/3">
+        <p className="text-sm sm:text-base md:text-xl 2xl:text-2xl 3xl:text-3xl text-primary">
+          {qualification.qualification}
+        </p>
+        <p className="text-xs sm:text-sm md:text-lg 2xl:text-xl 3xl:text-2xl text-secondary">
+          {qualification.provider}
+        </p>
+      </div>
+      <p className="text-xs sm:text-sm md:text-lg 2xl:text-xl 3xl:text-2xl text-secondary w-1/3 text-right">
+        {qualification.date}
+      </p>
+    </div>
+  );
 
   return (
     <div className="flex flex-wrap justify-center w-full">
       <div className="w-full md:w-11/12 lg:w-5/6 xl:w-3/4 2xl:w-2/3 px-4 mb-8">
         <div className={`
-          ${centeredClasses} 
+          relative left-1/2 -translate-x-1/2
           py-1 px-2 sm:py-2 md:py-4 sm:px-6 md:px-10 
           flex flex-col w-full
           ${darkMode ? 'card-dark' : 'card-light'} 
           ${boxAnimationStates[0]}
         `}>
-          <h2 className={`${titleClasses} mb-2 ${centeredClasses} text-center`}>
+          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary mb-2 text-center">
             Resume
           </h2>
 
           <div className='w-full mx-2'>
-            <div className={`${centeredClasses} ${mainCardAnimationStates[0]}`}>
+            <div className={`relative left-1/2 -translate-x-1/2 ${mainCardAnimationStates[0]}`}>
               <div className="flex flex-wrap justify-center mb-4">
                 <a 
                   href="resume.pdf" 
@@ -105,53 +142,25 @@ function Resume() {
             </div>
           </div>
 
-          <h2 className={`${titleClasses} font-bold mb-2 mt-4 text-center`}>
+          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary font-bold mb-2 mt-4 text-center">
             Experience:
           </h2>
           <div className='mx-2'>
-            <div className={`${centeredClasses} ${mainCardAnimationStates[1]}`}>
-              {workExperience.map((experience, experienceIndex) => (
-                <div key={experienceIndex} className="mb-4">
-                  <div className="flex flex-row mb-2">
-                    <div className="w-1/2">
-                      <p className={jobTitleClasses}>{experience.title}</p>
-                      <p className={subtitleClasses}>{experience.company}</p>
-                    </div>
-                    <p className={`${subtitleClasses} w-1/2 text-right`}>
-                      {experience.timeline}
-                    </p>
-                  </div>
-                  <ul>
-                    {experience.accomplishments.map((accomplishment, accomplishmentIndex) => (
-                      <li 
-                        key={accomplishmentIndex} 
-                        className="text-2xs md:text-base text-secondary"
-                      > 
-                        • {accomplishment}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+            <div className={`relative left-1/2 -translate-x-1/2 ${mainCardAnimationStates[1]}`}>
+              {workExperience.map((experience, index) => 
+                renderExperienceItem(experience, index)
+              )}
             </div>
           </div>
 
-          <h2 className={`${titleClasses} mb-2 text-center`}> 
-            Education and Certificates: 
+          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary mb-2 text-center">
+            Education and Certificates:
           </h2>
           <div className='mx-2'>
-            <div className={`${centeredClasses} ${mainCardAnimationStates[2]}`}>
-              {education.map((qualification, qualificationIndex) => (
-                <div key={qualificationIndex} className="mb-4 flex flex-row" >
-                  <div className="w-2/3">
-                    <p className={jobTitleClasses}>{qualification.qualification}</p>
-                    <p className={subtitleClasses}>{qualification.provider}</p>
-                  </div>
-                  <p className={`${subtitleClasses} w-1/3 text-right`}>
-                    {qualification.date}
-                  </p>
-                </div>
-              ))}
+            <div className={`relative left-1/2 -translate-x-1/2 ${mainCardAnimationStates[2]}`}>
+              {education.map((qualification, index) => 
+                renderEducationItem(qualification, index)
+              )}
             </div>
           </div>
         </div>
@@ -161,7 +170,7 @@ function Resume() {
         {categories.map((category, index) => (
           <div key={index} className="w-full md:w-1/2 xl:w-1/3 px-4 mb-8">
             <div className={`
-              ${centeredClasses} 
+              relative left-1/2 -translate-x-1/2
               p-4 2xl:p-6 
               ${darkMode ? 'card-dark' : 'card-light'}
               ${boxAnimationStates[index + 1]} 
@@ -170,7 +179,7 @@ function Resume() {
               <h2 className="text-base sm:text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl font-bold mb-2 text-primary">
                 {category}
               </h2>
-              <div className="flex flex-wrap"> 
+              <div className="flex flex-wrap">
                 {itemList[index].map((item, itemIndex) => (
                   <div key={itemIndex} className="w-fit mx-1">
                     <div className={`skill ${itemAnimationStates[index][itemIndex]}`}>
@@ -188,4 +197,3 @@ function Resume() {
 }
 
 export default Resume;
-
