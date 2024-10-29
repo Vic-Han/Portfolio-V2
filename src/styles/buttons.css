@@ -37,6 +37,7 @@
     background: linear-gradient(160deg, #5589aa 0%, #5595b0 50%, #5589aa 100%);
     border-radius: 0.5em;
     aspect-ratio: 1/1;
+    cursor: pointer;
 
 }
 .close-button::after,.close-button::before{

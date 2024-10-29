@@ -1,6 +1,8 @@
+// Resume.jsx
 import React, { useState, useEffect, useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 import { animateContentBoxes } from '../transitions/AnimationHelper';
+import { experienceItem, educationItem, skillsItem } from '../components/ResumeParts';
 import resumeData from "../data/Resume";
 import '../styles/resume.css';
 
@@ -124,7 +126,7 @@ function Resume() {
           ${darkMode ? 'card-dark' : 'card-light'} 
           ${boxAnimationStates[0]}
         `}>
-          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary mb-2 text-center">
+          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary my-4 text-center">
             Resume
           </h2>
 
@@ -142,24 +144,24 @@ function Resume() {
             </div>
           </div>
 
-          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary font-bold mb-2 mt-4 text-center">
+          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary font-bold my-4 text-center">
             Experience:
           </h2>
           <div className='mx-2'>
             <div className={`relative left-1/2 -translate-x-1/2 ${mainCardAnimationStates[1]}`}>
               {workExperience.map((experience, index) => 
-                renderExperienceItem(experience, index)
+                experienceItem(experience, index)
               )}
             </div>
           </div>
 
-          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary mb-2 text-center">
+          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary my-4 text-center">
             Education and Certificates:
           </h2>
           <div className='mx-2'>
             <div className={`relative left-1/2 -translate-x-1/2 ${mainCardAnimationStates[2]}`}>
               {education.map((qualification, index) => 
-                renderEducationItem(qualification, index)
+                educationItem(qualification, index)
               )}
             </div>
           </div>
@@ -168,28 +170,7 @@ function Resume() {
 
       <div className="w-full flex flex-row flex-wrap justify-center px-4 sm:px-10 md:px-0 2xl:px-3 3xl:px-6 4xl:px-10">
         {categories.map((category, index) => (
-          <div key={index} className="w-full md:w-1/2 xl:w-1/3 px-4 mb-8">
-            <div className={`
-              relative left-1/2 -translate-x-1/2
-              p-4 2xl:p-6 
-              ${darkMode ? 'card-dark' : 'card-light'}
-              ${boxAnimationStates[index + 1]} 
-              flex-grow min-h-full
-            `}>
-              <h2 className="text-base sm:text-lg md:text-xl 2xl:text-2xl 3xl:text-3xl font-bold mb-2 text-primary">
-                {category}
-              </h2>
-              <div className="flex flex-wrap">
-                {itemList[index].map((item, itemIndex) => (
-                  <div key={itemIndex} className="w-fit mx-1">
-                    <div className={`skill ${itemAnimationStates[index][itemIndex]}`}>
-                      <p>{item}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
+          skillsItem(category, index, itemList, darkMode, boxAnimationStates, itemAnimationStates)
         ))}
       </div>
     </div>

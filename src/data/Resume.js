@@ -10,7 +10,6 @@ const resumeData = {
     "Tools": ["Git/Github", "Docker","Bash"],
   },
 
-  // Define work experience and education
   "workExperience":[
     {
       title: "Prompt Engineer",

@@ -24,7 +24,7 @@ export const animateContentBoxes = (animationClass, stagger) => {
    */
 
 
-  return (boxAnimationStates, setBoxAnimationStates, callback) => {
+  return (boxAnimationStates, setBoxAnimationStates, callback=null) => {
     for (let i = 0; i < boxAnimationStates.length; i++) {
       setTimeout(() => {
         setBoxAnimationStates((prevState) => {
