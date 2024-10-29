@@ -85,7 +85,7 @@ function Mainpage() {
         </div>
 
         <div className={`w-11/12 my-1 relative left-1/2 -translate-x-1/2 md:p-5 lg:p-3 md:m-3 lg:m-6 xl:m-8 2xl:m-10 flex flex-col overflow-auto xl:p-4 2xl:p-5 ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[1]}`}>
-          <div className={`flex flex-col items-center m-3 xl:m-5 text-sm sm:text-base md:text-xl lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl-relaxed text-secondary`}>
+          <div className={`flex flex-col items-center m-3 xl:m-5 text-sm sm:text-base md:text-xl lg:text-xl/relaxed xl:text-2xl/relaxed 2xl:text-3xl/relaxed 3xl:text-4xl/relaxed 4xl:text-5xl/relaxed text-secondary`}>
             I'm a web developer currently training AI to write code at DataAnnotation. 
             I recently graduated from the University of Calgary with a degree in Computer Science. 
             I'm driven by my desire to make an impact and love for challenges.
