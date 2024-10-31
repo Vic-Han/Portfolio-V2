@@ -1,3 +1,4 @@
+// Mainpage.jsx
 import React, { useEffect, useState } from 'react';
 import { useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";

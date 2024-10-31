@@ -75,47 +75,7 @@ function Resume() {
     }
   }, []);
 
-  const renderExperienceItem = (experience, index) => (
-    <div key={index} className="mb-4">
-      <div className="flex flex-row mb-2">
-        <div className="w-1/2">
-          <p className="text-sm sm:text-base md:text-xl 2xl:text-2xl 3xl:text-3xl text-primary">
-            {experience.title}
-          </p>
-          <p className="text-xs sm:text-sm md:text-lg 2xl:text-xl 3xl:text-2xl text-secondary">
-            {experience.company}
-          </p>
-        </div>
-        <p className="text-xs sm:text-sm md:text-lg 2xl:text-xl 3xl:text-2xl text-secondary w-1/2 text-right">
-          {experience.timeline}
-        </p>
-      </div>
-      <ul>
-        {experience.accomplishments.map((accomplishment, accomplishmentIndex) => (
-          <li key={accomplishmentIndex} className="text-2xs md:text-base text-secondary">
-            • {accomplishment}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-
-  const renderEducationItem = (qualification, index) => (
-    <div key={index} className="mb-4 flex flex-row">
-      <div className="w-2/3">
-        <p className="text-sm sm:text-base md:text-xl 2xl:text-2xl 3xl:text-3xl text-primary">
-          {qualification.qualification}
-        </p>
-        <p className="text-xs sm:text-sm md:text-lg 2xl:text-xl 3xl:text-2xl text-secondary">
-          {qualification.provider}
-        </p>
-      </div>
-      <p className="text-xs sm:text-sm md:text-lg 2xl:text-xl 3xl:text-2xl text-secondary w-1/3 text-right">
-        {qualification.date}
-      </p>
-    </div>
-  );
-
+  
   return (
     <div className="flex flex-wrap justify-center w-full">
       <div className="w-full md:w-11/12 lg:w-5/6 xl:w-3/4 2xl:w-2/3 px-4 mb-8">
@@ -126,25 +86,21 @@ function Resume() {
           ${darkMode ? 'card-dark' : 'card-light'} 
           ${boxAnimationStates[0]}
         `}>
-          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary my-4 text-center">
+          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary my-4 xl:my-5 text-center">
             Resume
           </h2>
 
           <div className='w-full mx-2'>
             <div className={`relative left-1/2 -translate-x-1/2 ${mainCardAnimationStates[0]}`}>
-              <div className="flex flex-wrap justify-center mb-4">
-                <a 
-                  href="resume.pdf" 
-                  download 
-                  className={`download ${animation !== 'Minimal' ? 'animate-glow' : ''}`}
-                >
+              <div className="flex flex-wrap justify-center">
+                <a href="resume.pdf" download className={`download -my-2 ${animation !== 'Minimal' ? 'animate-glow' : ''}`}>
                   Download
                 </a>
               </div>
             </div>
           </div>
 
-          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary font-bold my-4 text-center">
+          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary my-4 xl:my-5 text-center">
             Experience:
           </h2>
           <div className='mx-2'>
@@ -155,7 +111,7 @@ function Resume() {
             </div>
           </div>
 
-          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary my-4 text-center">
+          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary my-4 xl:my-5 text-center">
             Education and Certificates:
           </h2>
           <div className='mx-2'>
