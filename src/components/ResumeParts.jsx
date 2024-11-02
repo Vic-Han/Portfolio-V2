@@ -1,6 +1,35 @@
 // ResumeParts.jsx 
 import React from "react";
-
+/**
+ * @component ResumeParts
+ * @description
+ * A collection of sub-components for rendering resume sections
+ * 
+ * @exports
+ * - experienceItem: 
+ *   @param {Object} experience - Experience data object
+ *   @param {number} index - Item index for key prop
+ *   @returns {JSX.Element} - Formatted experience entry
+ * 
+ * - educationItem:
+ *   @param {Object} qualification - Education data object
+ *   @param {number} index - Item index for key prop
+ *   @returns {JSX.Element} - Formatted education entry
+ * 
+ * - skillsItem:
+ *   @param {string} category - Skill category name
+ *   @param {number} index - Category index
+ *   @param {Array} itemList - List of skills per category
+ *   @param {boolean} darkMode - Theme mode
+ *   @param {Array} boxAnimationStates - Animation states for boxes
+ *   @param {Array} itemAnimationStates - Animation states for items
+ *   @returns {JSX.Element} - Skill category card with items
+ * 
+ * @styling
+ * - Uses Tailwind CSS for responsive design
+ * - Custom classes for dark/light mode cards
+ * - Dynamic skill item rendering with animation classes
+ */
 
 const experienceItem = (experience, index) => (
     <div key={index} className="mb-4">
