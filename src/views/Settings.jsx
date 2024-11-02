@@ -2,6 +2,45 @@ import React, { useState, useEffect, useContext } from 'react';
 import DarkThemeSwitch from '../components/DarkThemeSwitch';
 import AnimationToggle from '../components/AnimationToggle';
 
+/**
+ * @component Settings
+ * @description
+ * A configuration panel component that allows users to customize application settings 
+ * such as dark mode and animation levels. Features responsive design and dynamic animations.
+ * 
+ * @requires
+ * - GlobalContext with properties:
+ *   - darkMode: boolean
+ *   - setDarkMode: function
+ *   - animation: 'Minimal' | 'Normal' | 'Extreme'
+ *   - setAnimation: function
+ * - Components:
+ *   - DarkThemeSwitch: Toggle for dark/light mode
+ *   - AnimationToggle: Select animation intensity
+ *   - ReadOnlyStars: Visual representation of animation levels
+ * 
+ * @props
+ * - close: function - Callback to close the settings panel
+ * 
+ * @layout
+ * Uses a responsive card layout with:
+ * - Header section with dark theme toggle and close button
+ * - Animation level selection with description and star ratings
+ * 
+ * @animations
+ * Implements three animation modes:
+ * - Minimal: No animations
+ * - Normal: Fade-in effect (200ms delay)
+ * - Extreme: Smooth reveal effect (250ms delay)
+ * 
+ * @styling
+ * - Utilizes Tailwind CSS for responsive design
+ * - Custom card styles for dark/light mode
+ * - Dynamic close button styling based on animation setting
+ */
+
+
+
 import ReadOnlyStars from '../components/ReadOnlyStars';
 import {GlobalContext} from '../context/GlobalContext';
 import {animateContentBoxes} from '../transitions/AnimationHelper';

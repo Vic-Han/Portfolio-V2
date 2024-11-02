@@ -2,6 +2,26 @@
 import { useState } from 'react';
 import React from 'react';
 import './darkThemeSwitch.css'
+
+/**
+ * @component DarkThemeSwitch
+ * @description
+ * A custom toggle switch for dark/light theme selection with sun and moon icons.
+ * 
+ * @props
+ * - value: boolean - Current theme state
+ * - change: function - Callback to update theme state
+ * 
+ * @state
+ * - on: boolean - Internal switch state
+ * - isClickable: boolean - Prevents rapid toggling during animation
+ * 
+ * @features
+ * - Smooth transition between sun and moon icons
+ * - 550ms cooldown between toggles to allow for animation completion
+ * - Custom CSS styling for switch animation
+ */
+
 const DarkThemeSwitch = ({ value, change }) => {
     const [on, setOn] = useState(value);
     const [isClickable, setIsClickable] = useState(true);

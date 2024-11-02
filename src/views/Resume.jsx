@@ -5,7 +5,44 @@ import { animateContentBoxes } from '../transitions/AnimationHelper';
 import { experienceItem, educationItem, skillsItem } from '../components/ResumeParts';
 import resumeData from "../data/Resume";
 import '../styles/resume.css';
-
+/**
+ * @component Resume
+ * @description
+ * A comprehensive resume display component showcasing work experience, education, 
+ * and skills. Features animated reveals and responsive design for optimal viewing 
+ * across different screen sizes.
+ * 
+ * @requires
+ * - GlobalContext with properties:
+ *   - darkMode: boolean
+ *   - animation: 'Minimal' | 'Normal' | 'Extreme'
+ * - resumeData: object containing skills, work experience, and education data
+ * - animateContentBoxes from AnimationHelper
+ * - Resume parts components (experienceItem, educationItem, skillsItem)
+ * 
+ * @animations
+ * - Three animation modes:
+ *   - Minimal: No animations
+ *   - Normal: Fade-in effect (200ms delay)
+ *   - Extreme: Smooth reveal with item-by-item animation
+ * - Custom animation states for main sections and individual skill items
+ * 
+ * @state
+ * - boxAnimationStates: string[] - Animation states for main content boxes
+ * - itemAnimationStates: string[][] - Animation states for skill items (nested array)
+ * - mainCardAnimationStates: string[] - Animation states for primary sections
+ * 
+ * @layout
+ * - Responsive grid layout adapting to screen sizes:
+ *   - Full width on mobile
+ *   - Multi-column layout for skills on larger screens
+ * - Separate sections for experience, education, and skills categories
+ * 
+ * @styling
+ * - Tailwind CSS for responsive design
+ * - Custom card styles for dark/light mode
+ * - Animated download button with glow effect
+ */
 
 function Resume() {
   const { darkMode, animation } = useContext(GlobalContext);

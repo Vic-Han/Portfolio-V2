@@ -1,5 +1,23 @@
 import React from 'react';
 import './animationToggle.css'
+
+
+/**
+ * @component AnimationToggle
+ * @description
+ * A three-star radio button group for selecting animation intensity.
+ * 
+ * @props
+ * - value: 'Minimal' | 'Normal' | 'Extreme' - Current animation setting
+ * - change: function - Callback to update animation state
+ * - dark: boolean - Applies dark theme styling
+ * 
+ * @features
+ * - Custom SVG star icons for each option
+ * - Dark mode compatibility with class switching
+ * - Radio button functionality with custom styling
+ */
+
 function AnimationToggle({value, change, dark}){
 
     return (
