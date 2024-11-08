@@ -13,6 +13,10 @@
 
 }
 
+.fade-in.animate-right-mainpage{
+  animation: fade-in-right 1.2s ease-in-out;
+}
+
 .scale-in{
    animation: scale-in 0.9s ease-in-out;
 }
