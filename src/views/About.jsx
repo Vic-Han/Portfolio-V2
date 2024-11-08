@@ -1,45 +1,36 @@
 // About.jsx
-
 import React, { useContext, useState, useEffect, useRef } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 import casualAbout from "../data/CasualAbout";
 import formalAbout from "../data/FormalAbout";
 import ImageGallery from "../components/ImageGallery";
 /**
- * About Component
+ * @component About
+ * @description
+ * A biographical section component that displays formal and casual text content
+ * with animated text reveals and an accompanying image gallery.
  * 
- * Purpose:
- * Renders an animated biography section with formal and casual content cards
- * alongside a decorative image gallery.
+ * @properties
+ * Accessed through GlobalContext:
+ * - darkMode: boolean - Controls light/dark theme
+ * - animation: 'Minimal' | 'Normal' | 'Extreme' - Animation style
  * 
- * Key Features:
- * - Dual content sections (formal/casual)
- * - Progressive text reveal animations with multiple modes
- * - Scroll-based content visibility
- * - Responsive design
- * - Dark/Light mode support
+ * @animations
+ * Text reveal modes:
+ * - Minimal: All text visible immediately
+ * - Normal: Fade-in animation on scroll
+ * - Extreme: Typewriter effect for current text block
  * 
- * Dependencies:
- * - GlobalContext: {darkMode, animation}
- * - Data files: formalAbout, casualAbout arrays
+ * @layout
+ * - Two card sections: formal and casual content
+ * - Overlaid image gallery
+ * - Responsive text sizing and spacing
+ * - Scroll-based text visibility using Intersection Observer
  * 
- * Implementation Overview:
- * 1. Text Animation System
- *    - Intersection Observer for visibility
- *    - Three animation modes: Minimal, Normal, Extreme
- * 
- * 2. Content Cards
- *    - Separate formal/casual biography sections
- *    - Responsive layout with theme support
- * 
- * 3. Image Gallery
- *    - Integrated decorative images
- *    - Managed by ImageGallery component
- * 
- * Styling:
- * - Tailwind CSS
- * - Responsive typography
- * - Dark/Light theme support
+ * @styling
+ * - Dynamic theme switching (light/dark modes)
+ * - Responsive typography scales
+ * - Card-based content containers
  */
 const About = () => {
 
@@ -137,7 +128,6 @@ const About = () => {
     }
   }
 
-  
    
   const cardStyle = "w-4/5 sm:w-3/5 md:w-1/2 xl:w-2/5 p-3 md:p-6 2xl:p-10 4xl:p-14 relative left-0 ml-1 sm:ml-0 sm:left-1/2 sm:-translate-x-1/2";
   const fontSize = "text-xs sm:text-sm md:text-base/loose lg:text-lg/loose xl:text-xl/loose 3xl:text-2xl/loose 4xl:text-3xl/loose"

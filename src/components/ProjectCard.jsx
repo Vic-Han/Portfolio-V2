@@ -1,34 +1,40 @@
-/**
- * ProjectCard Component
- * 
- * This component displays information about a single project.
- * It includes an image, title, description, and relevant links.
- * 
- * @component
- * @param {Object} props.project - The project data object
- * @param {string} props.project.name - The name of the project
- * @param {string} props.project.image - URL of the project image
- * @param {string} props.project.description - Short description of the project
- * @param {string} props.project.github - GitHub repository URL (optional)
- * @param {string} props.project.report - Project report URL (optional)
- * @param {string} props.project.link - Live site URL (optional)
- * @param {string} props.project.video - Project video URL (optional)
- * @param {string} props.project.buttonStyle - CSS classes for button styling
- * @param {string} props.project.titleTextStyle - CSS classes for title text styling
- * @param {string} props.project.descriptionTextStyle - CSS classes for description text styling
- * 
- * @example
- * const project = {
- *   name: "My Project",
- *   image: "/path/to/image.jpg",
- *   description: "A short description",
- *   github: "https://github.com/user/repo",
- *   buttonStyle: "bg-blue-500 text-white",
- *   titleTextStyle: "text-xl font-bold",
- *   descriptionTextStyle: "text-sm text-gray-600"
- * }
- */
+// ProjectCard.jsx
 import React from 'react';
+/**
+ * @component ProjectCard
+ * @description
+ * A responsive project card component that displays project information
+ * with hover effects and configurable styling.
+ * 
+ * @properties
+ * @param {Object} project - The project data object
+ * @param {string} project.name - The name of the project
+ * @param {string} project.image - URL of the project image
+ * @param {string} project.description - Short description of the project
+ * @param {string} project.github - GitHub repository URL (optional)
+ * @param {string} project.report - Project report URL (optional)
+ * @param {string} project.link - Live site URL (optional)
+ * @param {string} project.video - Project video URL (optional)
+ * @param {string} project.buttonStyle - CSS classes for button styling
+ * @param {string} project.titleTextStyle - CSS classes for title text styling
+ * @param {string} project.descriptionTextStyle - CSS classes for description text styling
+ * 
+ * @layout
+ * - Responsive card sizing
+ * - Image background with overlay on hover
+ * - Title always visible, description and links appear on hover
+ * 
+ * @styling
+ * - Tailwind classes for responsive design
+ * - Configurable text and button styles through props
+ * - Hover effects for revealing additional information
+ * 
+ * @animations
+ * - Scale up on hover
+ * - Fade-in overlay on hover
+ * - Slide-up animation for description and links on hover
+ * 
+ */
 
 
 const ProjectCard = ({ project }) => {
