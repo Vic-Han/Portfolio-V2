@@ -2,12 +2,12 @@ const resumeData = {
 
    "skills" : {
     // "Interpersonal":["Leadership"],
-    "Languages": ["JavaScript", "Python", "HTML/CSS", "C/C++", "Go", "Java", "C#"],
-    "Web Development" : ["React", "Vue", "Tailwind"],
-    "API Development": ["Gin","Express.js", "Django", "Flask", ],
+    "Languages": ["JavaScript", "Python", "HTML/CSS", "C/C++", "Go", "Java"],
+    "Web/API Frameworks" : ["React", "Vue", "Tailwind","Express.js", "Django", "Flask",],
     "Databases": ["MongoDB", "PostgreSQL", "MySQL", "Cassandra"],
-    "Data Engineering": ["Pandas", "Numpy", "Matplotlib", "Tensorflow", "Spark" ],
+    "Data Science": ["Pandas", "Numpy", "Matplotlib", "Tensorflow", "Spark" ],
     "Tools": ["Git/Github", "Docker","Bash"],
+    "Cloud" : ["GCP"]
   },
 
   "workExperience":[
