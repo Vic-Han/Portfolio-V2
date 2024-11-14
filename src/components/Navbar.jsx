@@ -23,16 +23,15 @@ import React, { useState } from "react";
 function Navbar({clickHandler, darkmode}) {
     const [selected, setSelected] = useState('mainpage')
 
-    const selectedStyle = 'border-2' + (darkmode ? ' border-blue-500' : ' border-blue-800')
-    // const selectedStyle = 'underline'
+    const selectedStyle = 'border-2' + (darkmode ? ' border-blue-500 text-blue-500 bg-black' : ' border-blue-800 bg-gray-50 text-blue-800')
+    const dark = 'text-white hover:bg-black hover:text-blue-500'
+    const light = 'text-black hover:bg-gray-50 hover:text-blue-800'
+    const color = darkmode ? dark : light
 
-    const dark = 'text-white hover:bg-black hover:text-blue-500';
-    const light = 'text-black hover:bg-gray-50 hover:text-blue-800';
-
-    const cursor = 'cursor-pointer font-bold';
-    const layout = 'rounded-lg 2xl:rounded-xl p-1 md:p-2 lg:p-3 2xl:p-4 3xl:p-5 4xl:p-6';
+    const cursor = 'cursor-pointer font-bold'
+    const layout = 'rounded-lg 2xl:rounded-xl p-1 md:p-2 lg:p-3 2xl:p-4 3xl:p-5 4xl:p-6'
     const textSize = 'text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl'
-    const styles = `${cursor} ${layout} ${textSize} ${darkmode ? dark : light}`
+    const styles = `${cursor} ${layout} ${textSize}`
 
     const click = (page) => {
         if(page === selected){
@@ -45,13 +44,13 @@ function Navbar({clickHandler, darkmode}) {
     }
 
     return (
-        <div className="flex flex-row justify-between py-3 px-1 sm:px-3 md:px-5 lg:px-8 xl:px-10 lg:py-3 xl:py-4 2xl:py-8">
+        <div className="flex flex-row justify-between py-3 px-1 sm:px-3 md:px-5 lg:px-8 xl:px-10 xl:py-4 2xl:py-8">
             
-            <div className={`${styles} ${selected === 'settings' ? selectedStyle : ''}`} onClick={() => click('settings')}> Settings </div>    
-            <div className={`${styles} ${selected === 'mainpage' ? selectedStyle : ''}`}  onClick={() => click('mainpage')}> Home </div>
-            <div className={`${styles} ${selected === 'projects' ? selectedStyle : ''}`}  onClick={() => click('projects')}> Projects </div>
-            <div className={`${styles} ${selected === 'resume' ? selectedStyle : ''}`}  onClick={() => click('resume')}> Resume </div>
-            <div className={`${styles} ${selected === 'about' ? selectedStyle : ''}`} onClick={() => click('about')}> About </div>
+            <div className={`${styles} ${color}`} onClick={() => click('settings')}> Settings </div>    
+            <div className={`${styles} ${selected === 'mainpage' ? selectedStyle : color}`}  onClick={() => click('mainpage')}> Home </div>
+            <div className={`${styles} ${selected === 'projects' ? selectedStyle : color}`}  onClick={() => click('projects')}> Projects </div>
+            <div className={`${styles} ${selected === 'resume' ? selectedStyle : color}`}  onClick={() => click('resume')}> Resume </div>
+            <div className={`${styles} ${selected === 'about' ? selectedStyle : color}`} onClick={() => click('about')}> About </div>
 
         </div>
     );
