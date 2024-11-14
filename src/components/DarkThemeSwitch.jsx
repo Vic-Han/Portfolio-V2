@@ -1,6 +1,6 @@
 // DarkThemeSwitch.jsx
-import { useState } from 'react';
-import React from 'react';
+// Taken practically verbatim from: https://uiverse.io/andrew-demchenk0/honest-stingray-90
+import React,{useState} from 'react';
 import './darkThemeSwitch.css'
 
 /**

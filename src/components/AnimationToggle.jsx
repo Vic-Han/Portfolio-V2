@@ -1,3 +1,5 @@
+// AnimationToggle.jsx
+// Taken practically verbatim from: https://uiverse.io/SelfMadeSystem/selfish-starfish-40
 import React from 'react';
 import './animationToggle.css'
 

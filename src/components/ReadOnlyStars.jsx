@@ -1,6 +1,18 @@
 // ReadOnlyStars.jsx
+// All styling from: https://uiverse.io/SelfMadeSystem/selfish-starfish-40
 import React from 'react';
 import './readOnlyStars.css'
+
+/**
+ * 
+ * @component ReadOnlyStars
+ * @description
+ * A read-only star rating component that displays a row of filled stars.
+ * 
+ * @param {Object} props - Component props
+ * @param {number} props.value - Number of stars to display (1-5)
+ * @returns {React.ReactElement} A row of filled stars
+ */
 function ReadOnlyStars({value}){
 
     return (
