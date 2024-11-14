@@ -95,11 +95,10 @@ function Mainpage() {
       </div>
 
       <div className={`w-full md:w-1/4 lg:w-1/5 flex flex-col md:flex-row justify-center my-2 mx-0 md:m-2 lg:m-4 xl:m-6 2xl:m-8`}>
-        <div className={`w-11/12 md:w-full relative left-1/2 -translate-x-1/2 flex p-3 md:px-4 md:py-2 3xl:px-6 flex-col animate-right-mainpage ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[2]}`}>
-          <div className={`w-11/12 relative left-1/2 -translate-x-1/2 h-full grid items-center xl:text-3xl 2xl:text-4xl 3xl:px-4 text-primary text-center leading-loose`}>          
-              
+        <div className={`w-11/12 md:w-full relative left-1/2 -translate-x-1/2 flex p-3 md:px-4 md:py-2 3xl:px-6s animate-right-mainpage ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[2]}`}>
+          <div className={`w-11/12 relative left-1/2 -translate-x-1/2 h-full flex flex-col md:grid md:items-center xl:text-3xl 2xl:text-4xl 3xl:px-4 text-primary text-center leading-loose`}>          
               <div>Stay in touch!</div>
-            <SocialGrid />
+              <SocialGrid />
           </div>
         </div>
       </div>
