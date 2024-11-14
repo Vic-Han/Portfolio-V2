@@ -1,3 +1,4 @@
+// ReadOnlyStars.jsx
 import React from 'react';
 import './readOnlyStars.css'
 function ReadOnlyStars({value}){

@@ -1,3 +1,7 @@
+// ImageGallery.jsx
+import React, { useEffect, useRef, useState, useContext } from "react";
+import { GlobalContext } from "../context/GlobalContext";
+
 /**
  * @component ImageGallery
  * @description
@@ -24,8 +28,6 @@
  * - Tailwind classes for responsive design
  * - Intersection Observer for scroll-based animations
  */
-import React, { useEffect, useRef, useState, useContext } from "react";
-import { GlobalContext } from "../context/GlobalContext";
 
 const ImageGallery = () => {
   

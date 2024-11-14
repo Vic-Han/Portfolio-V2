@@ -1,3 +1,4 @@
+// Settings.jsx
 import React, { useState, useEffect, useContext } from 'react';
 import DarkThemeSwitch from '../components/DarkThemeSwitch';
 import AnimationToggle from '../components/AnimationToggle';

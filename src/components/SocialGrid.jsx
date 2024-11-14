@@ -1,3 +1,4 @@
+// SocialGrid.jsx
 import React from "react";
 import './SocialGrid.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

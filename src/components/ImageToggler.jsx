@@ -1,3 +1,4 @@
+// ImageToggler.jsx
 import { useState, useEffect, useCallback, useContext } from 'react';
 import './ImageToggler.css';
 import { GlobalContext } from '../context/GlobalContext';
