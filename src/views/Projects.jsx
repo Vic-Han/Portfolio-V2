@@ -1,12 +1,42 @@
+// Projects.jsx
 import React, { useState, useEffect, useContext } from "react";
 import { GlobalContext } from "../context/GlobalContext";
 import ProjectCard from "../components/ProjectCard";
 import { animateContentBoxes } from "../transitions/AnimationHelper";
 /**
- * Projects Component
+ * @component Projects
+ * @description
+ * Displays a responsive grid of project cards with configurable animations
+ * and theming. Utilizes the GlobalContext for theme and animation settings.
  * 
- * This component displays a grid of project cards with animation capabilities.
- * It uses the global context for theming and animation settings.
+ * @context GlobalContext
+ * @property {boolean} darkMode - Controls light/dark theme
+ * @property {string} animation - Animation style ('Minimal', 'Normal', 'Extreme')
+ * @property {Array} projects - Array of project objects to display
+ * 
+ * @state
+ * @property {Array} boxAnimationStates - Tracks animation states for each project card
+ * 
+ * @animations
+ * - Minimal: No animations
+ * - Normal: Fade-in-top animation with 200ms delay between cards
+ * - Extreme: Smooth-reveal animation with 250ms delay between cards
+ * 
+ * @layout
+ * - Centered heading with responsive text sizing
+ * - Responsive grid of project cards
+ * - Flexbox wrap for automatic card arrangement
+ * - Centered content with negative translate
+ * 
+ * @styling
+ * - Responsive text sizes using Tailwind breakpoints
+ * - Dynamic dark/light mode text colors
+ * - Consistent spacing with responsive margins and padding
+ * 
+ * @dependencies
+ * - GlobalContext for theme and animation settings
+ * - ProjectCard component for individual project display
+ * - animateContentBoxes helper for animation sequences
  * 
  */
 function Projects() {
@@ -22,7 +52,7 @@ function Projects() {
 
 
     const animateContentBoxesNormal = animateContentBoxes('fade-in-top', 200);
-    const animateContentBoxesExtreme = animateContentBoxes('smooth-reveal', 200);
+    const animateContentBoxesExtreme = animateContentBoxes('smooth-reveal', 250);
     useEffect(() => {
         if(animation !== 'Minimal'){
             hideContentBoxes();
