@@ -80,20 +80,20 @@ function Settings({close}) {
           
             <div className={`relative -translate-x-1/2 left-1/2 rounded-xl my-2 sm:my-4 xl:my-10 p-3 sm:p-4 xl:p-6 3xl:p-10 w-11/12 sm:w-5/6 xl:w-2/3 text-center ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[0]}`}>
                 <div className='flex flex-row'>
-                    <div className='w-1/2 p-0'>
+                    <div className='w-1/2 p-0 z-40'>
                         <div className='relative left-0 w-fit'>
                             <div className='text-sm sm:text-base xl:text-3xl 2xl:text-4xl 3xl:text-5xl text-primary w-fit mb-0.5 sm:mb-1 md:mb-2 lg-mb-3 xl:mb-4 2xl:mb-4 3xl:mb-6'>Dark Theme?</div>
                             <div className='scale-60 sm:scale-75 md:scale-95 lg:scale-105 2xl:scale-125 3xl:scale-150'><DarkThemeSwitch value={darkMode} change={setDarkMode}/></div>
                         </div>
                     </div>
-                    <div className='w-1/2 p-0'>
+                    <div className='w-1/2 p-0 z-40'>
                         <div className='relative left-full -translate-x-full w-fit'>
                             <button onClick={close} className={`close-button w-10 sm:w-14 xl:w-20 2xl:w-24 3xl:w-28 4xl:w-32 ${closeButtonStyle(animation)}`}></button>
                         </div>
                     </div> 
                 </div>
                 <div className='flex flex-row -my-6 md:my-0 3xl:my-8'>
-                    <div className='min-h-full w-1/3'>
+                    <div className='min-h-full w-1/3 z-40'>
                         <div className='relative left-0 w-fit top-1/2 -translate-y-1/2'>
                             <div className='text-sm sm:text-base xl:text-3xl 2xl:text-4xl 3xl:text-5xl mb-2 sm:mb-4 lg:mb-6 xl:mb-10 text-primary xl:-translate-x-0.5'>Animation Level:</div>
                             <div className='text-secondary text-xs sm:text-base xl:text-xl 2xl:text-2xl 3xl:text-3xl'> {animation}</div>
