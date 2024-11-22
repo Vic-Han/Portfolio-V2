@@ -62,8 +62,8 @@
 .linkedin-box{
     background: linear-gradient(45deg,
         #0069ab 0%,
-        #0075b6 50%,
-        #0082c8 100%
+        #0582c8 50%,
+        #0a92d9 100%
     );
     z-index: 10;
     transition-delay: 0s;
@@ -72,8 +72,8 @@
 .git-box{
     background: linear-gradient(45deg,
         #151313 0%,
-        #1a1717 50%,
-        #201e1e 100%
+        #201e1e 50%,
+        #343131 100%
     );
     z-index: 11;
     transition-delay: 0.06s;
@@ -89,6 +89,17 @@
     transition-delay: 0.12s;
 }
 
+.strava-box{
+    background: linear-gradient(45deg,
+        #fc4c02 0%,
+        #f68634 50%,
+        #f9a825 100%
+    );
+    z-index: 12;
+    transition-delay: 0.12s;
+}
+
+
 .social-container:not(:hover) .linkedin-box{
     transition-delay: 0.12s;
 }
@@ -99,6 +110,10 @@
 
 .social-container:not(:hover) .insta-box{
     transition-delay: 0s;
+}
+
+.social-container:not(:hover) .strava-box{
+    transition-delay: 0.0s;
 }
 
 .social-container:hover .linkedin-box{
@@ -112,6 +127,11 @@
 .social-container:hover .insta-box{
     height: 25%;
 }
+
+.social-container:hover .strava-box{
+    height: 25%;
+}
+
 .social-content{
     position: absolute;
     left: 50%;
@@ -125,6 +145,9 @@
     top: 25%;
 }
 .insta-box .social-content{
+    top: 50%;
+}
+.strava-box .social-content{
     top: 50%;
 }
 /* Shimmer effect */

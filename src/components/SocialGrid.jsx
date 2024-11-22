@@ -2,7 +2,7 @@
 import React from "react";
 import './SocialGrid.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLinkedin, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faLinkedin, faGithub, faInstagram, faStrava } from '@fortawesome/free-brands-svg-icons'
 
 /**
  * @component SocialGrid
@@ -53,11 +53,17 @@ function SocialGrid() {
           </div>
          
         </a>
-        <a href='https://www.instagram.com/viccccc_h/' className='social-box insta-box' target='_blank' rel='noreferrer'>
+        {/* <a href='https://www.instagram.com/viccccc_h/' className='social-box insta-box' target='_blank' rel='noreferrer'>
           <div className='social-content'>
             <FontAwesomeIcon icon={faInstagram} style={{ fontSize: "1em", color: 'white' }} />
             <span>Instagram</span>
           </div>
+        </a> */}
+        <a href ='https://www.strava.com/athletes/102573049' className="social-box strava-box" target='_blank' rel='noreferrer'>
+          <div className='social-content'>
+            <FontAwesomeIcon icon={faStrava} style={{ fontSize: "1em", color: 'white' }} />
+            <span>Strava</span>
+            </div>
         </a>
       </div>
     </div>
