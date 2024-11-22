@@ -9,7 +9,7 @@ import projects from '../data/Projects'
 // including state for dark mode, animation level, and transitions.
 const GlobalContext = createContext();
 const GlobalProvider = ({ children }) => {
-  const [darkMode, setDarkMode] = useState(Cookies.get('darkMode') === 'true');
+  const [darkMode, setDarkMode] = useState(!Cookies.get('darkMode') || Cookies.get('darkMode') === 'true');
   const [animation, setAnimation] = useState(Cookies.get('animationLevel') || 'Normal');
   const [circleTransition, setCircleTransition] = useState(false);
 
