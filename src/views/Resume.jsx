@@ -123,8 +123,8 @@ function Resume() {
           ${darkMode ? 'card-dark' : 'card-light'} 
           ${boxAnimationStates[0]}
         `}>
-          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary my-4 xl:my-5 text-center">
-            Resume
+          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary my-2 xl:my-3 py-2 text-center">
+              Resume
           </h2>
 
           <div className='w-full mx-2'>
@@ -137,7 +137,7 @@ function Resume() {
             </div>
           </div>
 
-          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary my-4 xl:my-5 text-center">
+          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary my-2 xl:my-3 py-2 text-center border-b xl:border-b-2 border-green-400">
             Experience:
           </h2>
           <div className='mx-2'>
@@ -148,8 +148,8 @@ function Resume() {
             </div>
           </div>
 
-          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary my-4 xl:my-5 text-center">
-            Education and Certificates:
+          <h2 className="text-sm sm:text-base md:text-2xl 2xl:text-3xl 3xl:text-4xl text-primary my-2 xl:my-3 py-2 text-center border-b xl:border-b-2 border-green-400">
+             Education and Certificates:
           </h2>
           <div className='mx-2'>
             <div className={`relative left-1/2 -translate-x-1/2 ${mainCardAnimationStates[2]}`}>

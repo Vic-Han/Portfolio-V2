@@ -48,7 +48,7 @@ const experienceItem = (experience, index) => (
       </div>
       <ul>
         {experience.accomplishments.map((accomplishment, accomplishmentIndex) => (
-          <li key={accomplishmentIndex} className="text-2xs md:text-base text-secondary">
+          <li key={accomplishmentIndex} className="text-2xs md:text-base 3xl:text-lg text-secondary">
             • {accomplishment}
           </li>
         ))}
