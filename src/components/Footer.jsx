@@ -2,7 +2,44 @@
 import React, { useState, useEffect, useRef, useContext } from 'react';
 import { GlobalContext } from '../context/GlobalContext';
 import './footer.css';
-
+/**
+ * @component Footer
+ * @description
+ * A responsive footer component featuring dark/light mode support, entrance animations,
+ * and multi-column layout with contact information and attributions.
+ * 
+ * @properties
+ * Accessed through GlobalContext:
+ * - darkMode: boolean - Controls theme styling
+ * - animation: 'Minimal' | 'Normal' - Controls animation behavior
+ * 
+ * @animations
+ * Two visibility modes:
+ * - Minimal: Footer visible immediately
+ * - Normal: Width expansion animation on scroll into view
+ * 
+ * @layout
+ * Four responsive columns:
+ * - Copyright information
+ * - Contact details
+ * - Source code information
+ * - Attribution links
+ * Mobile: Stacked vertical layout
+ * Desktop: Horizontal row layout
+ * 
+ * @styling
+ * Theme variations:
+ * - Dark: Dark gradient background with light text
+ * - Light: Light gradient background with dark text
+ * - Custom link hover effects
+ * - Responsive text sizing
+ * - Tailwind classes for layout
+ * 
+ * @implementation
+ * Uses Intersection Observer for scroll-based visibility
+ * Manages theme-specific styling through CSS classes
+ * Implements responsive breakpoints for layout adaptation
+ */
 function Footer() {
   const GlobalStates = useContext(GlobalContext);
   const { darkMode, animation } = GlobalStates;
