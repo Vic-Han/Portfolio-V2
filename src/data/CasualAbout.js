@@ -13,14 +13,14 @@ const casualAbout = [
     `,
     `
         I have a philosophy that the biggest limits are the ones we put on ourselves. 
-        It's very obvious to me now that my own self doubt was dragging me down, and I see all the time in others too. 
+        It's very obvious to me now that my own self doubt was by far my biggest problem. 
         I don't believe we gain confidence through self love tactics, 
         we earn confidence by getting out of our comfort zone. 
     `,
     `
-        I want to tackle races like the Artic Ultra and Badwater in the far(?) future.
-        I also enjoy trying to craft recipes in the kitchen, but whether I'm actually good at it is up for debate.
-        I love karaoke too, but it's not up for debate that I'm horrendous at it.
+        I'm also a huge chess nerd. I used to play competitively when I was younger, and I still follow top level events. 
+        I'm a decent home cook as well, I love trying new recipes and experimenting with different styles and cooking methods.
+        Okay, maybe the decent part is a bit of a stretch.
     `
 ]
 export default casualAbout;

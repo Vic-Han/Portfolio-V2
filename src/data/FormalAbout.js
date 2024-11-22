@@ -11,8 +11,8 @@ const formalAbout = [
         I take pride in my work and willingness to take on difficult tasks. 
     `,
     `
-       Right now I mostly do web stuff outside my job. 
-       I have a lot of experience with the full stack, including React, Vue, Express, Django, SQL, and a lot more.
+       Right now I mostly do web stuff inside and outside my job. 
+       I use both client side and server side technologies, and sometimes more broad engineering concepts.
        I am trying to get into data science, specfically data engineering and ETL pipelines.
     `    
 ]

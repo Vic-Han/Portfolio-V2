@@ -87,9 +87,9 @@ function Mainpage() {
 
         <div className={`w-11/12 my-1 relative left-1/2 -translate-x-1/2 md:p-2 lg:p-3 2xl:p-4 md:m-2 lg:m-4 xl:m-6 2xl:m-8 flex flex-col overflow-auto  ${darkMode ? 'card-dark' : 'card-light'} ${boxAnimationStates[1]}`}>
           <div className='flex flex-col items-center m-3 text-sm sm:text-base md:text-lg lg:text-xl/relaxed 2xl:text-2xl/relaxed 3xl:text-3xl/relaxed 4xl:text-4xl/relaxed text-secondary'>
-            I'm a web developer and ultra runner. 
-            I graduated in May with a Bachelor's in Computer Science from the University of Calgary.
-            I'm driven by my desire to make meaningful change through tech, and also to solve really tough problems.
+          I'm a web developer and ultra runner. 
+          I graduated in May with a Bachelor's in Computer Science from the University of Calgary. 
+          I'm driven by my desire to create meanigful impact through technology, and the pride I take in solving complex problems.
           </div>
         </div>
       </div>
