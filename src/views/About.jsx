@@ -131,7 +131,7 @@ const About = () => {
    
   const cardStyle = "w-4/5 sm:w-3/5 md:w-1/2 xl:w-2/5 p-3 md:p-6 2xl:p-10 4xl:p-14 relative left-0 ml-1 sm:ml-0 sm:left-1/2 sm:-translate-x-1/2";
   const fontSize = "text-xs sm:text-sm md:text-base/loose lg:text-lg/loose xl:text-xl/loose 3xl:text-2xl/loose 4xl:text-3xl/loose"
-  const fontSizeHeader = "text-primary text-center text-base sm:text-lg md:text-2xl xl:text-3xl 2xl:text-4xl 3xl:text-5xl 4xl:text-6xl"
+  const fontSizeHeader = "text-primary text-center text-base sm:text-lg md:text-xl xl:text-2xl 2xl:text-3xl 3xl:text-4xl 4xl:text-5xl"
 
   return (
     <div className="relative my-4">
