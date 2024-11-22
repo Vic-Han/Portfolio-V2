@@ -24,7 +24,7 @@ import React, { useState } from "react";
 function Navbar({clickHandler, darkmode}) {
     const [selected, setSelected] = useState('mainpage')
 
-    const selectedStyle = 'border-2' + (darkmode ? ' border-blue-500 text-blue-500 bg-black' : ' border-blue-800 bg-gray-50 text-blue-800')
+    const selectedStyle = 'border xl:border-2 3xl:border-3' + (darkmode ? ' border-blue-500 text-blue-500 bg-black' : ' border-blue-800 bg-gray-50 text-blue-800')
     const dark = 'text-white hover:bg-black hover:text-blue-500'
     const light = 'text-black hover:bg-gray-50 hover:text-blue-800'
     const color = darkmode ? dark : light
